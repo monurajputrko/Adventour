@@ -4,8 +4,9 @@ export const getHotel = () => async(dispatch) => {
     dispatch({type:GET_HOTEL_REQUEST})
     try{
         let response = await axios.get(`http://localhost:8080/hotels`)
-        console.log(response)
-        dispatch({type:GET_HOTEL_SUCESS,payload:response.data})
+        setTimeout(()=>{
+            dispatch({type:GET_HOTEL_SUCESS,payload:response.data})
+        },[1000])
     }catch(e){
         dispatch({type:GET_HOTEL_ERROR})
     }
