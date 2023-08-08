@@ -2,10 +2,10 @@
 
 # Team & Tasks
 Mohd Shamaiel Wani : Home Page <br/>
-Karan Kotai(Team Leader) : Booking & Listing pages
-Monu Singh : Checkout & Details pages
-Shiva Verma : Login/Signup pages
-MD Dilnawaj Alam : Blog/Explore Page
+Karan Kotai(Team Leader) : Booking & Listing pages <br/>
+Monu Singh : Checkout & Details pages <br/>
+Shiva Verma : Login/Signup pages <br/>
+MD Dilnawaj Alam : Blog/Explore Page <br/>
 
 # Features 
 Interactive Map: Explore destinations using an interactive map, pinning points of interest and getting a glimpse of the attractions each location has to offer.
