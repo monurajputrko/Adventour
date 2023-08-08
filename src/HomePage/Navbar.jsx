@@ -53,7 +53,7 @@ function Navbar() {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 900,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -130,6 +130,7 @@ function Navbar() {
             ))}
           </Box>
 
+           
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -167,6 +168,13 @@ function Navbar() {
       </Container>
     </AppBar>
   )
+
 }
+
 export default Navbar;
+
+
+
+
+
 
