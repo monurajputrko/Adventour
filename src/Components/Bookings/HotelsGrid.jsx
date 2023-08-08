@@ -1,11 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as C from '@chakra-ui/react'
-const HotelsGrid = () => {
+const HotelsGrid = ({mainImg,title,description,address}) => {
+  const [show, setShow] = React.useState(false)
+
+  const handleToggle = () => setShow(!show)
   return (
-    <C.Card>
-      <C.CardHeader>Hotel 1</C.CardHeader>
-      <C.CardBody>Be it for business or leisure, Crowne Plaza Ahmedabad provides a wide range of services guaranteed to satisfy the needs of the most discerning guests.</C.CardBody>
-      <C.CardFooter>$6969</C.CardFooter>
+    <C.Card
+      direction={{ base: 'column', sm: 'row' }}
+      overflow='hidden'
+      variant='outline'
+      p={5}
+    >
+      <C.Image
+        objectFit='cover'
+        maxW={{ base: '100%', sm: '300px' }}
+        maxH={{ base: '200px', sm: '300px' }}
+        src={mainImg}
+        alt='Hotel'
+      />
+
+      <C.Stack>
+        <C.CardBody>
+          <C.Heading size='md'>{title}</C.Heading>
+          <C.Collapse startingHeight={100} in={show}>
+            {description}
+          </C.Collapse>
+          <C.Button size='sm' onClick={handleToggle} mt='1rem'>
+            Show {show ? 'Less' : 'More'}
+          </C.Button>
+        </C.CardBody>
+
+        <C.CardFooter>
+          <C.Button variant='solid' colorScheme="purple">
+            Book Now
+          </C.Button>
+        </C.CardFooter>
+      </C.Stack>
     </C.Card>
   )
 }
