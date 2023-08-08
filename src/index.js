@@ -15,14 +15,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider theme={theme}>
+  <Provider store={store}>
+    <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-    <Provider store={store}>
       <BrowserRouter>
         <App/>
       </BrowserRouter>
-    </Provider>
-  </ChakraProvider>
+    </ChakraProvider>
+  </Provider>
  
 );
 
