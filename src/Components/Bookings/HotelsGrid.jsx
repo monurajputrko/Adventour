@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as C from '@chakra-ui/react'
 const HotelsGrid = ({mainImg,title,description,address}) => {
-  const [show, setShow] = React.useState(false)
+  const [show, setShow] = useState(false)
 
   const handleToggle = () => setShow(!show)
   return (
