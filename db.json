@@ -1,0 +1,28 @@
+{
+  "hotels":[
+    {
+      "id":1,
+      "mainImg":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d0/a5/47/deluxe-room.jpg?w=1100&h=-1&s=1",
+      "secImg":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
+      "title": "Riverview Hotel",
+      "reviews": 534,
+      "address": "Nehru Bridge Corner Near Sakar Vii , Opp Patang Hotel, Ahmedabad 380009 India",
+      "stars": 4.5,
+      "description":"Located in Ahmedabad’s downtown commercial area of Nehru Bridge, Ashram Road, on the banks of River Sabarmati, Always Hotel Riverview is a modern & contemporary 3 Star Hotel in the country’s fastest growing city. Well appointed, spacious rooms with parquet flooring & all modern amenities, it is ideal for both business & leisure traveler.Plan your next luxury stay at the Riverview Hotel is one of the best hotel in Ahmedabad near sabarmati riverfront, which is the perfect destination for budget stay in Ahmedabad. Riverview hotel is located near Ashram Road Ahmedabad",
+      "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
+      "phone": "079 66185000"
+    },
+    {
+      "id":2,
+      "mainImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
+      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
+      "title": "Courtyard By Marriott",
+      "reviews":2548,
+      "address":"Ramdev Nagar Cross Road Satellite Road, Ahmedabad 380015 India",
+      "stars":4.7,
+      "description":"Courtyard by Marriott, Ahmedabad is ideally located in Gujarat, Ahmedabad, India's commercial capital with easy access to the Sardar Vallabhbhai Patel International airport as well as SG Highway, one of the city's fastest growing business districts. Our Ahmedabad luxury hotel is also close to all major business parks, Gujarat's largest shopping mall, world-class cinemas, the Gandhi Ashram and Shaking Minarets. We offer 164 spacious contemporary guest rooms including 6 Deluxe and 6 Executive suites, complete with in-room laptop size safes, LCD panels, iHome docking station, Wi-Fi Internet and workstations that support all your business needs. Facilities include an Executive Lounge, 24-hour fitness centre, swimming pool, Ode Spa and state-of-the-art meeting and banquet spaces. We offer 3 restaurants - MoMo Cafe, Bayleaf and Java+ each special in a versatile cuisine.",
+      "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
+      "phone": "079 52185000"
+    }
+  ]
+}

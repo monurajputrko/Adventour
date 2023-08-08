@@ -39,7 +39,8 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" style={{ backgroundColor: "black"  }}  >
+      <Container maxWidth="xl" style={{ backgroundColor: "black"  }} 
+       >
        
         <Toolbar disableGutters>
        
@@ -48,7 +49,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/login"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
