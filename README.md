@@ -1,7 +1,7 @@
 **Adventour** is a modern and user-friendly travel app built with React, designed to help users plan and organize their travel adventures with ease. Whether you're a seasoned globetrotter or a first-time traveler, Adventour has all the features you need to make your journey unforgettable.
 
 # Team & Tasks
-Mohd Shamaiel Wani : Home Page
+Mohd Shamaiel Wani : Home Page <br/>
 Karan Kotai(Team Leader) : Booking & Listing pages
 Monu Singh : Checkout & Details pages
 Shiva Verma : Login/Signup pages
