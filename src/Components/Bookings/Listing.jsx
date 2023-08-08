@@ -15,7 +15,7 @@ const Listing = () => {
   return (
    <C.SimpleGrid columns={1} p={5}>
     <C.Flex minWidth='max-content' alignItems='center' gap='2' justify={"space-around"}>
-        <C.Button colorScheme={"blue.300"}>UPDATE SEARCH</C.Button>
+        <C.Button color={"blue.400"}>UPDATE SEARCH</C.Button>
     </C.Flex>
     <C.SimpleGrid columns={2} gap={6} p={5} alignItems={"start"}>
       {hotels?.map(hotel=>{
