@@ -11,3 +11,5 @@ export const getHotel = () => async(dispatch) => {
         dispatch({type:GET_HOTEL_ERROR})
     }
 }
+
+

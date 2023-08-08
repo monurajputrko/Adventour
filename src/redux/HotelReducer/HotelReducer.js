@@ -5,6 +5,8 @@ const iniState = {
     isLoading: false,
     isError: true
 }
+
+
 export const HotelReducer = (state=iniState,{type,payload}) =>{
     switch(type){
         case GET_HOTEL_REQUEST : return {...state,isLoading:true}
@@ -13,3 +15,4 @@ export const HotelReducer = (state=iniState,{type,payload}) =>{
         default: return state;
     }
 }
+
