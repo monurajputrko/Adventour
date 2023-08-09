@@ -8,7 +8,7 @@ export const muiTheme = createMuiTheme();
 export const App = () => {
   return <div className="app">
     <ThemeProvider theme={muiTheme}>
-      <Navbar/>
+      {/* <Navbar/> */}
     </ThemeProvider>
     <Allroutes/>
   </div>
