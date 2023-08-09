@@ -1,0 +1,59 @@
+*{
+    color: white;
+}
+.footer{
+    background-color: #111315;
+    width: 100%;
+    padding-top: 50px;
+}
+.gridColumn{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.connected{
+    
+    margin-top: -25px;
+    margin-bottom: -100px;
+    
+
+}
+.connected p{
+    margin-bottom: -10px;
+
+    
+}
+.gridColumn button{
+    font-size: large;
+    color:black;
+    background-color: #3ec6f0;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.gridColumn p {
+    color: #3ec6f0;
+}
+footer{
+    
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(42, 39, 39);
+    border-left: none;
+    border-right: none;
+    margin-top: 100px;
+    
+}
+.copyright{
+    
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.copyright ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}

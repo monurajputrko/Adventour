@@ -1,0 +1,12 @@
+.experience{
+    background-color: black;
+    padding-top: 20px;
+}
+.experience-element{
+    display: flex;
+    justify-content: space-around;
+}
+.achieve{
+    display: flex;
+    justify-content: space-around;
+}

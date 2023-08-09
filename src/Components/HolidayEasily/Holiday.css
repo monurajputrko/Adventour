@@ -1,0 +1,15 @@
+
+
+.holiday{
+  
+    background-color: #16181a;
+    padding-top: 50px;
+}
+.holiday-element{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.onedown{
+    margin-top: 100px;
+}

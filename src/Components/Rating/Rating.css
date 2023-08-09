@@ -1,0 +1,23 @@
+.rating{
+    background-color: black;
+    margin-top: -16px;
+    padding-top: 50px;
+}
+.rating-element{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    height: 40vh;
+    border: none;
+    
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.rating-element-div{
+    background-color: rgb(50, 53, 53);
+    border-radius: 30px;
+}
+.saying{
+    display: flex;
+    justify-content: space-around;
+}

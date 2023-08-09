@@ -1,0 +1,50 @@
+.homepage{
+    background-color: #111315;
+    margin-bottom: -20px;
+    margin-top: -60px;
+}
+
+.homepege-title{
+    display: flex;
+justify-content: space-around;    
+padding-top: 30px;
+
+}
+.homepege-title span{
+    color: #3ec6f0;
+}
+.homepege-title p{
+   color: #8e9092;
+}
+.homepege-title img{
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.slider{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.forback-btn button{
+    font-size: 30px;
+    background-color: #3ec6f0;
+    border-radius: 12px;
+}
+.slider p{
+    margin-bottom: -20px;
+    color:#3ec6f0 ;
+}
+.placeDetails{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.placeDetails img{
+    border-radius: 15px;
+}
+.sliderText{
+    margin-top: -40px;
+}
