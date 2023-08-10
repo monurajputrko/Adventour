@@ -17,7 +17,11 @@ import { IoMdBed } from "react-icons/io";
 import { ImSpoonKnife } from "react-icons/im";
 import { MdTour } from "react-icons/md";
 import { BsStars } from "react-icons/bs";
-
+import {
+    Animate,
+    initTE,
+  } from "tw-elements"
+import Loader from '../Utils/Loader';
 export const AdventureDetail = () => {
     const dispatch = useDispatch()
     const { location } = useParams()
@@ -34,10 +38,8 @@ export const AdventureDetail = () => {
             top: 0,
         });
     }, [])
-
-
     return (
-        <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mt={{ base: "0", lg: "7.5em" }} mb={{ base: "2em" }}>
+        <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mt={{ base: "0", lg: "7.6em" }} mb={{ base: "2em" }}>
             {/* <Toggle  /> */}
             {/* <Detailnav/> */}
 
@@ -49,11 +51,11 @@ export const AdventureDetail = () => {
                 <Flex flexDirection={{ base: 'column', md: 'column', lg: 'row' }} bg="white" p="2% 10px" >
                     <Box textAlign={'left'} pl={'40px'} w={{ base: '90%', md: '70%', lg: '38%' }}>
                         <Heading size='lg' pb={'15px'}>{adventures?.title}</Heading>
-                        <Text pb={'10px'}>
-                            <strong> {adventures?.tour_length} days • {adventures?.rating} stars</strong>
+                        <Text as="div" pb={'10px'}>
+                            <strong> Duration : {adventures?.tour_length} • {adventures?.rating} stars</strong>
                             <Rating>
-                                {[...Array(Math.round(adventures?.rating) || 4)].map(i => {
-                                    return <Rating.Star />
+                                {[...Array(Math.round(adventures?.rating) || 4)].map((i,idx) => {
+                                    return <Rating.Star key={"i"+idx}/>
                                 })}
                                 ({adventures?.reviews} reviews)
                             </Rating>
@@ -108,12 +110,12 @@ export const AdventureDetail = () => {
 
                         <Flex bg={theme === "dark" ? '#191b1d' : 'white'} direction={'column'} w={{ base: '100%', md: '100%', lg: '350px' }} boxShadow={'md'} border={'1px solid silver'} p={'20px'} mt={{ base: '40px', md: '10px' }} ml={{ base: '0px', md: '0px', lg: '40px' }} borderRadius={'10px'}>
                             <Flex w={{ base: '100%', md: '100%', lg: '300px' }}>
-                                <Text><s>From ₹{(adventures?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag colorScheme='cyan.200' bg="red" color={'white'}>-{adventures?.off}%</Tag>
+                                <Text><s>From ₹{(adventures?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{adventures?.off}%</Tag>
                             </Flex>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link to={`/payment/${location}/${id}`}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.300"} color={'white'} borderRadius={'40px'}>Add to Bookings</Button></Link>
+                                <Link to={`/payment/${location}/${id}`}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
@@ -185,8 +187,8 @@ export const AdventureDetail = () => {
                             <HStack textAlign={'left'}><BsStars /><Text>Overall Rating<br />Excellent</Text></HStack>
                             <Spacer />
                             <Rating>
-                                {[...Array(Math.round(Math.floor(adventures?.rating)) || 4)].map(i => {
-                                    return <Rating.Star />
+                                {[...Array(Math.round(Math.floor(adventures?.rating)) || 4)].map((i,idx) => {
+                                    return <Rating.Star key={"j"+idx}/>
                                 })}
                                 ({adventures?.reviews} reviews)
                             </Rating>
@@ -203,39 +205,39 @@ export const AdventureDetail = () => {
                         </SimpleGrid>
                     </Flex>
                     <Flex flexDirection="column" w="50%" p="1em">
-                        <div class="flex items-center mb-4 space-x-4">
-                            <img class="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
-                            <div class="space-y-1 font-medium dark:text-white">
-                                <p>Jese Leos <time datetime="2014-08-16 19:00" class="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
+                        <div className="flex items-center mb-4 space-x-4">
+                            <img className="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
+                            <div className="space-y-1 font-medium dark:text-white">
+                                <p>Jese Leos <time  className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
                             </div>
                         </div>
-                        <div class="flex items-center mb-1">
-                            <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <div className="flex items-center mb-1">
+                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-gray-300 dark:text-gray-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <svg className="w-4 h-4 text-gray-300 dark:text-gray-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <h3 class="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Must have Experience!</h3>
+                            <h3 className="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Must have Experience!</h3>
                         </div>
-                        <footer class="mb-5 text-sm text-gray-500 dark:text-gray-400"><p>Reviewed in the United Kingdom on <time datetime="2017-03-03 19:00">March 3, 2017</time></p></footer>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">The marines have always been my fantasy and I could not miss the Dubai scuba diving experience for anything. Thrillophilia helped me get the booking done with ease. On the day we were dropped to the site through a comfortable bus ride. Then from there the scuba instructor gave us a very detailed set of instructions before gears and equipment were put on us, demonstrated, checked and we went down into the blue world!</p>
-                        <p class="mb-3 text-gray-500 dark:text-gray-400">Once the green signal issued, we dived deeper and saw amazing nautical sights that we can’t describe in words, also the feeling of weightlessness is great. You can dive up to 60 ft. which is really deep. I absolutely loved scuba diving in Dubai and I totally recommend it.</p>
-                        <a href="#" class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
+                        <footer className="mb-5 text-sm text-gray-500 dark:text-gray-400"><p>Reviewed in the United Kingdom on <time>March 3, 2017</time></p></footer>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400">The marines have always been my fantasy and I could not miss the Dubai scuba diving experience for anything. Thrillophilia helped me get the booking done with ease. On the day we were dropped to the site through a comfortable bus ride. Then from there the scuba instructor gave us a very detailed set of instructions before gears and equipment were put on us, demonstrated, checked and we went down into the blue world!</p>
+                        <p className="mb-3 text-gray-500 dark:text-gray-400">Once the green signal issued, we dived deeper and saw amazing nautical sights that we can’t describe in words, also the feeling of weightlessness is great. You can dive up to 60 ft. which is really deep. I absolutely loved scuba diving in Dubai and I totally recommend it.</p>
+                        <a href="#" className="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
                         <aside>
-                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
-                            <div class="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
-                                <a href="#" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-2 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Helpful</a>
-                                <a href="#" class="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Report abuse</a>
+                            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
+                            <div className="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
+                                <a href="#" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-2 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Helpful</a>
+                                <a href="#" className="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Report abuse</a>
                             </div>
                         </aside>
                     </Flex>
