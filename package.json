@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.0",
     "@chakra-ui/icons": "^2.1.0",
     "@chakra-ui/react": "^2.8.0",
     "@craco/craco": "^7.1.0",
@@ -13,26 +14,21 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
     "@mui/styled-engine-sc": "^5.12.0",
-    "@auth0/auth0-react": "^2.2.0",
-    "@chakra-ui/react": "^2.8.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.4",
-    "@mui/styled-engine-sc": "^5.12.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "firebase": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-responsive-carousel": "^3.2.23",
     "react-redux": "^8.1.2",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.11",
     "tw-elements": "^1.0.0-beta3",
-    "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -61,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.1",
     "tailwindcss": "^3.3.3"
   }
 }
