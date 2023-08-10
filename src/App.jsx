@@ -13,10 +13,10 @@ export const App = () => {
 
   return <div className="app">
     <ThemeProvider theme={muiTheme}>
-      <Navbar/>
+      {/* <Navbar/> */}
     </ThemeProvider>
-    <Login/>
+    {/* <Login/> */}
     {/* <SignUp/> */}
-    {/* <Allroutes/> */}
+    <Allroutes/>
   </div>
 }

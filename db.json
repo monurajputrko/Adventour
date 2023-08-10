@@ -10,7 +10,8 @@
       "stars": 4.5,
       "description":"Located in Ahmedabad’s downtown commercial area of Nehru Bridge, Ashram Road, on the banks of River Sabarmati, Always Hotel Riverview is a modern & contemporary 3 Star Hotel in the country’s fastest growing city. Well appointed, spacious rooms with parquet flooring & all modern amenities, it is ideal for both business & leisure traveler.Plan your next luxury stay at the Riverview Hotel is one of the best hotel in Ahmedabad near sabarmati riverfront, which is the perfect destination for budget stay in Ahmedabad. Riverview hotel is located near Ashram Road Ahmedabad",
       "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
-      "phone": "079 66185000"
+      "phone": "079 66185000",
+      "price": 7840 
     },
     {
       "id":2,
@@ -22,7 +23,88 @@
       "stars":4.7,
       "description":"Courtyard by Marriott, Ahmedabad is ideally located in Gujarat, Ahmedabad, India's commercial capital with easy access to the Sardar Vallabhbhai Patel International airport as well as SG Highway, one of the city's fastest growing business districts. Our Ahmedabad luxury hotel is also close to all major business parks, Gujarat's largest shopping mall, world-class cinemas, the Gandhi Ashram and Shaking Minarets. We offer 164 spacious contemporary guest rooms including 6 Deluxe and 6 Executive suites, complete with in-room laptop size safes, LCD panels, iHome docking station, Wi-Fi Internet and workstations that support all your business needs. Facilities include an Executive Lounge, 24-hour fitness centre, swimming pool, Ode Spa and state-of-the-art meeting and banquet spaces. We offer 3 restaurants - MoMo Cafe, Bayleaf and Java+ each special in a versatile cuisine.",
       "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
-      "phone": "079 52185000"
+      "phone": "079 52185000",
+      "price": 6504
+    },
+    {
+      "id":3,
+      "mainImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=-1&s=1",
+      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
+      "title": "Taj Skyline",
+      "reviews":1556,
+      "address":"Sindhubhavan Road, Shilaj Sankalp Square III, Opp. Saket3, Nr. Nilkanth Green, Ahmedabad 380059 India",
+      "stars":4.5,
+      "description":"Taj Skyline at Ahmedabad is a vantage, 5 star luxury hotel with 170 rooms with 18 Floors of view. The hotel is easily accessible to the business districts of S.G. Highway, Sanand & Gandhinagar. An all day dining outlet, a speciality pan Asian restaurant and a tea-lounge for delectable cuisines. Luxurious banqueting, conferencing spaces and Taj's signature Jiva Spa is available.",
+      "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
+      "phone": "079 92185541",
+      "price": 5790
+    },
+    {
+      "id":4,
+      "mainImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+      "title": " Four Points by Sheraton",
+      "reviews": 2427,
+      "address":"Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
+      "stars": 4.1,
+      "description":"Description: Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils":["Allergy-free room","Blackout curtains","Desk","Housekeeping","Coffee / tea maker","Cable / satellite TV","Sofa bed","Walk-in shower"],
+      "phone": "084463 10595",
+      "price": 4399
     }
-  ]
+  ],
+  "adventures":[
+    {
+      "id": 1,
+        "category": "Explorer",
+        "title": "Scuba Diving In Dubai",
+        "reviews": 909,
+        "destinations": [
+            "Dubai"
+        ],
+        "age_range": "Above 10 years",
+        "travel_style": [
+            "Custom",
+            "Private",
+            "Group",
+            "Explorer"
+        ],
+        "highlights": [
+            "Get a chance to swim along the majestic marine creatures including the Torpedo Rays and the Yellowtail Barracuda",
+            "Explore the Persian Gulf and their colorful coral reefs as you dive deep into the amazing underwater world of Dubai",
+            "Get hassle free hotel pick up & drop off as you experience scuba diving in Dubai Beach best view!",
+            "With training given by PADI certified divers before your scuba experience, this activity is safe for all level of divers"
+        ],
+        "tour_length": "2 days",
+        "price_per_day": 7099,
+        "str_price": 21493.99,
+        "act_price": 14099.99,
+        "save_price": 7785,
+        "addional_price": 3948,
+        "off": 58,
+        "main_image": "https://images.squarespace-cdn.com/content/v1/51bd4803e4b08f1c218b1208/1562793521324-BNIB21ALLVWXR32KQ5JG/SRWX2520-Edit-preview.jpg",
+        "rating": 4.7,
+        "tour_id": 136848,
+        "group_size": 5,
+        "places_see_img": [
+            "https://media1.thrillophilia.com/filestore/a7odb4oqk8nfxuib6l7ntol9nij6_1555916896_shutterstock_219200257.jpg?w=auto&h=600",
+            "https://media1.thrillophilia.com/filestore/ct0jg843d1d0o496qhz2bl6b6d72_1555917665_shutterstock_558396214.jpg?w=auto&h=600",
+            "https://media1.thrillophilia.com/filestore/2vu9pulryfbqj6x3569wb7mm0u37_1550731893_scuba-diving-dubai.jpg?w=auto&h=600",
+            "https://media1.thrillophilia.com/filestore/f4a7qvgaoutwzfn6jtne0zgveyp4_8461461602_8bf714cd59_b.jpg?w=auto&h=600"
+        ],
+        "places_see_name": [
+            "Bermuda Diving Center"
+        ],
+        "user_ratings": [
+          {"title":"Itineray","ratings":"4.4"},
+          {"title":"Guide","ratings":"5"},
+          {"title":"Transport","ratings":"4.7"},
+          {"title":"Tour Operator","ratings":"4.0"},
+          {"title":"Customer Satisfaction","ratings":"4.5"},
+          {"title":"Experience","ratings":"4.9"}
+        ]
+
+    }
+  ],
+  "cart":[]
 }

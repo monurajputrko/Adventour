@@ -7,7 +7,7 @@ const SecondaryNav = () => {
         console.log(e.target.value)
     }
   return (
-  <C.Flex p="10px 7%" color={'white'} bg="cyan.100" gap="1em" alignItems="center">
+  <C.Flex p={{base:"15px",lg:"20px 5rem"}} top="0" display={{base:"none",lg:"flex"}} position={{base:"fixed"}} zIndex="20" color={'white'} bg="cyan.100" gap="1em" alignItems="center" h={{base:"100vh",lg:"120px"}} w={{base:"20vw",lg:"100vw"}} flexDirection={{base:"column",lg:"row"}}>
     <C.FormControl>
         <C.FormLabel color="cyan.600">Location</C.FormLabel>
         <C.Input type="text" color="black" bg="white.300" placeholder='City name, location, or Specific hotel' />
