@@ -485,7 +485,7 @@ function Pricediv({ theme, storedata, traveller }) {
       </Flex>
     </Flex>
   </Box>
-
+   
 }
 
 export default Payment
