@@ -3,7 +3,7 @@ import { GET_ADVENTURE_ERROR, GET_ADVENTURE_REQUEST, GET_ADVENTURE_SUCESS } from
 const iniState = {
     adventures: [],
     isLoading: false,
-    isError: true
+    isError: false
 }
 
 

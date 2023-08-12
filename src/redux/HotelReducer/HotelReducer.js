@@ -3,7 +3,7 @@ import { GET_HOTEL_ERROR, GET_HOTEL_REQUEST, GET_HOTEL_SUCESS } from "./actionTy
 const iniState = {
     hotels: [],
     isLoading: false,
-    isError: true
+    isError: false
 }
 
 

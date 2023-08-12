@@ -1,32 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import HotelsGrid from './HotelsGrid'
 import * as C from '@chakra-ui/react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getHotel } from '../../redux/HotelReducer/action'
-import Loader from '../Utils/Loader'
-import { EditIcon } from '@chakra-ui/icons'
 import SecondaryNav from './SecondaryNav'
 import AdventureDetail from './AdventureDetail'
-
-const Listing = () => {
-  const initRef = React.useRef()
-
-  const hotels = useSelector(store => store.hotels)
-  const isLoading = useSelector(store => store.isLoading)
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getHotel())
-  }, [])
-  if (isLoading) return <Loader />
+import HotelGrid from './HotelGrid'
+const Booking = () => {
   return (
-    <C.Flex >
-      <SecondaryNav />
-      {/* <C.Grid p="10px 2em 10px 22em">
-        {hotels.map(hotel=>{
-          return <HotelsGrid key={hotel.id} {...hotel}  />
-        })}
-      </C.Grid> */}
-      <AdventureDetail />
+    <C.Flex>
+      {/* <SecondaryNav /> */}
+      <HotelGrid />
+      {/* <AdventureDetail /> */}
       {/* <div class="text-center">
         <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-disable-body-scrolling" data-drawer-show="drawer-disable-body-scrolling" data-drawer-body-scrolling="false" aria-controls="drawer-disable-body-scrolling">
           Show body scrolling disabled
@@ -133,4 +115,4 @@ const Listing = () => {
   )
 }
 
-export default Listing
+export default Booking
