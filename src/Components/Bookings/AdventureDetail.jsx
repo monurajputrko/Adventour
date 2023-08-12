@@ -11,11 +11,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAdventure } from '../../redux/AdventureReducer/action';
 import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
-import { FaUserCheck } from "react-icons/fa";
-import { GiCarWheel } from "react-icons/gi";
-import { IoMdBed } from "react-icons/io";
-import { ImSpoonKnife } from "react-icons/im";
-import { MdTour } from "react-icons/md";
 import { BsStars } from "react-icons/bs";
 import {
     Animate,
@@ -31,15 +26,16 @@ export const AdventureDetail = () => {
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
-
+    const isLoading = useSelector(store => store.adventures.isLoading)
     useEffect(() => {
         dispatch(getAdventure())
         window.scrollTo({
             top: 0,
         });
     }, [])
+    if(isLoading) return <Loader />
     return (
-        <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mt={{ base: "0", lg: "7.6em" }} mb={{ base: "2em" }}>
+        <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
             {/* <Toggle  /> */}
             {/* <Detailnav/> */}
 
@@ -145,7 +141,7 @@ export const AdventureDetail = () => {
 
                 <Flex direction={'column'} mt={'10px'} textAlign={'left'} bg="white" p="4%">
                     <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book adventures, personalized</Text>
-                    <SimpleGrid columns={2} w={{ base: "100%", lg: '69%' }} lineHeight={'25px'} spacing={'20px'}>
+                    <SimpleGrid minChildWidth={"200px"} w={{ base: "100%"}} lineHeight={'25px'} spacing={'20px'}>
                         <Flex>
                             <RiFileCopy2Line size={'25px'} />
                             <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
@@ -165,9 +161,9 @@ export const AdventureDetail = () => {
                     </SimpleGrid>
                 </Flex>
                 <Divider borderColor="black" />
-                <Flex direction={'column'} pb={'30px'} lineHeight={'50px'} bg="white" p="4%" pt="1%">
+                <Flex direction={'column'} pb={'30px'} lineHeight={'50px'} w="100%" bg="white" p="4%" pt="1%">
                     <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                    <SimpleGrid pl={'10px'} columns={{ base: "2", lg: "3" }}>
+                    <SimpleGrid pl={'10px'} minChildWidth={"200px"}  columns={4}>
                         <HStack><MdVerified /><Text>Accommodation</Text></HStack>
                         <HStack><MdVerified /><Text>Guide</Text></HStack>
                         <HStack><MdVerified /><Text>Meals</Text></HStack>
@@ -180,8 +176,8 @@ export const AdventureDetail = () => {
                     </SimpleGrid>
                 </Flex>
                 <Divider borderColor="black" />
-                <Flex justifyContent="space-between" >
-                    <Flex w="50%" direction={'column'} p="2% 4%">
+                <Flex justifyContent="space-between" flexDirection={{base:"column",lg:"row"}}>
+                    <Flex w={{base:"100%",md:"50%"}} direction={'column'} p="2% 4%">
                         <Text textAlign={'left'} fontSize={'25px'} fontWeight={'600'} pb={'25px'}>Customer Reviews</Text>
                         <HStack shadow='md' bg={theme === "dark" ? 'gray.900' : 'blue.100'} mb={'2px'} px={'20px'} py={'10px'}>
                             <HStack textAlign={'left'}><BsStars /><Text>Overall Rating<br />Excellent</Text></HStack>
@@ -204,7 +200,7 @@ export const AdventureDetail = () => {
                             }))}
                         </SimpleGrid>
                     </Flex>
-                    <Flex flexDirection="column" w="50%" p="1em">
+                    <Flex flexDirection="column" w={{base:"100%",md:"50%"}} p="1em">
                         <div className="flex items-center mb-4 space-x-4">
                             <img className="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
                             <div className="space-y-1 font-medium dark:text-white">
@@ -230,8 +226,8 @@ export const AdventureDetail = () => {
                             <h3 className="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Must have Experience!</h3>
                         </div>
                         <footer className="mb-5 text-sm text-gray-500 dark:text-gray-400"><p>Reviewed in the United Kingdom on <time>March 3, 2017</time></p></footer>
-                        <p className="mb-2 text-gray-500 dark:text-gray-400">The marines have always been my fantasy and I could not miss the Dubai scuba diving experience for anything. Thrillophilia helped me get the booking done with ease. On the day we were dropped to the site through a comfortable bus ride. Then from there the scuba instructor gave us a very detailed set of instructions before gears and equipment were put on us, demonstrated, checked and we went down into the blue world!</p>
-                        <p className="mb-3 text-gray-500 dark:text-gray-400">Once the green signal issued, we dived deeper and saw amazing nautical sights that we can’t describe in words, also the feeling of weightlessness is great. You can dive up to 60 ft. which is really deep. I absolutely loved scuba diving in Dubai and I totally recommend it.</p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400">The marines have always been my fantasy and I could not miss the Dubai scuba diving experience for anything. Adventour helped me get the booking done with ease. Demonstrated, checked and we went down into the blue world!</p>
+                        <p className="mb-3 text-gray-500 dark:text-gray-400">Once the green signal issued, we dived deeper and saw amazing nautical sights that we can’t describe in words, also the feeling of weightlessness is great. You can dive up to 60 ft. </p>
                         <a href="#" className="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
                         <aside>
                             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>

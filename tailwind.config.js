@@ -7,18 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation:{
+        border: 'border 4s ease infinite',
+      },
       keyframes:{
         pulse : {
-          "100%" : {
-            opacity: '1'
-          },
-          "0%" : {
-            opacity: '1'
-          },
-          "50%": {
-            opacity: '.5'
-          }
-        }
+          '0%, 100%': { transform: 'rotate(-30deg)' },
+          '50%': { transform: 'rotate(30deg)' },
+        },
+        border: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       } 
     },
   },

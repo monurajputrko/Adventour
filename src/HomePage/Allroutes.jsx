@@ -2,16 +2,16 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Login from "../Components/Login/Login"
-import Listing from '../Components/Bookings/Listing'
 import { ThemeProvider } from "@mui/material"
 import { muiTheme } from '../App'
+import Booking from '../Components/Bookings/Booking'
 
 const Allroutes = () => {
     return (
         <Routes>
             <Route path={"/"} element={<ThemeProvider theme={muiTheme}><Home/></ThemeProvider>} ></Route>
             <Route path={"/login"} element={<Login/>} ></Route>
-            <Route path={"/booking"} element={<Listing />} />
+            <Route path={"/booking"} element={<Booking />} />
         </Routes>
   )
 }
