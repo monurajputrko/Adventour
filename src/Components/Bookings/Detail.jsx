@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useDisclosure, useToast } from '@chakra-ui/react'
+import React, { useEffect,  useState } from 'react'
+import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
 import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai";
 import { RiFileCopy2Line } from "react-icons/ri";
 import { MdGroup, MdStar, MdVerified } from "react-icons/md";
@@ -12,17 +12,13 @@ import { getAdventure } from '../../redux/AdventureReducer/action';
 import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-import {
-    Animate,
-    initTE,
-  } from "tw-elements"
+
 import Loader from '../Utils/Loader';
-export const AdventureDetail = () => {
+export const Detail = () => {
     const dispatch = useDispatch()
-    const { location } = useParams()
-    const { id } = useParams()
+    const { idx } = useParams()
     const theme = useSelector(state => state.theme);
-    let adventures = useSelector(state => state.adventures.adventures[0])
+    const adventures = useSelector(state => state.adventures[idx-1])
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
@@ -99,7 +95,7 @@ export const AdventureDetail = () => {
                     <Flex direction={'column'} textAlign={'left'} lineHeight={'30px'} color="grey.900" p="0 1%">
                         <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>Highlights</Text>
                         {adventures?.highlights?.map((text, idx) => {
-                            return <HStack key={id} pb={'10px'}><MdStar size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
+                            return <HStack key={idx} pb={'10px'}><MdStar size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
                         })}
                     </Flex>
                     <div>
@@ -111,7 +107,7 @@ export const AdventureDetail = () => {
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link to={`/payment/${location}/${id}`}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
@@ -243,4 +239,4 @@ export const AdventureDetail = () => {
     )
 }
 
-export default AdventureDetail
+export default Detail
