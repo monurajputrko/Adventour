@@ -5,9 +5,9 @@ import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
 import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
-import Toggle from './toggle';
+// import Toggle from './toggle';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
-import Logo from './LogoPic.png'
+// import Logo from './LogoPic.png'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -67,12 +67,12 @@ function Payment() {
 
   return (
     <Box minH={'100vh'} bg={theme ? '#101214' : 'gray.100'} color={theme ? 'white' : 'blackAlpha.800'}>
-      <Toggle />
+      {/* <Toggle /> */}
       {/* navbar-box */}
       <Box bg={theme ? '#191b1d' : 'white'} py={'15px'}>
         <HStack w={{ base: "95%", md: "95%", lg: '76%' }} m={'auto'} >
           <Flex alignItems={"center"}>
-            <Image src={Logo} alt='logo' w={"70px"} px={"8px"} />
+            {/* <Image src={Logo} alt='logo' w={"70px"} px={"8px"} /> */}
             <Text fontSize={"1.2rem"} fontWeight={"800"} >Adventour.</Text>
           </Flex>
           <Spacer />
