@@ -4,6 +4,12 @@
       "id": 1,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d0/a5/47/deluxe-room.jpg?w=1100&h=-1&s=1",
       "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/5c/09/always-hotel-riverview.jpg?w=700&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/f7/14/23/riverview-hotel.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/5a/2b/fc/riverview-hotel.jpg?w=1100&h=-1&s=1"
+      ],
       "title": "Riverview Hotel",
       "reviews": 534,
       "address": "Nehru Bridge Corner Near Sakar Vii , Opp Patang Hotel, Ahmedabad 380009 India",
@@ -25,7 +31,12 @@
     {
       "id": 2,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a6/fitness-center.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a4/momo-cafe.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a3/momo-cafe-dining-area.jpg?w=1200&h=-1&s=1"
+      ],
       "title": "Courtyard By Marriott",
       "reviews": 2548,
       "address": "Ramdev Nagar Cross Road Satellite Road, Ahmedabad 380015 India",
@@ -46,8 +57,13 @@
     },
     {
       "id": 3,
-      "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
+      "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=1200",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6e/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6c/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6b/amp.jpg?w=1200&h=-1&s=1"
+      ],
       "title": "Taj Skyline",
       "reviews": 1556,
       "address": "Sindhubhavan Road, Shilaj Sankalp Square III, Opp. Saket3, Nr. Nilkanth Green, Ahmedabad 380059 India",
@@ -69,7 +85,12 @@
     {
       "id": 4,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/fb/d4/0c/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/4c/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/d0/41/3d/hotel-entrance.jpg?w=700&h=-1&s=1"
+      ],
       "title": " Four Points by Sheraton",
       "reviews": 2427,
       "address": "Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
