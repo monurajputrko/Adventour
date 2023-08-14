@@ -1,5 +1,5 @@
 .homepage{
-    background-color: #111315;
+    background-color: #101214;
     margin-bottom: -20px;
     margin-top: -60px;
 }
@@ -47,4 +47,19 @@ padding-top: 30px;
 }
 .sliderText{
     margin-top: -40px;
+}
+.sliderText h1{
+    font-family :
+"Segoe UI"
+Helvetica
+Arial
+sans-serif
+"Apple Color Emoji";
+text-decoration:
+none solid rgb(255, 255, 255);
+text-align: left;
+line-height: 43.2px;
+font-size: 36px;
+color: white
+
 }

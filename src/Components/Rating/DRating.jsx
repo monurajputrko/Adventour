@@ -24,7 +24,11 @@ const DRating = () => {
             It was a very great experience with Adventour <br />g coding from
             the user. It is well-known for its eCommerce solution,{" "}
           </p>
-          <h5>Dilnawaz</h5>
+          <div>
+          <img src="https://bit.ly/sage-adebayo" width={50} height={50} />
+          <h4>Dilnawaz</h4>
+          <p>Creator, Chakra UI</p>
+          </div>
         </div>
         <div className="rating-element-div">
           <h3>"Momorable Trip"</h3>
@@ -33,7 +37,12 @@ const DRating = () => {
             It was a very great experience with Adventour <br />g coding from
             the user. It is well-known for its eCommerce solution,{" "}
           </p>
-          <h5>Dilnawaz</h5>
+          <div>
+          <img src="https://bit.ly/sage-adebayo" width={50} height={50} />
+          <h4>Dilnawaz</h4>
+          <p>Creator, Chakra UI</p>
+          </div>
+          
         </div>
         <div className="rating-element-div">
           <h3>"Momorable Trip"</h3>
@@ -42,7 +51,11 @@ const DRating = () => {
             It was a very great experience with Adventour <br />g coding from
             the user. It is well-known for its eCommerce solution,{" "}
           </p>
-          <h5>Dilnawaz</h5>
+          <div>
+          <img src="https://bit.ly/sage-adebayo" width={50} height={50} />
+          <h4>Dilnawaz</h4>
+          <p>Creator, Chakra UI</p>
+          </div>
         </div>
         <div className="rating-element-div">
           <h3>"Momorable Trip"</h3>
@@ -51,7 +64,11 @@ const DRating = () => {
             It was a very great experience with Adventour <br />g coding from
             the user. It is well-known for its eCommerce solution,{" "}
           </p>
-          <h5> Dilnawaz</h5>
+          <div>
+          <img src="https://bit.ly/sage-adebayo" width={50} height={50} />
+          <h4>Dilnawaz</h4>
+          <p>Creator, Chakra UI</p>
+          </div>
         </div>
       </div>
     </div>

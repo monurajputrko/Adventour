@@ -2,6 +2,10 @@
     background-color: black;
     padding-top: 20px;
 }
+.experience p{
+    color:#a3a3a3;
+    font-size: large;
+}
 .experience-element{
     display: flex;
     justify-content: space-around;
@@ -9,4 +13,15 @@
 .achieve{
     display: flex;
     justify-content: space-around;
+}
+.experience-element img{
+    margin-left: 20%;
+}
+.Experience_text_Div{
+    padding-top: 10%;
+    padding-right: 15%;
+}
+.achieve h1{
+    color: #3dc6ef;
+    font-weight: 800;
 }

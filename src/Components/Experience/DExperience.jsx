@@ -6,15 +6,15 @@ const DExperience = () => {
       <div className="experience-element">
         <div>
           <img
-            src="https://i.pinimg.com/564x/6f/75/15/6f75156a49475bddfc26ff0ee6794f23.jpg"
-            width={250}
-            height={400}
+            src="https://adventour-app.vercel.app/static/media/modelTwo.bf411a9ed0f3be90d397.png"
+            width={400}
+            height={600}
           />
         </div>
-        <div>
+        <div className="Experience_text_Div" >
           <p style={{color:"#3ec6f0"}}>Our Experience</p>
-          <h1>Save More With Our Best Deals</h1>
-          <p>The company serves customers from freelance web professionals to digital agencies, all the way up to the large hosting companies.</p>
+          <h1 style={{fontSize:40}} >Save More With Our Best Deals</h1>
+          <p style={{color:"#a3a3a3"}}>The company serves customers from freelance <br/> web professionals to digital agencies, all the way up to the large hosting companies.</p>
           <div className="achieve">
       <div>
         <h1>12+</h1>

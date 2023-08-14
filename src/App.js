@@ -5,7 +5,10 @@ import DHomePage from "./Components/HomePage/DHomePage";
 import DHoliday from "./Components/HolidayEasily/DHoliday";
 import DExperience from "./Components/Experience/DExperience";
 import DRating from "./Components/Rating/DRating";
-function DApp() {
+import { Route, Routes  } from "react-router-dom";
+
+
+function App() {
   return (
     <div className="App">
       <DNavbar />
@@ -14,8 +17,16 @@ function DApp() {
       <DExperience />
       <DRating />
       <DFooter />
+
+
+    
+    <Routes>
+        <Route path="/footer" element={<DFooter/>} />
+      </Routes>
+    
+     
     </div>
   );
 }
 
-export default DApp;
+export default App;

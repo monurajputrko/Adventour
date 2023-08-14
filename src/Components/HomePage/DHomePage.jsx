@@ -20,8 +20,8 @@ const DHomePage = () => {
         <div>
           <img
             src="https://i.pinimg.com/564x/6f/75/15/6f75156a49475bddfc26ff0ee6794f23.jpg"
-            width={250}
-            height={400}
+            width={350}
+            height={500}
           />
         </div>
       </div>

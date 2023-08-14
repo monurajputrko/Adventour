@@ -4,6 +4,7 @@
   
     background-color: #16181a;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .holiday-element{
     display: flex;
@@ -12,4 +13,15 @@
 }
 .onedown{
     margin-top: 100px;
+}
+
+.onedown img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.onedown1 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
