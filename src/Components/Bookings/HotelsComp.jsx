@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { ChevronDownIcon, ChevronUpIcon, Search2Icon } from '@chakra-ui/icons'
-import { Box, Button, Card, CardBody, CardFooter, Collapse, Flex, Grid, Heading, Icon, IconButton, Image, LinkBox, LinkOverlay, SkeletonCircle, SkeletonText, Spacer, Spinner, Stack, Text, Tooltip, useToast } from '@chakra-ui/react'
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { Box, Button, Card, CardBody, CardFooter, Collapse, Flex, Grid, Heading, Icon, IconButton, Image, SkeletonCircle, SkeletonText, Spacer, Stack, Text, Tooltip, useToast } from '@chakra-ui/react'
 import { Rating } from 'flowbite-react'
-import { Link, redirect, useLinkClickHandler, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FaMapLocationDot } from "react-icons/fa6";
 import { AiFillCheckCircle, AiFillHeart, AiOutlineCaretLeft, AiOutlineCaretRight, AiOutlineHeart } from 'react-icons/ai'
 const HotelsComp = ({ spinner, id, main_img, title, description, address, secImg, stars, reviews, places_see_img }) => {
@@ -30,14 +30,14 @@ const HotelsComp = ({ spinner, id, main_img, title, description, address, secImg
     e.stopPropagation()
     if (!wish) {
       toast({
-        title: 'Added to WishList.',
+        title: `${title} Added to WishList.`,
         status: 'success',
         duration: 3000,
         isClosable: true,
       })
     } else {
       toast({
-        title: 'Removed from Wishlist',
+        title: `${title} Removed from Wishlist`,
         status: 'info',
         duration: 3000,
         isClosable: true,
