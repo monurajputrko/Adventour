@@ -60,16 +60,17 @@ const Login = () => {
   useEffect(() => {
     onOpen();
   }, [])
+
   return (
     <>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
           <ModalOverlay />
-          <ModalContent position='absolute' top='20%'
+          <ModalContent position='absolute' top='15%'
             bgGradient='linear(to-r, white, gray.300)'
-            size={100}>
+            size={'100'}>
             <Flex>
-              <Box w={'40%'} bg={'transparent'} >
+              <Box w={'45%'} bg={'transparent'} >
                 <Carousel />
               </Box>
               <Box w={'60%'}
@@ -78,23 +79,23 @@ const Login = () => {
                 }}
               >
                 <ModalHeader >
-                  <Box fontWeight='800' fontSize='30' >LogIn </Box>
+                  <Box fontWeight='800' fontSize='35'm={5} >logIn </Box>
                 </ModalHeader>
 
                 <ModalCloseButton />
                 <ModalBody >
                   <Flex >
                     <Box w='100%'>
-                      <Box mb='3'>
-                        <Text >Email Address</Text>
+                      <Box mb='5'>
+                        <Text mb='3'>Email Address</Text>
                         <Input outline={'1px solid black'} placeholder='Enter Email' size='sm' onChange={(e) => setValue(prev => (({ ...prev, email: e.target.value })))} />
                       </Box>
-                      <Box>
-                        <Text >Password</Text>
+                      <Box mb='3'>
+                        <Text mb='3'>Password</Text>
                         <Input outline={'1px solid black'} placeholder='Enter Password' size='sm' onChange={(e) => setValue(prev => (({ ...prev, pass: e.target.value })))} />
                       </Box>
                       <Text color={'red'} >{Err}</Text>
-                      <Box mt='5'>
+                      <Box my='7'>
                         <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Login</Button>
                       </Box>
                       <Text fontSize='15' my='5' >Doesn't have an account yet ?
@@ -104,11 +105,11 @@ const Login = () => {
 
                   </Flex>
                   <Divider />
-                  <Box w={'80%'} m={'auto'}>
+                  <Box w={'80%'} m={'auto'} my={5}>
                     <Flex w={'fit-content'} m={'auto'} fontSize={20}>
-                      <Box color={'gray'} borderRadius={100} p={5} onClick={handleGoogleLogin} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} ><BsGoogle /></Box>
-                      <Box color={'gray'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} fontWeight={700} ><BsMeta /></Box>
-                      <Box color={'gray'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'}><BsInstagram /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} onClick={handleGoogleLogin} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} ><BsGoogle /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} fontWeight={700} ><BsMeta /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'}><BsInstagram /></Box>
                     </Flex>
                   </Box>
                 </ModalBody>
