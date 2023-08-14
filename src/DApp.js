@@ -5,7 +5,7 @@ import DHomePage from "./Components/HomePage/DHomePage";
 import DHoliday from "./Components/HolidayEasily/DHoliday";
 import DExperience from "./Components/Experience/DExperience";
 import DRating from "./Components/Rating/DRating";
-function App() {
+function DApp() {
   return (
     <div className="App">
       <DNavbar />
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default DApp;
