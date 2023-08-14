@@ -16,44 +16,42 @@ const SignUp = () => {
 
   // const navigate = useNavigate() ;
 
-  const [user,setUser] = useState({})
-  
-  const [Err,setErr] = useState('') ;
-  const [disBtn,setdisBtn] = useState(true) ;
+  const [user, setUser] = useState({})
 
-  const handlesubmission =()=>{
+  const [Err, setErr] = useState('');
+  const [disBtn, setdisBtn] = useState(true);
+
+  const handlesubmission = () => {
     setErr("")
-    setdisBtn(true) ;
-    if( !value.name || !value.email |!value.pass){
-      setErr("*Fill all fields") ;
-      return ;
+    setdisBtn(true);
+    if (!value.name || !value.email | !value.pass) {
+      setErr("*Fill all fields");
+      return;
     }
     // onClose
-    setErr("") ;
-    createUserWithEmailAndPassword(auth ,value.email,value.pass)
-    .then((res)=>{
-      setdisBtn(false) ;
-      setUser(res.user) ;
-      // await updateProfile(user,{
-      //   displayName : value.name,
-      // })
-      console.log(res)
-    //  navigate('/') ;
-    })
-    .catch((err)=>{
-      // console.log(err)
-      setdisBtn(false) ;
-      setErr(err.message)
-    })
+    setErr("");
+    createUserWithEmailAndPassword(auth, value.email, value.pass)
+      .then((res) => {
+        setdisBtn(false);
+        setUser(res.user);
+        // await updateProfile(user,{
+        //   displayName : value.name,
+        // })
+        console.log(res)
+      })
+      .catch((err) => {
+        setdisBtn(false);
+        setErr(err.message)
+      })
   }
 
-  useEffect(()=>{
-    onOpen() ;
-  },[])
+  useEffect(() => {
+    onOpen();
+  }, [])
 
-  const nevigate = useNavigate() ;
-  const handleLogin = () =>{
-    nevigate('/login') ;
+  const nevigate = useNavigate();
+  const handleLogin = () => {
+    nevigate('/login');
   }
   return (
     <>
@@ -79,28 +77,27 @@ const SignUp = () => {
                 <ModalCloseButton />
                 <ModalBody >
                   <Flex >
-                  <Box w='100%'>
-                <Box mb='3'>
-                  <Text >Name</Text>
-                  <Input outline={'1px solid gray'} placeholder='Enter Name' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, name: e.target.value }))} />
-                </Box>
-                <Box mb='3'>
-                  <Text >Email Address</Text>
-                  <Input outline={'1px solid gray'} placeholder='Enter Email' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, email: e.target.value }))} />
-                </Box>
-                <Box>
-                  <Text >Password</Text>
-                  <Input outline={'1px solid gray'} placeholder='Enter Password' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, pass: e.target.value }))} />
-                </Box>
-                <Text color='red'fontSize='15' >{Err}</Text>
-                <Box mt='5'>
-                  <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Signup</Button>
-                </Box>
-                <Text fontSize='15' my='5' >Already have an account?
-                  <Link color='blue' onClick={()=>handleLogin()} > Login</Link>
-                </Text>
-              </Box>
-
+                    <Box w='100%'>
+                      <Box mb='3'>
+                        <Text >Name</Text>
+                        <Input outline={'1px solid gray'} placeholder='Enter Name' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, name: e.target.value }))} />
+                      </Box>
+                      <Box mb='3'>
+                        <Text >Email Address</Text>
+                        <Input outline={'1px solid gray'} placeholder='Enter Email' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, email: e.target.value }))} />
+                      </Box>
+                      <Box>
+                        <Text >Password</Text>
+                        <Input outline={'1px solid gray'} placeholder='Enter Password' size='sm' onChange={(e) => setValue((prev) => ({ ...prev, pass: e.target.value }))} />
+                      </Box>
+                      <Text color='red' fontSize='15' >{Err}</Text>
+                      <Box mt='5'>
+                        <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Signup</Button>
+                      </Box>
+                      <Text fontSize='15' my='5' >Already have an account?
+                        <Link color='blue' onClick={() => handleLogin()} > Login</Link>
+                      </Text>
+                    </Box>
                   </Flex>
                 </ModalBody>
               </Box>
