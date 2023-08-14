@@ -87,6 +87,7 @@ const Login = () => {
                 <ModalHeader >
                   <Box fontWeight='800' fontSize='30' >LogIn </Box>
                 </ModalHeader>
+                
                 <ModalCloseButton />
                 <ModalBody >
                   <Flex >

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Home'
-import Login from "../Components/Login/Login"
 import { ThemeProvider } from "@mui/material"
 import { muiTheme } from '../App'
 import Booking from '../Components/Bookings/Booking'
 import SignUp from '../Components/Login/SignUp'
+import Login from '../Components/Login/Login'
 
 const Allroutes = () => {
     return (

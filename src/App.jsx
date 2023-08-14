@@ -4,7 +4,6 @@ import Listing from "./Components/Bookings/Booking"
 import Allroutes from "./HomePage/Allroutes"
 import Navbar from "./HomePage/Navbar"
 import Payment from "./Components/Payment/Payment";
-import SignUp from "./Components/Login/SignUp";
 import { useEffect } from "react";
 
 export const muiTheme = createMuiTheme();
