@@ -9,34 +9,30 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import { ModalOverlay, Text } from '@chakra-ui/react';
+import { Image, ModalOverlay, Text } from '@chakra-ui/react';
+import img1 from "./photos/1.jpg"
+import img2 from "./photos/2.jpg"
+import img3 from "./photos/3.jpg"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-    {
-      label: 'San Francisco – Oakland Bay Bridge, United States',
-      imgPath:
-        'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-    },
-    {
-      label: 'Bird',
-      imgPath:
-        'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-    },
-    {
-      label: 'Bali, Indonesia',
-      imgPath:
-        'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-    },
-    {
-      label: 'Goč, Serbia',
-      imgPath:
-        'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-    },
-  ];
+// const images = [
+//     {
+//       label: 'San Francisco – Oakland Bay Bridge, United States',
+//       src: {img1}
+//     },
+//     {
+//       label: 'Bird',
+//       src:{img2}
+//     },
+//     {
+//       label: 'Bali, Indonesia',
+//       src:{img3}
+//     }
+//   ];
 
 const Carousel = () => {
+  const images = [img1,img2,img3];
     const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -74,21 +70,14 @@ const Carousel = () => {
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
             >
-                {images.map((step, index) => (
-                    <div key={step.label}>
-                        {Math.abs(activeStep - index) <= 2 ? (
-                            <Box
-                                
-                                component="img"
-                                sx={{
-                                    height: '47.5vh',
-                                    display: 'block',
-                                    maxWidth: 400,
-                                    overflow: 'hidden',
-                                    width: '100%',
-                                }}
-                                src={step.imgPath}
-                                alt={step.label}
+                {images.map((ele, i) => (
+                    <div key={i} style={{borderRadius:"20px"}} >
+                        {Math.abs(activeStep - i) <= 2 ? (
+                            <Image
+                                sx={{height: '47.5vh',display: 'block',maxWidth: 400,overflow: 'hidden',width: '100%',}}
+                                src= {images[i]}
+                                alt={ele.label}
+                                style={{borderRadius:"5px"}}
                             />
                         ) : null}
                     </div>

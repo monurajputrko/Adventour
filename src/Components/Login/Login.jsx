@@ -59,13 +59,6 @@ const Login = () => {
     console.log(user);
     console.log("logged in Google Successflly");
   }
-
-  const handleFaceBook = async () => {
-    const provider = new FacebookAuthProvider();
-    const result = await signInWithPopup(auth, provider)
-    const user = result.user;
-    console.log("logged with Facebook Successful");
-  }
   return (
     <>
       
