@@ -1,19 +1,18 @@
- import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
- import React, { useEffect, useState } from 'react'
- import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
-import {  GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
+import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { auth } from './FireBase'
 import { BsGoogle } from 'react-icons/bs';
 import { BsMeta } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import Carousel from './Carousel'
-import { shadows } from '@mui/system';
 import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
-const { isOpen, onOpen, onClose } = useDisclosure()
-const [value, setValue] = useState({
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [value, setValue] = useState({
     email: "",
     pass: "",
   })
@@ -30,7 +29,7 @@ const [value, setValue] = useState({
       setErr("*Fill all fields");
       return;
     }
-    // onClose
+
     setErr("");
     signInWithEmailAndPassword(auth, value.email, value.pass)
       .then((res) => {
@@ -43,13 +42,13 @@ const [value, setValue] = useState({
       })
   }
 
-  const nevigate = useNavigate() ;
-  const handleSignup = ()=>{
-    nevigate('/signup') ;
+  const nevigate = useNavigate();
+  const handleSignup = () => {
+    nevigate('/signup');
   }
 
 
-//   // ======================================Google Authentication ================
+  //   // ========================= Google Authentication ================
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
@@ -58,9 +57,9 @@ const [value, setValue] = useState({
     console.log(user);
     console.log("logged in Google Successflly");
   }
-  useEffect(()=>{
-    onOpen() ;
-  },[])
+  useEffect(() => {
+    onOpen();
+  }, [])
   return (
     <>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
@@ -99,7 +98,7 @@ const [value, setValue] = useState({
                         <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Login</Button>
                       </Box>
                       <Text fontSize='15' my='5' >Doesn't have an account yet ?
-                        <Link color='blue' onClick={()=>handleSignup()} > Sign up</Link>
+                        <Link color='blue' onClick={() => handleSignup()} > Sign up</Link>
                       </Text>
                     </Box>
 
