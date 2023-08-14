@@ -61,11 +61,10 @@ const Login = () => {
   }
   return (
     <>
-      
+
       <Button onClick={onOpen}>Login</Button>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
-
           <ModalOverlay />
           <ModalContent position='absolute' top='20%'
             bgGradient='linear(to-r, white, gray.300)'
