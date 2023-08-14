@@ -1,15 +1,9 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import { Image, ModalOverlay, Text } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import img1 from "./photos/1.jpg"
 import img2 from "./photos/2.jpg"
 import img3 from "./photos/3.jpg"
@@ -58,7 +52,7 @@ const Carousel = () => {
                 enableMouseEvents
             >
                 {images.map((ele, i) => (
-                    <div key={i} style={{borderRadius:"20px"}} >
+                    <div key={i} style={{borderRadius:"20px"}}>
                         {Math.abs(activeStep - i) <= 2 ? (
                             <Image
                                 sx={{height: '48.5vh',display: 'block',maxWidth: 400,overflow: 'hidden',width: '100%',}}

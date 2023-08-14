@@ -26,7 +26,7 @@ const SignUp = () => {
       setErr("*Fill all fields");
       return;
     }
-    // onClose
+    
     setErr("");
     createUserWithEmailAndPassword(auth, value.email, value.pass)
       .then((res) => {

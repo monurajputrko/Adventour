@@ -48,7 +48,7 @@ const Login = () => {
   }
 
 
-  //   // ========================= Google Authentication ================
+  //========================= Google Authentication ================
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
