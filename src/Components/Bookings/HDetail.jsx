@@ -18,13 +18,16 @@ export const HDetail = () => {
     const dispatch = useDispatch()
     const { idx } = useParams()
     const theme = useSelector(state => state.theme);
-    const hotels = useSelector(state => state.hotels.hotels[idx-1])
+    const hotels = useSelector(state => state.hotels.hotels[idx - 1])
     console.log(hotels)
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
     const isLoading = useSelector(store => store.hotels.isLoading)
-    
+
+    const splitString = (str = '', size) => {
+        
+     }
     useEffect(() => {
         dispatch(getHotel())
         window.scrollTo({
@@ -33,13 +36,10 @@ export const HDetail = () => {
     }, [])
     if (isLoading) return <Loader />
     return (
-        <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
-            {/* <Toggle  /> */}
-            {/* <Detailnav/> */}
+        <Box bg={'white'} mb={{ base: "2em" }}>
 
-
-            <Box m={'auto'} pt={'20px'} w={{ base: '90vw', md: '76vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'}>
-            <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '350px', lg: "500px" }} />
+            <Box m={'auto'} mt="20px" w={{ base: '100vw',  lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
+                <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '350px', lg: "500px" }} />
 
 
                 <Flex flexDirection={{ base: 'column', md: 'column', lg: 'row' }} bg="white" p="2% 10px" >
@@ -56,14 +56,14 @@ export const HDetail = () => {
                         </Text>
                         <Box w={'80%'} mb={'15px'}>
                             {hotels?.utils?.map((style, idx) => {
-                                return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={theme === "dark" ? 'blackAlpha.800' : 'whiteAlpha.900'} bg='cyan.300'>{style}</Tag>
+                                return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={"white"} bg='black'>{style}</Tag>
                             })}
                         </Box>
                         <Box>
 
-                            <SimpleGrid templateColumns='repeat(2, 1fr)' gap={1}>
-                                <Text><strong>Check In</strong><br />15/08/2023</Text>
-                                <Text><strong>Check Out</strong><br />20/08/2023</Text>
+                            <SimpleGrid templateColumns='repeat(2, 1fr)' w={{base:'100%',lg:'70%'}} gap={1} mb={{base:'10px',lg:'0'}}>
+                                <Text border={'1px solid black'} textAlign={'center'}><strong>Check In</strong><br />15/08/2023</Text>
+                                <Text border={'1px solid black'} textAlign={'center'}><strong>Check Out</strong><br />20/08/2023</Text>
                             </SimpleGrid >
                         </Box>
                     </Box>
@@ -84,9 +84,9 @@ export const HDetail = () => {
                 <Flex mt={'20px'} flexDirection={{ base: 'column', md: 'column', lg: 'row' }} p="25px" justifyContent="space-around" bg="cyan.100" >
 
                     <Flex direction={'column'} textAlign={'left'} lineHeight={'30px'} color="grey.900" p="0 1%">
-                        <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>Highlights</Text>
-                        {hotels?.description.split("\n")?.map((text, idx) => {
-                            return <HStack key={idx} pb={'10px'}><MdStar w="10%" size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
+                        <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>About Hotel</Text>
+                        {hotels?.about?.map((text, idx) => {
+                            return <Flex align={'center'} key={idx} pb={'10px'}><MdStar size="20px"/> <Text pl={'10px'} fontSize='lg'>{text}</Text></Flex>
                         })}
                     </Flex>
                     <div>
@@ -127,45 +127,28 @@ export const HDetail = () => {
                 </Flex>
 
                 <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '1em' }} mt={'10px'} textAlign={'left'} bg="white" p="4%">
-                    <Flex direction={{ base: 'column' }}>
-                        <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book hotels, personalized</Text>
-                        <Flex direction={{ base: "column" }} w={{ base: "100%", lg: '80%' }} lineHeight={'25px'} spacing={'20px'}>
-                            <Flex>
-                                <RiFileCopy2Line size={'25px'} />
-                                <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
-                            </Flex>
-                            <Flex>
-                                <MdGroup size={'25px'} />
-                                <Text pl={'18px'}><strong>Private</strong><br />Enjoy a tour focused solely on your travel group </Text>
-                            </Flex>
-                            <Flex>
-                                <MdOutlineTipsAndUpdates size={'25px'} />
-                                <Text pl={'18px'}><strong>Professional</strong><br />Access our Travel Experts’ insider knowledge</Text>
-                            </Flex>
-                        </Flex>
+                    <Flex direction={{ base: 'column' }} w='45%'>
+                        <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
+                        <SimpleGrid pl={'10px'} minChildWidth={"200px"} columns={2}>
+                            <HStack><MdVerified /><Text>Accommodation</Text></HStack>
+                            <HStack><MdVerified /><Text>Guide</Text></HStack>
+                            <HStack><MdVerified /><Text>Meals</Text></HStack>
+                            <HStack><MdVerified /><Text>Additional Services</Text></HStack>
+                            <HStack><MdVerified /><Text>Transport</Text></HStack>
+                            <HStack><MdVerified /><Text>Flights</Text></HStack>
+                            <HStack><MdVerified /><Text>Insurance</Text></HStack>
+                            <HStack><MdVerified /><Text>Additional Services</Text></HStack>
+                        </SimpleGrid>
                     </Flex>
                     <Spacer />
-                    <Box w={{base:'100%',lg:'50%'}}>
-                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(hotels?.places_see_name + "," + hotels?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
+                    <Box w={{ base: '100%', lg: '50%' }}>
+                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(hotels?.places_see_name + "," + hotels?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
                             <a href="https://www.maps.ie/population/">Find Population on Map</a>
                         </iframe>
                     </Box>
                 </Flex>
                 <Divider borderColor="black" />
-                <Flex direction={'column'} pb={'30px'} lineHeight={'50px'} w="100%" bg="white" p="4%" pt="1%">
-                    <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                    <SimpleGrid pl={'10px'} minChildWidth={"200px"} columns={4}>
-                        <HStack><MdVerified /><Text>Accommodation</Text></HStack>
-                        <HStack><MdVerified /><Text>Guide</Text></HStack>
-                        <HStack><MdVerified /><Text>Meals</Text></HStack>
-                        <HStack><MdVerified /><Text>Additional Services</Text></HStack>
-                        <HStack><MdVerified /><Text>Transport</Text></HStack>
-                        <HStack><MdVerified /><Text>Flights</Text></HStack>
-                        <HStack><MdVerified /><Text>Insurance</Text></HStack>
-                        <HStack><MdVerified /><Text>Optional</Text></HStack>
-                        <HStack><MdVerified /><Text>Additional Services</Text></HStack>
-                    </SimpleGrid>
-                </Flex>
+
                 <Divider borderColor="black" />
                 <Flex justifyContent="space-between" flexDirection={{ base: "column", lg: "row" }}>
                     <Flex w={{ base: "100%", md: "50%" }} direction={'column'} p="2% 4%">

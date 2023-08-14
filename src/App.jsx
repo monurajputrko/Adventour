@@ -5,6 +5,8 @@ import Allroutes from "./HomePage/Allroutes"
 import Navbar from "./HomePage/Navbar"
 import Payment from "./Components/Payment/Payment";
 import { useEffect } from "react";
+import { Box, Image, Link } from "@chakra-ui/react";
+import BackToTop from "./Components/Utils/BackToTop";
 
 export const muiTheme = createMuiTheme();
 
@@ -15,6 +17,6 @@ export const App = () => {
       {/* <Navbar/> */}
     </ThemeProvider>
     <Allroutes/>
-    {/* <Payment /> */}
+    <BackToTop />
   </div>
 }
