@@ -1,7 +1,7 @@
-import { Box, Divider, Flex, Image, Link, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Flex, Link, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { Input, Modal, Devider, Spacer, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './FireBase';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
