@@ -1,6 +1,6 @@
 import React from "react";
-import "./Experience.css";
-const Experience = () => {
+import "./DExperience.css";
+const DExperience = () => {
   return (
     <div className="experience">
       <div className="experience-element">
@@ -41,4 +41,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default DExperience;

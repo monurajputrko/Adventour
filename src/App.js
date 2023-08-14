@@ -1,20 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import HomePage from "./Components/HomePage/HomePage";
-import Holiday from "./Components/HolidayEasily/Holiday";
-import Experience from "./Components/Experience/Experience";
-import Rating from "./Components/Rating/Rating";
+import DNavbar from "./Components/Navbar/DNavbar";
+import DFooter from "./Components/Footer/DFooter";
+import DHomePage from "./Components/HomePage/DHomePage";
+import DHoliday from "./Components/HolidayEasily/DHoliday";
+import DExperience from "./Components/Experience/DExperience";
+import DRating from "./Components/Rating/DRating";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HomePage/>
-      <Holiday/>
-      <Experience/>
-      <Rating/>
-      <Footer/>
+      <DNavbar />
+      <DHomePage />
+      <DHoliday />
+      <DExperience />
+      <DRating />
+      <DFooter />
     </div>
   );
 }

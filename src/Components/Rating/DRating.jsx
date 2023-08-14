@@ -1,6 +1,6 @@
 import React from "react";
-import "./Rating.css"
-const Rating = () => {
+import "./DRating.css"
+const DRating = () => {
   return (
     <div className="rating">
       <div className="saying">
@@ -58,4 +58,4 @@ const Rating = () => {
   );
 };
 
-export default Rating;
+export default DRating;

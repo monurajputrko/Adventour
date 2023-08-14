@@ -1,6 +1,6 @@
 import React from "react";
-import "./HomePage.css";
-const HomePage = () => {
+import "./DHomePage.css";
+const DHomePage = () => {
     const forward =">";
     const back ="<"
   return (
@@ -70,4 +70,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default DHomePage;

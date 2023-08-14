@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Holiday.css"
-const Holiday = () => {
+import "./DHoliday.css"
+const DHoliday = () => {
   return (
     <div className='holiday'>
         <div>
@@ -34,4 +34,4 @@ const Holiday = () => {
   )
 }
 
-export default Holiday
+export default DHoliday
