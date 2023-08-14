@@ -1,4 +1,4 @@
-import "./App.css";
+import "./DApp.css";
 import DNavbar from "./Components/Navbar/DNavbar";
 import DFooter from "./Components/Footer/DFooter";
 import DHomePage from "./Components/HomePage/DHomePage";
