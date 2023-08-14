@@ -1,6 +1,7 @@
 .experience{
     background-color: black;
     padding-top: 20px;
+    overflow-x:hidden ;
 }
 .experience p{
     color:#a3a3a3;
@@ -24,4 +25,33 @@
 .achieve h1{
     color: #3dc6ef;
     font-weight: 800;
+}
+
+
+@media (min-width:300px) and (max-width:600px){
+
+    .experience{
+        text-align: center;
+        font-size: large;
+        overflow-x:hidden ;
+    }
+
+    .experience-element{
+        display: grid;
+        justify-content: space-around;
+    }
+    .experience-element img{
+        width: 300px;
+        height: 500px;
+        margin-left: -10%;
+    }
+    .Experience_text_Div{
+        margin-left: 10%;
+    }
+.achieve{
+    margin-left: 10%;
+}
+
+
+
 }

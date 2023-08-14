@@ -1,4 +1,4 @@
-import "./DApp.css";
+import "./App.css";
 import DNavbar from "./Components/Navbar/DNavbar";
 import DFooter from "./Components/Footer/DFooter";
 import DHomePage from "./Components/HomePage/DHomePage";
@@ -16,7 +16,7 @@ function App() {
       <DHoliday />
       <DExperience />
       <DRating />
-      <DFooter />
+     <DFooter/>
 
 
     

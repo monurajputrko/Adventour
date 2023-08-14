@@ -4,6 +4,7 @@
 .navbar{
     background-color: #101214;
     margin-top:-60px ;
+    overflow-x:hidden ;
     
 }
 .NavBox{
@@ -40,7 +41,7 @@
 
 .NavbarItems ul :hover{
     color: #E6E6E6;
-    text-decoration: underline;  
+    text-decoration: underline; 
 }
 
 .NavbarItems ul span{
@@ -86,18 +87,12 @@
     }
 
 
-
-
-
-
-
-
-
- @media  (max-width:600px) and (min-width:300px){
+  @media  (max-width:600px) and (min-width:300px){
       
     .navbar{
         background-color: #111315;
         margin-top:-80px ;
+        overflow-x:hidden;
         
     }
     .NavBox{
@@ -132,12 +127,10 @@
         color: #4d4e50;
     }
     
-    .NavbarItems ul :hover{
-        color: #E6E6E6;
-        text-decoration: underline;  
-    }
+   
     
     .NavbarItems ul span{
+        margin-top: 7px;
         margin-right:50px ;
         font-size: 20px;
         cursor: pointer;
@@ -145,20 +138,9 @@
     }
     
     
-    .NavbarItems li :hover ::after{
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        right: 0;
-        height: 2px;
-    }
-    .logo{
-        margin-left: 6%;
-        margin-right: 50%;
-        color: white;
-    }
+
+   
     .NavbarItems button{
-        
         display: none;
     }
  
@@ -166,17 +148,15 @@
         color:#8e9092;
         display: none;
     }
-    .NavbarItems ul li :hover {
-        background-color: blue;
-        }
+   
     
+    .NavbarItems img{
+        width: 40px;
+        height: 20px;
+        margin-left: 50px;
+        margin-top:10px;
+        padding-right: 30px;
+    }
     
-    
-
-
-
-
-
-  
-
- };
+  }
+ 

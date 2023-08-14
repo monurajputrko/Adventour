@@ -5,6 +5,7 @@
     background-color: #111315;
     width: 100%;
     padding-top: 50px;
+    overflow-x:hidden ;
 }
 .gridColumn{
     display: flex;
@@ -56,4 +57,33 @@ footer{
     display: flex;
     list-style: none;
     gap: 30px;
+    margin-bottom: 100px;
+}
+
+
+
+
+@media (min-width:300px) and (max-width:600px){
+    .footer{
+        text-align: center;
+        border-top: 2px sold wheat;
+    }
+   .footer button{
+    font-size: small;
+    margin-right: 20px;
+    padding: auto;
+    }
+    footer{
+        gap:10px;
+    }
+    .footer_Div p{
+        margin-top: -10px;
+        font-size: small;
+    }
+.copyright{
+    font-size: small;
+    gap: 10px;
+    margin-bottom: 5px;
+    
+}
 }

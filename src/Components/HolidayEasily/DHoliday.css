@@ -1,10 +1,9 @@
 
-
 .holiday{
-  
     background-color: #16181a;
     padding-top: 50px;
     padding-bottom: 50px;
+    text-align: center;
 }
 .holiday-element{
     display: flex;
@@ -24,4 +23,25 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+
+
+@media  (min-width:300px) and (max-width:600px) {
+    
+    .holiday{
+        text-align: center;
+        font-size: large;
+        overflow-x:hidden ;
+    }
+
+.holiday-element{
+    display: grid;
+}
+.onedown1{
+margin-top: 50px;
+margin-bottom: -50px;
+}
+
+
 }
