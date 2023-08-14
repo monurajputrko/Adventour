@@ -1,7 +1,7 @@
  import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
  import React, { useEffect, useState } from 'react'
- import { Input, Modal, Devider, Spacer, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
-import { FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth'
+ import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
+import {  GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { auth } from './FireBase'
 import { BsGoogle } from 'react-icons/bs';
 import { BsMeta } from 'react-icons/bs';
@@ -12,12 +12,8 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
-
-
-
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const [value, setValue] = useState({
+const { isOpen, onOpen, onClose } = useDisclosure()
+const [value, setValue] = useState({
     email: "",
     pass: "",
   })
@@ -67,8 +63,6 @@ const Login = () => {
   },[])
   return (
     <>
-
-      {/* <Button onClick={onOpen}>Login</Button> */}
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
           <ModalOverlay />
@@ -87,7 +81,7 @@ const Login = () => {
                 <ModalHeader >
                   <Box fontWeight='800' fontSize='30' >LogIn </Box>
                 </ModalHeader>
-                
+
                 <ModalCloseButton />
                 <ModalBody >
                   <Flex >
