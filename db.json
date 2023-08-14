@@ -84,6 +84,7 @@
     },
     {
       "id": 4,
+      "category":"HOTEL",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
@@ -91,7 +92,7 @@
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/4c/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/d0/41/3d/hotel-entrance.jpg?w=700&h=-1&s=1"
       ],
-      "title": " Four Points by Sheraton",
+      "title": "Four Points by Sheraton",
       "reviews": 2427,
       "address": "Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
       "stars": 4.1,
@@ -114,11 +115,10 @@
     {
       "id": 1,
       "category": "Explorer",
+      "main_image": "https://images.squarespace-cdn.com/content/v1/51bd4803e4b08f1c218b1208/1562793521324-BNIB21ALLVWXR32KQ5JG/SRWX2520-Edit-preview.jpg",
       "title": "Scuba Diving In Dubai",
       "reviews": 909,
-      "destinations": [
-        "Dubai"
-      ],
+      "destination": "Dubai",
       "age_range": "Above 10 years",
       "travel_style": [
         "Custom",
@@ -133,15 +133,10 @@
         "With training given by PADI certified divers before your scuba experience, this activity is safe for all level of divers"
       ],
       "tour_length": "2 days",
-      "price_per_day": 7099,
       "str_price": 21493.99,
       "act_price": 14099.99,
-      "save_price": 7785,
-      "addional_price": 3948,
       "off": 58,
-      "main_image": "https://images.squarespace-cdn.com/content/v1/51bd4803e4b08f1c218b1208/1562793521324-BNIB21ALLVWXR32KQ5JG/SRWX2520-Edit-preview.jpg",
       "rating": 4.7,
-      "tour_id": 136848,
       "group_size": 5,
       "places_see_img": [
         "https://media1.thrillophilia.com/filestore/a7odb4oqk8nfxuib6l7ntol9nij6_1555916896_shutterstock_219200257.jpg?w=auto&h=600",
