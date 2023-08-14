@@ -14,7 +14,7 @@ export const App = () => {
     <ThemeProvider theme={muiTheme}>
       {/* <Navbar/> */}
     </ThemeProvider>
-    {/* <Allroutes/> */}
+    <Allroutes/>
     {/* <Payment /> */}
   </div>
 }
