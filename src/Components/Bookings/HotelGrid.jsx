@@ -21,9 +21,9 @@ const HotelGrid = () => {
         dispatch(getHotel())
     }, [])
     if (isLoading) return <Loader />
-    return <Flex mx="20px" w={{base:"98vw", lg:"80vw"}} m="auto" flexDirection={{base:"column",lg:"row"}}>
+    return <Flex mx="20px" w={{base:"98vw", lg:"80vw"}} m="auto" mt="25px" flexDirection={{base:"column",lg:"row"}}>
         <Filters showSpinner={showSpinner}/> 
-        <Grid p={{base:"10px",lg:"10px 2em 10px 10px"}} w={{base:"95vw",lg:"70vw"}} ml={{base:"30px",lg:"22vw"}}>
+        <Grid p={{base:"10px",lg:"10px 2em 10px 10px"}} w={{base:"95vw",lg:"70vw"}} ml={{base:"5px",lg:"22vw"}}>
             {hotels?.map(hotel => {
                 return <HotelsComp key={hotel.id} spinner={spinner} {...hotel} />
             })}

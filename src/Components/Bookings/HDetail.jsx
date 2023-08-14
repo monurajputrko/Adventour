@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
 import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai";
 import { RiFileCopy2Line } from "react-icons/ri";
@@ -8,63 +8,62 @@ import { MdOutlineTipsAndUpdates, MdOutlineVerified } from "react-icons/md";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { getAdventure } from '../../redux/AdventureReducer/action';
 import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-
 import Loader from '../Utils/Loader';
-export const Detail = () => {
+import { getHotel } from '../../redux/HotelReducer/action';
+
+export const HDetail = () => {
     const dispatch = useDispatch()
     const { idx } = useParams()
     const theme = useSelector(state => state.theme);
-    const adventures = useSelector(state => state.adventures[idx-1])
+    const hotels = useSelector(state => state.hotels.hotels[idx-1])
+    console.log(hotels)
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
-    const isLoading = useSelector(store => store.adventures.isLoading)
+    const isLoading = useSelector(store => store.hotels.isLoading)
+    
     useEffect(() => {
-        dispatch(getAdventure())
+        dispatch(getHotel())
         window.scrollTo({
             top: 0,
         });
     }, [])
-    if(isLoading) return <Loader />
+    if (isLoading) return <Loader />
     return (
         <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
             {/* <Toggle  /> */}
             {/* <Detailnav/> */}
 
 
-            <Image src={adventures?.main_image} boxShadow={'md'} width={{ base: '100vw' }} h={{ base: '350px', lg: "500px" }} />
             <Box m={'auto'} pt={'20px'} w={{ base: '90vw', md: '76vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'}>
+            <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '350px', lg: "500px" }} />
 
 
                 <Flex flexDirection={{ base: 'column', md: 'column', lg: 'row' }} bg="white" p="2% 10px" >
                     <Box textAlign={'left'} pl={'40px'} w={{ base: '90%', md: '70%', lg: '38%' }}>
-                        <Heading size='lg' pb={'15px'}>{adventures?.title}</Heading>
+                        <Heading size='lg' pb={'15px'}>{hotels?.title}</Heading>
                         <Text as="div" pb={'10px'}>
-                            <strong> Duration : {adventures?.tour_length} • {adventures?.rating} stars</strong>
+                            <strong> {hotels?.stars} stars</strong>
                             <Rating>
-                                {[...Array(Math.round(adventures?.rating) || 4)].map((i,idx) => {
-                                    return <Rating.Star key={"i"+idx}/>
+                                {[...Array(Math.round(hotels?.stars) || 4)].map((i, idx) => {
+                                    return <Rating.Star key={"i" + idx} />
                                 })}
-                                ({adventures?.reviews} reviews)
+                                ({hotels?.reviews} reviews)
                             </Rating>
                         </Text>
-                        <Text pb={'15px'}>From <strong>Persian Gulf</strong> to <strong>Jumeirah Beach</strong></Text>
                         <Box w={'80%'} mb={'15px'}>
-                            {adventures?.travel_style?.map((style, idx) => {
+                            {hotels?.utils?.map((style, idx) => {
                                 return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={theme === "dark" ? 'blackAlpha.800' : 'whiteAlpha.900'} bg='cyan.300'>{style}</Tag>
                             })}
                         </Box>
                         <Box>
 
                             <SimpleGrid templateColumns='repeat(2, 1fr)' gap={1}>
-                                <Text><strong>Tour Operator:</strong><br />Dubai Emirates Co.</Text>
-                                <Text><strong>Max group size:</strong><br />{adventures?.group_size}</Text>
-                                <Text><strong>Age range:</strong><br />{adventures?.age_range} yrs</Text>
-                                <Text><strong>Operated in:</strong><br />English</Text>
+                                <Text><strong>Check In</strong><br />15/08/2023</Text>
+                                <Text><strong>Check Out</strong><br />20/08/2023</Text>
                             </SimpleGrid >
                         </Box>
                     </Box>
@@ -74,37 +73,29 @@ export const Detail = () => {
                         <IconButton borderRadius={'50%'} h={'40px'} position={'absolute'} top={'42%'} right={'0%'} zIndex={'2'} onClick={() => { setval(val - 300) }} colorScheme='none' bg={'blackAlpha.700'} isDisabled={val < -800}
                             icon={<AiOutlineCaretRight size={'20px'} />} />
                         <div style={{ height: '100%', display: 'flex', translate: `${val}px 0px`, transition: '1s' }}>
-                            {adventures?.places_see_img?.map((el, idx) => {
+                            {hotels?.places_see_img?.map((el, idx) => {
                                 return <Image key={idx} borderRadius={'10px'} p={'10px'} w={'400px'} height='100%' src={el} />
                             })}
                         </div>
                     </Box>
 
                 </Flex>
-                {/* <Box>
-                    <div style={{ width: "60%" }}>
-                        <iframe title="map" width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Vietnam%20Railway%20Station+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                            <a href="https://www.maps.ie/population/">Find Population on Map</a>
-                        </iframe>
-                    </div>
-                </Box> */}
 
                 <Flex mt={'20px'} flexDirection={{ base: 'column', md: 'column', lg: 'row' }} p="25px" justifyContent="space-around" bg="cyan.100" >
 
-
                     <Flex direction={'column'} textAlign={'left'} lineHeight={'30px'} color="grey.900" p="0 1%">
                         <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>Highlights</Text>
-                        {adventures?.highlights?.map((text, idx) => {
-                            return <HStack key={idx} pb={'10px'}><MdStar size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
+                        {hotels?.description.split("\n")?.map((text, idx) => {
+                            return <HStack key={idx} pb={'10px'}><MdStar w="10%" size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
                         })}
                     </Flex>
                     <div>
 
                         <Flex bg={theme === "dark" ? '#191b1d' : 'white'} direction={'column'} w={{ base: '100%', md: '100%', lg: '350px' }} boxShadow={'md'} border={'1px solid silver'} p={'20px'} mt={{ base: '40px', md: '10px' }} ml={{ base: '0px', md: '0px', lg: '40px' }} borderRadius={'10px'}>
                             <Flex w={{ base: '100%', md: '100%', lg: '300px' }}>
-                                <Text><s>From ₹{(adventures?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{adventures?.off}%</Tag>
+                                <Text><s>From ₹{(hotels?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{hotels?.off}%</Tag>
                             </Flex>
-                            <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
+                            <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(hotels?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
                                 <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
@@ -135,31 +126,35 @@ export const Detail = () => {
                     </div>
                 </Flex>
 
-                <Flex direction={'column'} mt={'10px'} textAlign={'left'} bg="white" p="4%">
-                    <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book adventures, personalized</Text>
-                    <SimpleGrid minChildWidth={"200px"} w={{ base: "100%"}} lineHeight={'25px'} spacing={'20px'}>
-                        <Flex>
-                            <RiFileCopy2Line size={'25px'} />
-                            <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
+                <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '1em' }} mt={'10px'} textAlign={'left'} bg="white" p="4%">
+                    <Flex direction={{ base: 'column' }}>
+                        <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book hotels, personalized</Text>
+                        <Flex direction={{ base: "column" }} w={{ base: "100%", lg: '80%' }} lineHeight={'25px'} spacing={'20px'}>
+                            <Flex>
+                                <RiFileCopy2Line size={'25px'} />
+                                <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
+                            </Flex>
+                            <Flex>
+                                <MdGroup size={'25px'} />
+                                <Text pl={'18px'}><strong>Private</strong><br />Enjoy a tour focused solely on your travel group </Text>
+                            </Flex>
+                            <Flex>
+                                <MdOutlineTipsAndUpdates size={'25px'} />
+                                <Text pl={'18px'}><strong>Professional</strong><br />Access our Travel Experts’ insider knowledge</Text>
+                            </Flex>
                         </Flex>
-                        <Flex>
-                            <MdGroup size={'25px'} />
-                            <Text pl={'18px'}><strong>Private</strong><br />Enjoy a tour focused solely on your travel group </Text>
-                        </Flex>
-                        <Flex>
-                            <MdOutlineTipsAndUpdates size={'25px'} />
-                            <Text pl={'18px'}><strong>Professional</strong><br />Access our Travel Experts’ insider knowledge</Text>
-                        </Flex>
-                        <Flex>
-                            <BiShieldQuarter size={'25px'} />
-                            <Text pl={'18px'}><strong>Protected</strong><br />Travel within your own bubble </Text>
-                        </Flex>
-                    </SimpleGrid>
+                    </Flex>
+                    <Spacer />
+                    <Box w={{base:'100%',lg:'50%'}}>
+                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(hotels?.places_see_name + "," + hotels?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
+                            <a href="https://www.maps.ie/population/">Find Population on Map</a>
+                        </iframe>
+                    </Box>
                 </Flex>
                 <Divider borderColor="black" />
                 <Flex direction={'column'} pb={'30px'} lineHeight={'50px'} w="100%" bg="white" p="4%" pt="1%">
                     <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                    <SimpleGrid pl={'10px'} minChildWidth={"200px"}  columns={4}>
+                    <SimpleGrid pl={'10px'} minChildWidth={"200px"} columns={4}>
                         <HStack><MdVerified /><Text>Accommodation</Text></HStack>
                         <HStack><MdVerified /><Text>Guide</Text></HStack>
                         <HStack><MdVerified /><Text>Meals</Text></HStack>
@@ -172,22 +167,22 @@ export const Detail = () => {
                     </SimpleGrid>
                 </Flex>
                 <Divider borderColor="black" />
-                <Flex justifyContent="space-between" flexDirection={{base:"column",lg:"row"}}>
-                    <Flex w={{base:"100%",md:"50%"}} direction={'column'} p="2% 4%">
+                <Flex justifyContent="space-between" flexDirection={{ base: "column", lg: "row" }}>
+                    <Flex w={{ base: "100%", md: "50%" }} direction={'column'} p="2% 4%">
                         <Text textAlign={'left'} fontSize={'25px'} fontWeight={'600'} pb={'25px'}>Customer Reviews</Text>
                         <HStack shadow='md' bg={theme === "dark" ? 'gray.900' : 'blue.100'} mb={'2px'} px={'20px'} py={'10px'}>
                             <HStack textAlign={'left'}><BsStars /><Text>Overall Rating<br />Excellent</Text></HStack>
                             <Spacer />
                             <Rating>
-                                {[...Array(Math.round(Math.floor(adventures?.rating)) || 4)].map((i,idx) => {
-                                    return <Rating.Star key={"j"+idx}/>
+                                {[...Array(Math.round(Math.floor(hotels?.rating)) || 4)].map((i, idx) => {
+                                    return <Rating.Star key={"j" + idx} />
                                 })}
-                                ({adventures?.reviews} reviews)
+                                ({hotels?.reviews} reviews)
                             </Rating>
                         </HStack>
 
                         <SimpleGrid columns={{ base: '1', md: '1', lg: '2' }} gap={'2px'}>
-                            {adventures?.user_ratings?.map(((ele, idx) => {
+                            {hotels?.user_ratings?.map(((ele, idx) => {
                                 return <HStack key={idx} bg={theme === "dark" ? '#191b1d' : 'white'} shadow='md' px={'20px'} py={'5px'} w={'100%'}>
                                     <HStack textAlign={'left'}><FaClipboardList /><Text>{ele.title}<br />{ele.ratings > 4.5 ? "Excellent" : "Good"}</Text></HStack>
                                     <Spacer />
@@ -196,11 +191,11 @@ export const Detail = () => {
                             }))}
                         </SimpleGrid>
                     </Flex>
-                    <Flex flexDirection="column" w={{base:"100%",md:"50%"}} p="1em">
+                    <Flex flexDirection="column" w={{ base: "100%", md: "50%" }} p="1em">
                         <div className="flex items-center mb-4 space-x-4">
                             <img className="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
                             <div className="space-y-1 font-medium dark:text-white">
-                                <p>Jese Leos <time  className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
+                                <p>Jese Leos <time className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
                             </div>
                         </div>
                         <div className="flex items-center mb-1">
@@ -239,4 +234,4 @@ export const Detail = () => {
     )
 }
 
-export default Detail
+export default HDetail

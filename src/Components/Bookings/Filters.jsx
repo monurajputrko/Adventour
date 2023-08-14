@@ -11,8 +11,7 @@ const Filters = ({ showSpinner }) => {
     const btnRef = React.useRef()
     return <>
         <Show breakpoint='(max-width: 995px)'>
-            <IconButton ref={btnRef} w="30px" borderRadius={"5px 5px 0 0"} mt="15px" colorScheme='cyan' color="white" position="fixed" zIndex={5} onClick={onOpen} icon={<HamburgerIcon />} />
-            <Box h="98vh" mt="52px" w="40px" position="fixed" bg="#0bc5ea" zIndex={5}></Box>
+            <IconButton ref={btnRef} w="20px" size={'sm'} bg="cyan.100" borderRadius={"0px"} colorScheme='cyan' color="white" position="fixed" zIndex={5} onClick={onOpen} icon={<HamburgerIcon />} />
             <Drawer
                 isOpen={isOpen}
                 placement='left'
@@ -132,7 +131,7 @@ const Filters = ({ showSpinner }) => {
             </Drawer>
         </Show>
         <Show breakpoint='(min-width: 996px)'>
-            <Flex w="22vw" p="2% 0" mt="10px" h="97vh" borderRadius="10px" bg="cyan.100" color="white" position="fixed" z-index="20" >
+            <Flex w="22vw" p="2% 0" mt="10px" h="94vh" borderRadius="10px" bg="cyan.100" color="white" position="fixed" z-index="20" >
                 <Accordion w="100%" allowToggle defaultIndex={0}>
                     <AccordionItem >
                         <AccordionButton _hover={{}} borderRadius="0" className="animate-border inline-block rounded-md text-white bg-white bg-gradient-to-r from-cyan-500 via-teal-200 to-cyan-500 bg-[length:400%_400%] p-0.5">
@@ -144,7 +143,7 @@ const Filters = ({ showSpinner }) => {
                         <AccordionPanel py="20px" px="25px">
                             <Accordion allowToggle defaultIndex={0}>
                                 <AccordionItem borderY="none">
-                                    <AccordionButton _hover={{}} border="5px double teal" borderRadius={"5px 5px 0 0"} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
+                                    <AccordionButton _hover={{}} borderRadius={"0"} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
                                         <Box as="h2" fontWeight={600} flex='1' textAlign='left'>
                                             Popular Filters
                                         </Box>
@@ -165,7 +164,7 @@ const Filters = ({ showSpinner }) => {
                             </Accordion>
                             <Accordion mt="20px" allowToggle defaultIndex={0}>
                                 <AccordionItem borderY="none">
-                                    <AccordionButton _hover={{}} border="5px double teal" borderRadius={"5px 5px 0 0"} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
+                                    <AccordionButton _hover={{}} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
                                         <Box as="h2" fontWeight={600} flex='1' textAlign='left'>
                                             Price Range
                                         </Box>
@@ -211,7 +210,7 @@ const Filters = ({ showSpinner }) => {
                             </Accordion>
                             <Accordion mt="20px" allowToggle defaultIndex={0}>
                                 <AccordionItem borderY="none">
-                                    <AccordionButton _hover={{}} border="5px double teal" borderRadius={"5px 5px 0 0"} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
+                                    <AccordionButton _hover={{}} boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" bg="cyan.200" fontWeight={600}  >
                                         <Box as="h2" fontWeight={600} flex='1' textAlign='left'>
                                             Customer Rating
                                         </Box>
