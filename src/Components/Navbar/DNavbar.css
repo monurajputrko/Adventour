@@ -5,6 +5,7 @@
     background-color: #101214;
     margin-top:-60px ;
     overflow-x:hidden ;
+    position:sticky;
     
 }
 .NavBox{
@@ -23,6 +24,7 @@
     vertical-align: baseline;
     font-weight: 800;
    margin: 60px;
+   position: sticky;
 }
 .NavbarItems li{
     list-style: none;
