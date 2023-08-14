@@ -16,20 +16,20 @@ import img3 from "./photos/3.jpg"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-// const images = [
-//     {
-//       label: 'San Francisco – Oakland Bay Bridge, United States',
-//       src: {img1}
-//     },
-//     {
-//       label: 'Bird',
-//       src:{img2}
-//     },
-//     {
-//       label: 'Bali, Indonesia',
-//       src:{img3}
-//     }
-//   ];
+const images = [
+    {
+      label: 'San Francisco – Oakland Bay Bridge, United States',
+      src: {img1}
+    },
+    {
+      label: 'Bird',
+      src:{img2}
+    },
+    {
+      label: 'Bali, Indonesia',
+      src:{img3}
+    }
+  ];
 
 const Carousel = () => {
   const images = [img1,img2,img3];
@@ -51,19 +51,6 @@ const Carousel = () => {
   return (
     <Box
     sx={{ maxWidth: 400, flexGrow: 1 }}>
-    {/* <Paper
-      square
-      elevation={0}
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        height: 50,
-        pl: 2,
-        bgcolor: 'background.default',
-      }}
-    >
-<Typography>{images[activeStep].label}</Typography>
-</Paper> */}
      <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
@@ -74,7 +61,7 @@ const Carousel = () => {
                     <div key={i} style={{borderRadius:"20px"}} >
                         {Math.abs(activeStep - i) <= 2 ? (
                             <Image
-                                sx={{height: '47.5vh',display: 'block',maxWidth: 400,overflow: 'hidden',width: '100%',}}
+                                sx={{height: '48.5vh',display: 'block',maxWidth: 400,overflow: 'hidden',width: '100%',}}
                                 src= {images[i]}
                                 alt={ele.label}
                                 style={{borderRadius:"5px"}}
@@ -83,38 +70,9 @@ const Carousel = () => {
                     </div>
                 ))}
             </AutoPlaySwipeableViews>
-            {/*
-    <MobileStepper
-      steps={maxSteps}
-      position="static"
-      activeStep={activeStep}
-      nextButton={
-        <Button
-          size="small"
-          onClick={handleNext}
-          disabled={activeStep === maxSteps - 1}
-        >
-          Next
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowLeft />
-          ) : (
-            <KeyboardArrowRight />
-          )}
-        </Button>
-      }
-      backButton={
-        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowRight />
-          ) : (
-            <KeyboardArrowLeft />
-          )}
-          Back
-        </Button>
-      }
-    /> */}
   </Box>
   )
 }
 
 export default Carousel
+

@@ -1,6 +1,6 @@
-import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
-import React, { useState } from 'react'
-import { Input, Modal, Devider, Spacer, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
+ import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
+ import React, { useEffect, useState } from 'react'
+ import { Input, Modal, Devider, Spacer, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
 import { FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth'
 import { auth } from './FireBase'
 import { BsGoogle } from 'react-icons/bs';
@@ -8,6 +8,7 @@ import { BsMeta } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import Carousel from './Carousel'
 import { shadows } from '@mui/system';
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
@@ -20,8 +21,6 @@ const Login = () => {
     email: "",
     pass: "",
   })
-
-  // const navigate = useNavigate() ;
 
   const [user, setUser] = useState({})
 
@@ -41,7 +40,6 @@ const Login = () => {
       .then((res) => {
         console.log(res)
         setdisBtn(false);
-        //  navigate('/') ;
       })
       .catch((err) => {
         setdisBtn(false);
@@ -49,8 +47,13 @@ const Login = () => {
       })
   }
 
+  const nevigate = useNavigate() ;
+  const handleSignup = ()=>{
+    nevigate('/signup') ;
+  }
 
-  // ======================================Google Authentication ================
+
+//   // ======================================Google Authentication ================
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
@@ -59,10 +62,13 @@ const Login = () => {
     console.log(user);
     console.log("logged in Google Successflly");
   }
+  useEffect(()=>{
+    onOpen() ;
+  },[])
   return (
     <>
 
-      <Button onClick={onOpen}>Login</Button>
+      {/* <Button onClick={onOpen}>Login</Button> */}
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
           <ModalOverlay />
@@ -98,7 +104,7 @@ const Login = () => {
                         <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Login</Button>
                       </Box>
                       <Text fontSize='15' my='5' >Doesn't have an account yet ?
-                        <Link color='blue' to={'/signup'} > Sign up</Link>
+                        <Link color='blue' onClick={()=>handleSignup()} > Sign up</Link>
                       </Text>
                     </Box>
 
@@ -122,3 +128,5 @@ const Login = () => {
 }
 
 export default Login
+
+
