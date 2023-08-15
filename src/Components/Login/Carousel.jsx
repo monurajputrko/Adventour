@@ -43,10 +43,10 @@ const Carousel = () => {
                 enableMouseEvents
             >
                 {images.map((ele, i) => (
-                    <div key={i} style={{borderRadius:"20px"}}>
+                    <div key={i} style={{borderRadius:"20px"}} >
                         {Math.abs(activeStep - i) <= 2 ? (
                             <Image
-                                sx={{height: '48.5vh',display: 'block',maxWidth: 400,overflow: 'hidden',width: '100%',}}
+                                sx={{height: '66vh',maxWidth: 400,overflow: 'hidden',width: '100%',}}
                                 src= {images[i]}
                                 alt={ele.label}
                                 style={{borderRadius:"5px"}}
