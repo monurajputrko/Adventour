@@ -9,7 +9,6 @@ const iniState = {
 
 
 export const HotelReducer = (state=iniState,{type,payload}) =>{
-    console.log(state,type,payload)
     switch(type){
         case GET_HOTEL_REQUEST : return {...state,isLoading:true}
         case GET_HOTEL_SUCESS: return {...state,isLoading:false,hotels:payload}

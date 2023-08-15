@@ -8,13 +8,13 @@ import Imag from '../../images/tripadvisor.png'
 import Imag1 from '../../images/money.png'
 import { AiFillCheckCircle, AiFillHeart, AiOutlineCaretLeft, AiOutlineCaretRight, AiOutlineHeart } from 'react-icons/ai'
 import { useSelector } from 'react-redux'
-const HotelsComp = ({ price, id, main_img, title, description, address, secImg, stars, reviews, places_see_img }) => {
+const HotelsComp = ({ price, id, main_img, title, description, address, city, stars, reviews, places_see_img }) => {
   const [show, setShow] = useState(false)
   const [showImg, setShowImg] = useState(main_img)
   const [val, setval] = useState(0);
   const toast = useToast()
   const [wish, setwish] = useState(false)
-  const spinner = useSelector(store=>store.hotels.isSkeleton)
+  const spinner = useSelector(store => store.hotels.isSkeleton)
   const handleImageChange = (e) => {
     e.stopPropagation()
     let temp = e.target.src
@@ -24,7 +24,7 @@ const HotelsComp = ({ price, id, main_img, title, description, address, secImg, 
   const navigate = useNavigate()
   const goToDetails = () => {
     console.log("here")
-    window.open("/booking/1", '_blank', 'noreferrer');
+    window.open(`/booking/${city}/1`, '_blank', 'noreferrer');
   }
   const goToMap = () => {
 
@@ -52,8 +52,6 @@ const HotelsComp = ({ price, id, main_img, title, description, address, secImg, 
     e.stopPropagation()
     setShow(!show)
   }
-  console.log(spinner)
-  console.log(useSelector(store=>store))
   if (spinner) return <Box padding='6' boxShadow='lg' bg='white'>
     <SkeletonCircle size='10' />
     <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
@@ -101,10 +99,10 @@ const HotelsComp = ({ price, id, main_img, title, description, address, secImg, 
                 })}
                 HOTEL
               </Rating>
-                <Flex w='-webkit-fit-content' alignItems={'center'} gap="5px" p='5px 10px' bg='#ecfff2' borderRadius={5}>
-                  <Image src={Imag1} boxSize={"35px"} pt='5px'/>
-                  <Text  color={'black'} textDecoration={'dotted'}>₹{price}</Text>
-                </Flex>
+              <Flex w='-webkit-fit-content' alignItems={'center'} gap="5px" p='5px 10px' bg='#ecfff2' borderRadius={5}>
+                <Image src={Imag1} boxSize={"35px"} pt='5px' />
+                <Text color={'black'} textDecoration={'dotted'}>₹{price}</Text>
+              </Flex>
             </Flex>
             <Stack w={{ base: "100%", lg: "60%" }}>
               <Heading size='md'>{title}</Heading>
@@ -125,7 +123,7 @@ const HotelsComp = ({ price, id, main_img, title, description, address, secImg, 
 
           <CardFooter display="flex" py="0" alignItems={"center"}>
             <Flex direction={'column'}>
-              <Flex alignItems="center" gap="5px" class="bg-green-300 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
+              <Flex alignItems="center" gap="5px" bg="green.100" w='fit-content' px='10px' borderRadius={10}>
                 <AiFillCheckCircle color="green" />
                 Certified
               </Flex>
@@ -135,8 +133,8 @@ const HotelsComp = ({ price, id, main_img, title, description, address, secImg, 
               </Flex>
             </Flex>
             <Spacer />
-            <button class="animate-border inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
-              <Link onClick={addToWish} class="border block rounded-md bg-cyan px-3 py-1 font-italic text-white"> Add to Wishlist <IconButton alignItems="flex-start" py="4px" display={{ base: "inline-flex", sm: "none", md: "inline-flex" }} rounded="full" size="sm" h={'35px'} w={'35px'} colorScheme='none' color={'blackAlpha.700'} icon={wish ? <AiFillHeart color={'red'} size={'22px'} transition="0.5s" /> : <AiOutlineHeart transition="0.5s" color={'white'} size={'22px'} />} /></Link>
+            <button className="animate-border inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
+              <Link onClick={addToWish} className="border block rounded-md bg-cyan px-3 py-1 font-italic text-white"> Add to Wishlist <IconButton alignItems="flex-start" py="4px" display={{ base: "inline-flex", sm: "none", md: "inline-flex" }} rounded="full" size="sm" h={'35px'} w={'35px'} colorScheme='none' color={'blackAlpha.700'} icon={wish ? <AiFillHeart color={'red'} size={'22px'} transition="0.5s" /> : <AiOutlineHeart transition="0.5s" color={'white'} size={'22px'} />} /></Link>
             </button>
 
           </CardFooter>

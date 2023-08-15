@@ -34,6 +34,9 @@
       "phone": "079 66185000",
       "price": 7840,
       "off":"24",
+      "city":"Ahemdabad",
+      "assured": true,
+      "extra": "book1",
       "feedback":[
         {
           "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
@@ -56,6 +59,7 @@
     },
     {
       "id": 2,
+      "city":"Ahemdabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
@@ -79,10 +83,31 @@
         "Walk-in shower"
       ],
       "phone": "079 52185000",
-      "price": 6504
+      "price": 6504,
+      "off":"30",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 3,
+      "city":"Ahemdabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=1200",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
@@ -106,10 +131,31 @@
         "Walk-in shower"
       ],
       "phone": "079 92185541",
-      "price": 5790
+      "price": 5790,
+      "off":"35",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 4,
+      "city":"Ahemdabad",
       "category":"HOTEL",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
@@ -121,6 +167,55 @@
       "title": "Four Points by Sheraton",
       "reviews": 2427,
       "address": "Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
+      "stars": 3.2,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 4399,
+      "off":"27",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
+    },
+    {
+      "id": 5,
+      "city":"Ahemdabad",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/3591864ad68011ecbcc30a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/6d2b8462955c11ecbb890a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/241741ded68011ec90340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/33e9f286dce911ecad6f0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/93a066be90a511ecb2fe0a58a9feac02.jpg"
+      ],
+      "title": "Hotel Ashish Ahemdabad",
+      "reviews": 2427,
+      "address": "Hotel Ashish Ahemdabad Lalbhai Dalpatbhai Museum 1.5 km Navkar Public SchoolBRTS Bus Stop Navkar Public SchoolGulbai Tekra Rd, opp. Vasundhara Society, Ambawadi",
       "stars": 4.1,
       "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
       "utils": [
@@ -134,9 +229,156 @@
         "Walk-in shower"
       ],
       "phone": "084463 10595",
-      "price": 4399
+      "price": 1850
+    },
+    {
+      "id": 6,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-855704ac253011eeabba0a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-200133d4253011eeb5d40a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-20bbf192253011eea5ca0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-20a841ba253011eeb54e0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-f4a22d20253d11ee992e0a58a9feac02.jpg"
+      ],
+      "title": "Concorde Palace Hotel Bur Dubai",
+      "reviews": 2427,
+      "address": "Concorde Palace Hotel Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 3099
+    },
+    {
+      "id": 7,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/33f428c2290611e9bba50242ac110002.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/1f8928ba290611e9b40a0242ac110002.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/a0ec07604c6011e9aad90242ac110002.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/8eee7aca4c6011e99b440242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_mmt_ext/t_g/htl-imgs/4190725563792785-1997c2c9_z.jpg"
+      ],
+      "title": "Majestic City Retreat Hotel",
+      "reviews": 2427,
+      "address": "Majestic City Retreat Hotel",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5599
+    },
+    {
+      "id": 8,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/eaf36a569bc611e8a5dd0a9df65c8753.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/de2d2c8a946011e7b4dd025f77df004f.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/e8b18f489bc611e8b11d02ca8202b952.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/e0807aaa946011e7b5a30a4cef95d023.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4ce444c81e4411eaa4030242ac110006.jpg"
+      ],
+      "title": "Howard Johnson by Wyndham Bur Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5599
+    },
+    {
+      "id": 9,
+      "city": "Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/2db812a297a811ec9a340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-c6e0353a711711eb8dd10242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4c5f12e897a611ec9e880a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-4c3cf19c711711eb893f0242ac110003.jpg"
+      ],
+      "title": "Star Metro Deira Hotel Apartments Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5899
+    },
+    {
+      "id": 10,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/2db812a297a811ec9a340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-c6e0353a711711eb8dd10242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4c5f12e897a611ec9e880a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-4c3cf19c711711eb893f0242ac110003.jpg"
+      ],
+      "title": "Star Metro Deira Hotel Apartments Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5899
     }
   ],
+  
+
   "adventures": [
     {
       "id": 1,
@@ -146,10 +388,11 @@
       "reviews": 909,
       "destination": "Dubai",
       "age_range": "Above 10 years",
+      "tour_operator": "Dubai tour & CO.",
       "travel_style": [
         "Custom",
         "Private",
-        "Group",
+        "Group", 
         "Explorer"
       ],
       "highlights": [
@@ -199,7 +442,465 @@
           "ratings": "4.9"
         }
       ]
+    },
+
+    {
+      "id": 2,
+      "category": "Monuments",
+      "main_image": "https://media1.thrillophilia.com/filestore/77n2ip2ixp9cluz2mceu3961ej15_shutterstock_533608354.jpg?w=auto&h=600",
+      "title": "Vatican Museums Tickets | Skip The Line",
+      "reviews": 800,
+      "destination": "Rome",
+      "age_range": "Above 15 years",
+      "tour_operator": "Rome tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Step into a world of timeless beauty and divine artistry at the historic Vatican Museums",
+        "Explore a vast collection of over 70,000 masterpieces, including treasures hidden away for centuries.",
+        "Be captivated by the sheer magnitude of artistic brilliance surrounding you. While only 20,000 artworks are on display, eacn",
+        "With training given by PADI certified divers before your scuba experience, this activity is safe for all level of divers"
+      ],
+      "tour_length": "5 days",
+      "str_price": 21493.99,
+      "act_price": 40909.99,
+      "off": 58,
+      "rating": 4.7,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/77n2ip2ixp9cluz2mceu3961ej15_shutterstock_533608354.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/pwbhn86hwgfymuku4xc6x1qog0dg_shutterstock_580194583%20(1).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/wzc0k6f7hva31mb0bmgye2fb8fq6_Michelangelo_-_Cristo_Juiz.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/pqrho60qm1b8ubv4v7dl94t0hjoi_77cc7fdda282496688f9ae4c64bea003.jpg?w=auto&h=600"
+      ],
+      "places_see_name": [
+        "Bermuda Diving Center"
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "category": "Monuments",
+      "main_image": "https://media1.thrillophilia.com/filestore/0abs05pmgdrkig0y5b7qb16ad536_shutterstock_1028245255.jpg?w=auto&h=600",
+      "title": "Colosseum Tickets, Rome",
+      "reviews": 700,
+      "destination": "Rome",
+      "age_range": "Above 10 years",
+      "tour_operator": "Rome tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Discover the most ancient landmarks in Rome - Colosseum, Roman Forum & Palatine Hill with your priority access ticket",
+        "Explore the Colosseum from a gladiator's point of view and get insights into its rich warfare memoirs",
+        "Be captivated by the sheer magnitude of artistic brilliance surrounding you. While only 20,000 artworks are on display, ",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
+      ],
+      "tour_length": "2 days",
+      "str_price": 24793.99,
+      "act_price": 50899.99,
+      "off": 58,
+      "rating": 4.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/xp019qacyb54ne0duwqm275hrc48_Colosseum-Entrance-with-Audio-Guide-Roman-Forum-and-Palatine-Hill-1024x683.jpeg?w=auto&h=6000",
+        "https://media1.thrillophilia.com/filestore/c4z44l06qrmyo4omtx8r7dts8lgw_1577702607_shutterstock_281865080.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/pqrho60qm1b8ubv4v7dl94t0hjoi_77cc7fdda282496688f9ae4c64bea003.jpg?w=auto&h=600",
+        "https://media.gettyimages.com/id/1097325124/photo/skyline-rome.jpg?s=612x612&w=0&k=20&c=cc2kfT4W1IsP48SgHGmQGZTvKl1AJoew7AnGHm11cig="
+      ],
+      "places_see_name": [
+        "Bermuda Diving Center"
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Zipline Singapore at Mega Adventure Park",
+      "main_image": "https://media1.thrillophilia.com/filestore/7ihs066l5r3sz30zqtskjr73m6hw_1539855324_megajump_(5).jpg?w=auto&h=600",
+      "title": "Zipline Singapore at Mega Adventure Park",
+      "reviews": 500,
+      "destination": "Rome",
+      "age_range": "Above 18 years",
+      "tour_operator": "Rome tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Soar above the vibrant cityscape of Singapore, zipping through the air with breathtaking views that will leave you speechless",
+        "Experience the thrill of defying gravity as you conquer heart-pounding drops and twists on an adrenaline-pumping zip line adve",
+        "Immerse yourself in the beauty of nature while seamlessly gliding through a carefully designed course that blends with",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
+      ],
+      "tour_length": "6 days",
+      "str_price": 367983.99,
+      "act_price": 70998.99,
+      "off": 58,
+      "rating": 4.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/qjkiudohhj3rs0mhh6iwknvbw5sd_1539855328_megajump_(3).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/81jkmdpdcmuxvi1c0xfwt627zbac_1539855330_megajump(8).jpg?w=auto&h=600",
+        "https://media.gettyimages.com/id/1157735556/photo/happy-woman-having-fun-during-canopy-tour-in-the-forest.jpg?s=612x612&w=0&k=20&c=6VGOcI9dqRku6Dc7yIMY8Q98Gd5JwBTeBR6qHWjdl9c="
+      ],
+      "places_see_name": [
+        "Bermuda Diving Center"
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+
+
+    {
+      "id": 5,
+      "category": "",
+      "main_image": "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+      "title": "Viking Cave",
+      "reviews": 900,
+      "destination": "Thailand",
+      "age_range": "Above 13 years",
+      "tour_operator": "Thailand tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Explore this naturally formed cave located at the bottom of a tall limestone cliff on the northeastern side of Ko Phi Phi island.",
+        "Check out the paintings on the eastern and southern walls of the cave that are believed to be done by pirates who took shelter at the caves.",
+        "Spot the swiftlet birds' nests in the Viking Caves which are actually edible and harvested by locals to be used in exotic Chinese delicacies.",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
+      ],
+      "tour_length": "2 days",
+      "str_price": 556351.99,
+      "act_price": 99099.99,
+      "off": 58,
+      "rating": 5.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+        "https://media.gettyimages.com/id/167650448/photo/koh-phi-phi-krabi-thailand-a-bird-nest-collector-climbs-bamboo-scaffolding-in-viking-cave-the.jpg?s=612x612&w=0&k=20&c=uyTkiPdDkf12JiV8RVwWhzwnYmKBRB_YmbqTo7hTdrA="
+
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "category": "Air",
+      "main_image": "https://media1.thrillophilia.com/filestore/o69bmvtyzcb27k22hhdqbvpuijxc_1588082622_1.png?w=auto&h=600",
+      "title": "Napa Valley Hot Air Balloon Tour, San Francisco",
+      "reviews": 800,
+      "destination": "San Francisco",
+      "age_range": "Above 12 years",
+      "tour_operator": "USA, tours & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Embark on enthralling 1-hour hot-air balloon ride with your folks as you witnes owned Napa Valley",
+        "Admire the outstanding beauty of the majestic mountains and lush greenery while  the corridors of grapes",
+        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
+      ],
+      "tour_length": "3 days",
+      "str_price": 93133.99,
+      "act_price": 9978.99,
+      "off": 58,
+      "rating": 7.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/38ah3y0sptxpi7vehg9tpom4rz42_napa1.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/xkkpai3edv5s83uxrakscszrxti9_napa3.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/c00dzle4z4r4v0ey3zr518byhf8j_napa2.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/yzxreibiffh193ur54gr0h3f4jci_napa%204.jpg?w=auto&h=600"
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "5.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "category": "Place",
+      "main_image": "https://media2.thrillophilia.com/images/photos/000/050/729/original/intro-2_673655992741448265454.jpg?width=975&height=600",
+      "title": "Wildlife Tour Of Little Rann Of Kutch",
+      "reviews": 800,
+      "destination": "Kutch Ahmedabad",
+      "age_range": "Above 10 years",
+      "tour_operator": "Ahmdabad govt tour .",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "The wildlife tour to Little Rann of Kutch is led by Vipul Ramanuj, who is  with wildlife photography",
+        "This tour is especially for those who are interested in raptors as a lot of them migrate here",
+        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
+      ],
+      "tour_length": "6 days",
+      "str_price": 83133.99,
+      "act_price": 2978.99,
+      "off": 58,
+      "rating": 7.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media.gettyimages.com/id/167844213/photo/indian-salt-pan-worker-bhartiben-rameshbhai-salvages-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=a82YY78vYjKncBXvl5Fs2G39bzycxK8LlpomlOeSQJE=",
+        "https://media.gettyimages.com/id/1258708021/photo/sea-water-closes-in-on-the-village-road-after-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=nXSAPMPpJTD4X2pbbY6J0mVzZoDDBcJ--RJ73nSdn6o=",
+        "https://media.gettyimages.com/id/167844204/photo/indian-salt-pan-worker-bhartiben-rameshbhai-displays-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=2GAXKUCocayLFkKbMhLrp4wsAbMjK8NgFcYmOVwJjZo=",
+        "https://media.gettyimages.com/id/1258707936/photo/villagers-cover-himself-with-plastic-to-protect-from-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=U67p5S8KTvZjAn2_KK2-zOrms9Lr1C-Ddoxn0OrqVdE="
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "5.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "category": "Trekking",
+      "main_image": "https://media2.thrillophilia.com/images/photos/000/074/397/original/chandrashila_tungnath.JPG?width=975&height=600",
+      "title": "Trek To Deoria Tal And Chandrashila",
+      "reviews": 900,
+      "destination": "Uttarakhand",
+      "age_range": "Above 15 years",
+      "tour_operator": "Uttarakhand tour co.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "There are plenty of sightseeing options available in a trek to Deoria Tal and Chandrashila.",
+        "Get ready to join a group of trekkers from Sari.",
+        "Walk to Deoria Tal, a lake in the wilderness surrounded by thick green forests and bugyal",
+        "Indulge in a 12.5 kilometer long trek to Chopta or Martoli."
+      ],
+      "tour_length": "2 days",
+      "str_price": 23133.99,
+      "act_price": 3978.99,
+      "off": 58,
+      "rating": 7.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media.gettyimages.com/id/167844213/photo/indian-salt-pan-worker-bhartiben-rameshbhai-salvages-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=a82YY78vYjKncBXvl5Fs2G39bzycxK8LlpomlOeSQJE=",
+        "https://media.gettyimages.com/id/1258708021/photo/sea-water-closes-in-on-the-village-road-after-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=nXSAPMPpJTD4X2pbbY6J0mVzZoDDBcJ--RJ73nSdn6o=",
+        "https://media.gettyimages.com/id/167844204/photo/indian-salt-pan-worker-bhartiben-rameshbhai-displays-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=2GAXKUCocayLFkKbMhLrp4wsAbMjK8NgFcYmOVwJjZo=",
+        "https://media.gettyimages.com/id/1258707936/photo/villagers-cover-himself-with-plastic-to-protect-from-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=U67p5S8KTvZjAn2_KK2-zOrms9Lr1C-Ddoxn0OrqVdE="
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "5.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
     }
+
+
+
   ],
+
+
+  
+
+
   "cart": []
 }
+
