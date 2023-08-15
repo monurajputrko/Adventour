@@ -8,7 +8,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { Rating } from 'flowbite-react';
 import Loader from '../Utils/Loader';
-import { getHotel } from '../../redux/HotelReducer/action';
+import { addHotel, getHotel } from '../../redux/HotelReducer/action';
 import SecondaryNav from './SecondaryNav';
 
 export const HDetail = () => {
@@ -92,7 +92,7 @@ export const HDetail = () => {
                                 <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(hotels?.price)?.toLocaleString("en-US")}</Text>
                                 <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                                 <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                    <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                    <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} onClick={()=>addHotel(hotels)} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                     <Spacer />
                                     <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                         if (!wish) {

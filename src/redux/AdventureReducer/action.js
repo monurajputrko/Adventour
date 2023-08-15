@@ -1,5 +1,5 @@
 import axios from "axios"
-import { GET_ADVENTURE_ERROR, GET_ADVENTURE_REQUEST, GET_ADVENTURE_SUCESS } from "./actionType"
+import { Add_ADVENTURE_REQUEST, GET_ADVENTURE_ERROR, GET_ADVENTURE_REQUEST, GET_ADVENTURE_SUCESS } from "./actionType"
 export const getAdventure = () => async(dispatch) => {
     dispatch({type:GET_ADVENTURE_REQUEST})
     try{
@@ -11,5 +11,7 @@ export const getAdventure = () => async(dispatch) => {
         dispatch({type:GET_ADVENTURE_ERROR})
     }
 }
-
+export const addAdventure = (obj) =>{
+    return {type:Add_ADVENTURE_REQUEST,payload:obj}
+}
 
