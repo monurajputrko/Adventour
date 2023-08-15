@@ -7,7 +7,6 @@ import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareF
 import { FaUserFriends } from 'react-icons/fa';
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
-import Logo from './LogoPic.png'
 import './pay.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';

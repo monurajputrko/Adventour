@@ -1,28 +1,29 @@
-.experience{
+.Dexperience{
     background-color: white;
     padding-top: 20px;
     overflow-x:hidden ;
 }
-.experience p{
+
+.Dexperience p{
     color:#a3a3a3;
     font-size: large;
 }
-.experience-element{
+.Dexperience-element{
     display: flex;
     justify-content: space-around;
 }
-.achieve{
+.Dachieve{
     display: flex;
     justify-content: space-around;
 }
-.experience-element img{
+.Dexperience-element img{
     margin-left: 20%;
 }
-.Experience_text_Div{
+.DExperience_text_Div{
     padding-top: 10%;
     padding-right: 15%;
 }
-.achieve h1{
+.Dachieve h1{
     color: #00a6ed;
     font-weight: 800;
 }
@@ -30,25 +31,25 @@
 
 @media (min-width:300px) and (max-width:600px){
 
-    .experience{
+    .Dexperience{
         text-align: center;
         font-size: large;
         overflow-x:hidden ;
     }
 
-    .experience-element{
+    .Dexperience-element{
         display: grid;
         justify-content: space-around;
     }
-    .experience-element img{
+    .Dexperience-element img{
         width: 300px;
         height: 500px;
         margin-left: -10%;
     }
-    .Experience_text_Div{
+    .DExperience_text_Div{
         margin-left: 10%;
     }
-.achieve{
+.Dachieve{
     margin-left: 10%;
 }
 

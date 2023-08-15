@@ -2,8 +2,8 @@ import React from "react";
 import "./DRating.css"
 const DRating = () => {
   return (
-    <div className="rating">
-      <div className="saying">
+    <div className="rating" style={{paddingBottom:"50px"}}>
+      <div className="saying" style={{marginBottom:"50px"}}>
       <div>
         <p style={{color:"#00a6ed"}}>What They Say</p>
         <h1>
@@ -11,7 +11,7 @@ const DRating = () => {
           About Us
         </h1>
       </div>
-      <div className="forback-btn1">
+      <div style={{marginBottom:-"50px"}} className="forback-btn1">
             <button>◀️</button>
             <button>▶️</button>
         </div>
