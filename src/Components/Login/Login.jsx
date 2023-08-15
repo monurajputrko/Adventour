@@ -55,29 +55,23 @@ const Login = () => {
 
   //========================= Google Authentication ================
 
+  const toast = useToast()
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup(auth, provider)
     dispatch(setLOGIN(result.user))
     console.log(result.user)
     toast({
-      title: 'Account created.',
-      description: "We've created your account for you.",
+      title: 'Logged in successfully.',
+      // description: "We've created your account for you.",
       status: 'success',
-      duration: 9000,
+      duration: 3000,
       isClosable: true,
     })
   }
   useEffect(() => {
     onOpen();
   }, [])
-
-  // ============================== useToast ========================
-
-  const toast = useToast()
-  const handleToast = ()=>{
-    
-  }
 
   return (
     <>
