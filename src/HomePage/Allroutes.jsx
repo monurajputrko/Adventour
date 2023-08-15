@@ -11,6 +11,7 @@ import Payment from '../Components/Payment/Payment'
 import Main from './Main'
 
 const Allroutes = () => {
+   
     return (
         <Routes>
             <Route path={"/"} element={<Main/>} ></Route>
@@ -25,4 +26,5 @@ const Allroutes = () => {
 }
 
 export default Allroutes;
+
 

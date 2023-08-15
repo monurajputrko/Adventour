@@ -9,7 +9,6 @@ import { FaUserFriends } from 'react-icons/fa';
 import { BsStar,BsStarFill,Bs1CircleFill,Bs2CircleFill,BsHouseFill,BsCashCoin,Bs3CircleFill } from "react-icons/bs";
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
-import Logo from './LogoPic.png'
 import './pay.css'
 import { useNavigate , useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux';
