@@ -4,7 +4,7 @@
 # Team & Tasks
 Mohd Shamaiel Wani & MD Dilnawaj Alam: Home Page <br/>
 Karan Kotai(Team Leader) : Booking & Listing pages <br/>
-Monu Singh : Checkout & Details pages <br/>
+Monu Singh : Checkout page <br/>
 Shiva Verma : Login/Signup pages <br/>
 
 # Features 
