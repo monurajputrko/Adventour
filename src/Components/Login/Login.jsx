@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
 import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
@@ -8,9 +8,12 @@ import { BsMeta } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import Carousel from './Carousel'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setLOGIN } from '../../redux/LoginReducer/action'
 
 
 const Login = () => {
+  const dispatch = useDispatch()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [value, setValue] = useState({
     email: "",
@@ -30,11 +33,13 @@ const Login = () => {
       return;
     }
 
+
     setErr("");
     signInWithEmailAndPassword(auth, value.email, value.pass)
       .then((res) => {
         console.log(res)
         setdisBtn(false);
+        dispatch(setLOGIN(res))
       })
       .catch((err) => {
         setdisBtn(false);
@@ -53,21 +58,34 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup(auth, provider)
-    const user = result.user
-    console.log(user);
-    console.log("logged in Google Successflly");
+    dispatch(setLOGIN(result.user))
+    console.log(result.user)
+    toast({
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
   }
   useEffect(() => {
     onOpen();
   }, [])
 
+  // ============================== useToast ========================
+
+  const toast = useToast()
+  const handleToast = ()=>{
+    
+  }
+
   return (
     <>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
-          <ModalOverlay />
-          <ModalContent position='absolute' top='15%'
-            bgGradient='linear(to-r, white, gray.300)'
+          {/* <ModalOverlay /> */}
+          <ModalContent position='absolute' top='13%'
+            bgGradient='linear(to-r, white, gray.100)'
             size={'100'}>
             <Flex>
               <Box w={'45%'} bg={'transparent'} >
@@ -79,7 +97,7 @@ const Login = () => {
                 }}
               >
                 <ModalHeader >
-                  <Box fontWeight='800' fontSize='35'm={5} >logIn </Box>
+                  <Box fontWeight='800' fontSize='35' m={5} >Login </Box>
                 </ModalHeader>
 
                 <ModalCloseButton />

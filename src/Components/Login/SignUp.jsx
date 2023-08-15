@@ -68,9 +68,9 @@ const SignUp = () => {
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}
       >
         <Box>
-          <ModalOverlay />
+          {/* <ModalOverlay /> */}
           <ModalContent position='absolute' top='15%'
-            bgGradient='linear(to-r, white, gray.300)'
+            bgGradient='linear(to-r, white, gray.100)'
             size={100}>
             <Flex>
               <Box w={'40%'} bg={'transparent'} >
