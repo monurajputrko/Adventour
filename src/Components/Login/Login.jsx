@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Divider, Flex, Image, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
 import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
@@ -8,9 +8,12 @@ import { BsMeta } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import Carousel from './Carousel'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setLOGIN } from '../../redux/LoginReducer/action'
 
 
 const Login = () => {
+  const dispatch = useDispatch()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [value, setValue] = useState({
     email: "",
@@ -30,11 +33,13 @@ const Login = () => {
       return;
     }
 
+
     setErr("");
     signInWithEmailAndPassword(auth, value.email, value.pass)
       .then((res) => {
         console.log(res)
         setdisBtn(false);
+        dispatch(setLOGIN(res))
       })
       .catch((err) => {
         setdisBtn(false);
@@ -53,23 +58,37 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup(auth, provider)
-    const user = result.user
-    console.log(user);
-    console.log("logged in Google Successflly");
+    dispatch(setLOGIN(result.user))
+    console.log(result.user)
+    toast({
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
   }
   useEffect(() => {
     onOpen();
   }, [])
+
+  // ============================== useToast ========================
+
+  const toast = useToast()
+  const handleToast = ()=>{
+    
+  }
+
   return (
     <>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
-          <ModalOverlay />
-          <ModalContent position='absolute' top='20%'
-            bgGradient='linear(to-r, white, gray.300)'
-            size={100}>
+          {/* <ModalOverlay /> */}
+          <ModalContent position='absolute' top='13%'
+            bgGradient='linear(to-r, white, gray.100)'
+            size={'100'}>
             <Flex>
-              <Box w={'40%'} bg={'transparent'} >
+              <Box w={'45%'} bg={'transparent'} >
                 <Carousel />
               </Box>
               <Box w={'60%'}
@@ -78,23 +97,23 @@ const Login = () => {
                 }}
               >
                 <ModalHeader >
-                  <Box fontWeight='800' fontSize='30' >LogIn </Box>
+                  <Box fontWeight='800' fontSize='35' m={5} >Login </Box>
                 </ModalHeader>
 
                 <ModalCloseButton />
                 <ModalBody >
                   <Flex >
                     <Box w='100%'>
-                      <Box mb='3'>
-                        <Text >Email Address</Text>
+                      <Box mb='5'>
+                        <Text mb='3'>Email Address</Text>
                         <Input outline={'1px solid black'} placeholder='Enter Email' size='sm' onChange={(e) => setValue(prev => (({ ...prev, email: e.target.value })))} />
                       </Box>
-                      <Box>
-                        <Text >Password</Text>
+                      <Box mb='3'>
+                        <Text mb='3'>Password</Text>
                         <Input outline={'1px solid black'} placeholder='Enter Password' size='sm' onChange={(e) => setValue(prev => (({ ...prev, pass: e.target.value })))} />
                       </Box>
                       <Text color={'red'} >{Err}</Text>
-                      <Box mt='5'>
+                      <Box my='7'>
                         <Button w='100%' p='3' colorScheme='blue' onClick={handlesubmission} disabled={disBtn} >Login</Button>
                       </Box>
                       <Text fontSize='15' my='5' >Doesn't have an account yet ?
@@ -104,11 +123,11 @@ const Login = () => {
 
                   </Flex>
                   <Divider />
-                  <Box w={'80%'} m={'auto'}>
+                  <Box w={'80%'} m={'auto'} my={5}>
                     <Flex w={'fit-content'} m={'auto'} fontSize={20}>
-                      <Box color={'gray'} borderRadius={100} p={5} onClick={handleGoogleLogin} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} ><BsGoogle /></Box>
-                      <Box color={'gray'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} fontWeight={700} ><BsMeta /></Box>
-                      <Box color={'gray'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'}><BsInstagram /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} onClick={handleGoogleLogin} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} ><BsGoogle /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'} fontWeight={700} ><BsMeta /></Box>
+                      <Box color={'#3182ce'} borderRadius={100} p={5} _hover={{ bg: '#3182ce', color: "white" }} cursor={'pointer'}><BsInstagram /></Box>
                     </Flex>
                   </Box>
                 </ModalBody>
