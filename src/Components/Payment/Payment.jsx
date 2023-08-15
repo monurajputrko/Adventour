@@ -3,8 +3,9 @@ import { Box, Button, Checkbox, Flex, FormControl, HStack, IconButton, Image, In
 import React, { useEffect, useState } from 'react'
 import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
 import { FaMoon, FaSun } from "react-icons/fa";
-import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill } from 'react-icons/bs';
+import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill,BsPhoneFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
+import { BsStar,BsStarFill,Bs1CircleFill,Bs2CircleFill,BsHouseFill,BsCashCoin,Bs3CircleFill } from "react-icons/bs";
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import Logo from './LogoPic.png'
@@ -212,15 +213,20 @@ function Payment() {
                 alt="Description of the image"
                 fallbackSrc="/path/to/fallback/image.jpg"
                 />
-                  <Text fontSize={'18px'} fontWeight={'700'}>Sunday, August 20th, 2023</Text>
-                  <Text fontSize={'15px'}>to Thursday, August 31st, 2023</Text>
-                  <Text>Change date</Text>
+                  <Text fontSize={'20px'} fontWeight={'700'}>{Hoteldata?.title}</Text>
+                  <Flex><Text fontSize={'18px'} fontWeight={'500'}>Ratings {Hoteldata?.stars}</Text>&nbsp;<BsStarFill marginBottom="20px" /></Flex>
+                  <Flex><Text fontSize={'17px'} fontWeight={'400'}>{Hoteldata?.reviews} Reviews</Text></Flex>
+                  {/* <Text fontSize={'15px'}>{Hoteldata?.address}</Text> */}
+                  
                 </Box>
                 <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}   w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
-                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(Hoteldata?.price)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
-                  <Flex py={'5px'}><FaUserFriends size={'25px'} /><Text px={'10px'}>6 spaces left and yours is reserved for the next 10 minutes</Text></Flex>
-                  <Flex py={'5px'}><BsLightningChargeFill size={'22px'} /><Text px={'10px'}>Instant Book: Your spaces will be instantly secured.</Text></Flex>
-                  <Flex py={'5px'}><AiFillTag size={'22px'} /><Text px={'10px'}>Special deal. See details</Text></Flex>
+                  <Flex py={'5px'}><BsCashCoin size={'25px'} /><Text pt={'0px'} px={'10px'}>Only ₹{(Hoteldata?.price)?.toLocaleString("en-US")} upfront per person</Text></Flex>
+                  <Flex py={'5px'}><BsHouseFill size={'35px'} /><Text px={'10px'}>{Hoteldata?.address}</Text></Flex>
+                  <Flex py={'5px'}><Bs1CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[0]}</Text></Flex>
+                  <Flex py={'5px'}><Bs2CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[3]}</Text></Flex>
+                  <Flex py={'5px'}><Bs3CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[4]}</Text></Flex>
+                 
+                  <Flex py={'5px'}><BsPhoneFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.phone}</Text></Flex>
                 </Box>
               </Flex>
             </Box>
@@ -594,7 +600,7 @@ function Payment() {
                 <Box w={'50%'} m={'auto'} textAlign={'center'} mt={'20px'}>
                   <Text fontSize={'13px'} fontWeight={'700'}>
                     No booking fees! <span style={{ fontWeight: "500" }}>You will be charged</span> ₹{(dueNext)?.toLocaleString("en-US")} <span style={{ fontWeight: "500" }}>now.
-                      The remaining balance is due on</span> 1 Jul, 2023.
+                      The remaining balance is due on</span> 20 August, 2023.
                   </Text>
                 </Box>
               </Box>
@@ -693,7 +699,7 @@ function Pricediv({ theme, storedata, traveller , basepr, discountVal, totalDue,
         <Text fontWeight={'700'}>₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}</Text>
       </Flex>
       <Flex>
-        <Text>Due on 1 Jul, 2023</Text>
+        <Text>Due on 20 August, 2023</Text>
         <Spacer />
         <Text>₹ {(traveller * dueNext)?.toLocaleString("en-US")}</Text>
       </Flex>
