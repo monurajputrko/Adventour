@@ -6,7 +6,19 @@
     padding-bottom: 50px;
     text-align: center;
 }
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+h2{
+    font-size: 20px;
 
+}
+p{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
 .homepege-title{
     display: flex;
 justify-content: space-around;    
@@ -55,7 +67,6 @@ padding-top: 30px;
    width:500px;
    height: 300px;
    margin-left: 150px;
-   
    margin-top: 50px;
    position: sticky;
 }

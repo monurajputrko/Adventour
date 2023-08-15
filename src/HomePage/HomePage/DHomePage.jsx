@@ -116,7 +116,7 @@ const DHomePage = () => {
 
       <div className="slider">
         <div className="sliderText">
-          <p style={{color:"#00a6ed"}}>Top Destination</p>
+          <p style={{color:"#00a6ed",marginBottom:"10px"}}>Top Destination</p>
           <h1 style={{ color: "black" }}>
             Wanderlist for <br />
             Your Wanderlist
@@ -130,34 +130,38 @@ const DHomePage = () => {
       <div className="placeDetails">
         {slider_Data.map((slideimg, index) => {
           return (
-            <div
+            <div 
               className={index === current ? "slide active" : "slide"}
               key={index}
             >
-              {index === current && <img src={slideimg.image} />}
+              {index === current && <img  src={slideimg.image} style={{ borderRradius: "15px",
+   width:"500px",
+   height: "300px",
+   marginLeft: "150px",
+   marginTop: "50px"}} />}
             </div>
           );
         })}
 
         <div className="placeDetails_Text">
           {slider_Data.map((slide, index) => {
-            return index === current && <h1> Location : {slide.title}</h1>;
+            return index === current && <h1 style={{marginBottom:"20px",paddingTop:"50px"}}> Location : {slide.title}</h1>;
           })}
 
           {slider_Data.map((slide, index) => {
-            return index === current && <h2> Place : {slide.location}</h2>;
+            return index === current && <h2 >Place : {slide.location}</h2>;
           })}
 
           {slider_Data.map((slide, index) => {
-            return index === current && <p>{slide.description}</p>;
+            return index === current && <p style={{paddingBottom:"20px" , paddingTop:"20px"}}>{slide.description}</p>;
           })}
 
           {slider_Data.map((slide, index) => {
-            return index === current && <h3> Rating: {slide.ratings} {slide.ratings > 4.7 ? "*****" : "****" }</h3>;
+            return index === current && <h3> Rating: {slide.ratings} {slide.ratings > 4.7 ? "⭐⭐⭐⭐⭐" : "⭐⭐⭐⭐" }</h3>;
           })}
 
           <h2> {slider_Data.map((slide, index) => {
-            return index === current && <p> Price : {slide.price} </p>;
+            return index === current && <p style={{fontSize:"20px"}}> Price : {slide.price} </p>;
           })} 
           </h2>
         </div>
