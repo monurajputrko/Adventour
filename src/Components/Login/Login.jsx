@@ -40,6 +40,7 @@ const Login = () => {
         console.log(res)
         setdisBtn(false);
         dispatch(setLOGIN(res))
+        onClose()
       })
       .catch((err) => {
         setdisBtn(false);
@@ -68,6 +69,7 @@ const Login = () => {
       duration: 3000,
       isClosable: true,
     })
+    onClose()
   }
   useEffect(() => {
     onOpen();
@@ -78,14 +80,14 @@ const Login = () => {
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
           {/* <ModalOverlay /> */}
-          <ModalContent position='absolute' top='13%'
+          <ModalContent position='absolute' top='5%'
             bgGradient='linear(to-r, white, gray.100)'
             size={'100'}>
             <Flex>
-              <Box w={'45%'} bg={'transparent'} >
+              <Box w={'50%'} bg={'transparent'} >
                 <Carousel />
               </Box>
-              <Box w={'60%'}
+              <Box w={'50%'}
                 style={{
                   boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',
                 }}
