@@ -140,7 +140,7 @@ function Payment() {
       {/* <Box bg={theme ? '#191b1d' : 'white'} py={'15px'}>
         <HStack w={{ base: "95%", md: "95%", lg: '76%' }} m={'auto'} >
           <Flex alignItems={"center"}>
-            {/* <Image src={Logo} alt='logo' w={"70px"} px={"8px"} /> */}
+            <Image src={Logo} alt='logo' w={"70px"} px={"8px"} />
             <Text fontSize={"1.2rem"} fontWeight={"800"} >Adventour.</Text>
           </Flex>
           <Spacer />
@@ -151,9 +151,9 @@ function Payment() {
             <Box color={theme ? 'white' : 'blackAlpha.800'} colorScheme='none'>Book as Travel Agent</Box>
           </HStack>
         </HStack>
-      </Box> */}
+      </Box>  */}
 
-      {/* Midbox-start */}
+      {/* Midbox-start 
       <Box w={{ base: "92%", md: "95%", lg: '76%' }} m={'auto'}>
         {/* Heading flex */}
         <Flex mb={-3} pb={1} py={'30px'}>
