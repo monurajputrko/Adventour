@@ -14,6 +14,12 @@
       "reviews": 534,
       "address": "Nehru Bridge Corner Near Sakar Vii , Opp Patang Hotel, Ahmedabad 380009 India",
       "stars": 4.5,
+      "about":[
+        "Riverview Hotel is a good choice for travellers looking for a 3 star hotel in Ahmedabad. It is located in Near Nehru Bridge.",
+        "From all the 3 Star hotels in Ahmedabad, Riverview Hotel is very much popular among the tourists across the whole India.",
+        "A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for all.",
+        "82% of the guests have recommended Riverview Hotel on our platform. Good service quality, nice location, good rooms, good."
+      ],
       "description": "Located in Ahmedabad’s downtown commercial area of Nehru Bridge, Ashram Road, on the banks of River Sabarmati, Always Hotel Riverview is a modern & contemporary 3 Star Hotel in the country’s fastest growing city. Well appointed, spacious rooms with parquet flooring & all modern amenities, it is ideal for both business & leisure traveler.Plan your next luxury stay at the Riverview Hotel is one of the best hotel in Ahmedabad near sabarmati riverfront, which is the perfect destination for budget stay in Ahmedabad. Riverview hotel is located near Ashram Road Ahmedabad",
       "utils": [
         "Allergy-free room",
@@ -26,7 +32,27 @@
         "Walk-in shower"
       ],
       "phone": "079 66185000",
-      "price": 7840
+      "price": 7840,
+      "off":"24",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 2,
