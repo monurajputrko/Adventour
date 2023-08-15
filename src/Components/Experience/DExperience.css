@@ -1,5 +1,5 @@
 .experience{
-    background-color: black;
+    background-color: white;
     padding-top: 20px;
     overflow-x:hidden ;
 }
@@ -23,7 +23,7 @@
     padding-right: 15%;
 }
 .achieve h1{
-    color: #3dc6ef;
+    color: #00a6ed;
     font-weight: 800;
 }
 

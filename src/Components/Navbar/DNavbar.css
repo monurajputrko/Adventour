@@ -2,14 +2,14 @@
     font-family: "Times New Roman";
 }
 .navbar{
-    background-color: #101214;
+    background-color: white;
     margin-top:-60px ;
     overflow-x:hidden ;
     position:sticky;
     
 }
 .NavBox{
-    width: 80%;
+    width: 100%;
   padding-top: 20px;
 }
 
@@ -42,7 +42,9 @@
 }
 
 .NavbarItems ul :hover{
-    color: #E6E6E6;
+    color: black;
+    font-weight: 800;
+    font-size:large ;
     text-decoration: underline; 
 }
 
@@ -87,12 +89,15 @@
 .NavbarItems ul li :hover {
     background-color: blue;
     }
+    .nav-Btn{
+        margin-top: -10px;
+    }
 
 
   @media  (max-width:600px) and (min-width:300px){
       
     .navbar{
-        background-color: #111315;
+        background-color: white;
         margin-top:-80px ;
         overflow-x:hidden;
         

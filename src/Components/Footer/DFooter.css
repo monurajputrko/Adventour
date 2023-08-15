@@ -2,7 +2,7 @@
     color: white;
 }
 .footer{
-    background-color: #111315;
+    background-color: white;
     width: 100%;
     padding-top: 50px;
     overflow-x:hidden ;
@@ -27,16 +27,19 @@
 .gridColumn button{
     font-size: large;
     color:black;
-    background-color: #3ec6f0;
+    background-color: #00a6ed;
     border-radius: 10px;
     padding: 10px;
+    border: none;
     
 }
 .gridColumn p {
-    color: #3ec6f0;
+    color: #00a6ed;
+    font-weight: 600;
+    font-size: large;
+
 }
 footer{
-    
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(42, 39, 39);
@@ -67,6 +70,7 @@ footer{
     .footer{
         text-align: center;
         border-top: 2px sold wheat;
+    
     }
    .footer button{
     font-size: small;
@@ -75,6 +79,8 @@ footer{
     }
     footer{
         gap:10px;
+        margin-left: 50px;
+        margin-right: 40px;
     }
     .footer_Div p{
         margin-top: -10px;

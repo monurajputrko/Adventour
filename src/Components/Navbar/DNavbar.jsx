@@ -14,7 +14,7 @@ const DNavbar = () => {
           width={75}
           height={40}
         />
-        <h1 className="logo">Adventour.</h1>
+        <h1 className="logo" style={{color:"black"}}>Adventour.</h1>
 
         <ul>
           <li className="navItem">Services</li>

@@ -1,6 +1,6 @@
 
 .holiday{
-    background-color: #16181a;
+    background-color: white;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -38,6 +38,7 @@
 .holiday-element{
     display: grid;
 }
+
 .onedown1{
 margin-top: 50px;
 margin-bottom: -50px;

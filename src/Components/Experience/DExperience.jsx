@@ -12,7 +12,7 @@ const DExperience = () => {
           />
         </div>
         <div className="Experience_text_Div" >
-          <p style={{color:"#3ec6f0"}}>Our Experience</p>
+          <p style={{color:"#00a6ed"}}>Our Experience</p>
           <h1 style={{fontSize:40}} >Save More With Our Best Deals</h1>
           <p style={{color:"#a3a3a3"}}>The company serves customers from freelance <br/> web professionals to digital agencies, all the way up to the large hosting companies.</p>
           <div className="achieve">

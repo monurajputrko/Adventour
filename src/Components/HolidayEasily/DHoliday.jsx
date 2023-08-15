@@ -4,7 +4,7 @@ const DHoliday = () => {
   return (
     <div className='holiday'>
         <div>
-            <p style={{color:"#3ec6f0"}}>Holiday Easily</p>
+            <p style={{color:"#00a6ed"}}>Holiday Easily</p>
             <h1>Book Tickets and Plan Your <br/> Holiday Easily</h1>
             <p>Discover a place taht suits your kind of trip. And Book Ticket and <br/> Enjoy on your own price. We will help you for that fun.</p>
         </div>
