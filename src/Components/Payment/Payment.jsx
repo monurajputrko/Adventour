@@ -6,9 +6,9 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
-
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
-// import Logo from './LogoPic.png'
+import Logo from './LogoPic.png'
+import './pay.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -17,7 +17,8 @@ function Payment() {
   const [RazorPay, setRazorPay] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [theme, settheme] = useState(false);
-  const storedata = useSelector(state => state.hotels)
+  const storedata = useSelector(state => state.adventure)
+  const Hoteldata = useSelector(state => state.hotels)
   const [start, setstart] = useState('');
   const [end, setend] = useState('');
   const len = storedata?.destinations?.length
@@ -48,6 +49,15 @@ function Payment() {
     cvv:''
   })
 
+  // const styles ={
+  //     background: linear-gradient(to bottom, #44c1ff 10%, white 50%);
+  //     width: 100%;
+  //     /* height: 60em; */
+  //     background-attachment: fixed;
+  //     z-index: -1;
+
+  // }
+
   useEffect(() => {
 
     window.scrollTo({
@@ -66,21 +76,21 @@ function Payment() {
   }, [])
 
   
-  const basepr = storedata?.price*10;
+  const basepr = storedata?.price_per_day*10;
 
   const discountVal = basepr*0.3;
 
   const totalDue = basepr-discountVal;
 
-  const dueNext = totalDue -  storedata?.price;
+  const dueNext = totalDue -  storedata?.price_per_day;
 
-  const mainImg = storedata?.main_img;
+  const mainImg = storedata?.main_image;
 
-  console.log(typeof(storedata?.price));
+  console.log(typeof(storedata?.price_per_day));
 
   const handlePayment = () => {
 
-    const Pr = traveller * storedata?.price;
+    const Pr = traveller * storedata?.price_per_day;
     const checkout = Pr * 100;
     console.log(checkout);
 
@@ -109,18 +119,12 @@ function Payment() {
     setRazorPay(false);
   };
 
+
+
   return (
-
-
-    // {theme && (
-    //   <Box
-    //   minH={'100vh'}
-    //   bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'}
-    //   color={theme ? 'white' : 'blackAlpha.800'}
-    //   position="relative"
-    //   zIndex={-1}
-    // >
-       <Box minH={'100vh'} bg={theme ? '#101214' : 'gray.100'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} color={theme ? 'white' : 'blackAlpha.800'} > 
+   
+    
+       <Box minH={'100vh'} bg={theme ? '#101214' : 'gray.100'} id='mmm'   color={theme ? 'white' : 'blackAlpha.800'} > 
       {/* <Toggle /> */}
       <IconButton
         aria-label="toggle theme"
@@ -132,10 +136,6 @@ function Payment() {
         zIndex={'4'}
         onClick={() => {if(theme){settheme(false)}else{settheme(true)}}} icon={theme ? <FaSun /> : <FaMoon />}
       />
-
-    <Box minH={'100vh'} bg={theme ? '#101214' : 'gray.100'} color={theme ? 'white' : 'blackAlpha.800'}>
-      {/* <Toggle /> */}
-
       {/* navbar-box */}
       {/* <Box bg={theme ? '#191b1d' : 'white'} py={'15px'}>
         <HStack w={{ base: "95%", md: "95%", lg: '76%' }} m={'auto'} >
@@ -151,29 +151,33 @@ function Payment() {
             <Box color={theme ? 'white' : 'blackAlpha.800'} colorScheme='none'>Book as Travel Agent</Box>
           </HStack>
         </HStack>
-      </Box>  */}
+      </Box> */}
 
-      {/* Midbox-start 
+      {/* Midbox-start */}
       <Box w={{ base: "92%", md: "95%", lg: '76%' }} m={'auto'}>
         {/* Heading flex */}
         <Flex mb={-3} pb={1} py={'30px'}>
-        <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px" filter={theme ? 'invert(100%)' : 'none'}/>
-        <Text pb={'20px'} fontSize={'20px'} fontWeight={'600'}>&nbsp;&nbsp;&nbsp;Your Booking overview</Text>
+        {/* <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px" filter={theme ? 'invert(100%)' : 'none'}/> */}
+        <Text pb={'20px'} fontSize={'30px'} fontWeight={'600'}>&nbsp;&nbsp;&nbsp;Your Booking overview</Text>
           <Spacer />
-          <Button colorScheme='none' bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} color={theme ? 'white' : 'blackAlpha.800'} mr={'10px'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Help</Button>
-          <Button colorScheme='none' bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} color={theme ? 'white' : 'blackAlpha.800'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Share Tour</Button>
+          <Button colorScheme='none' bg={theme ? '#101214' : 'gray.100'}  color={theme ? 'white' : 'blackAlpha.800'} mr={'10px'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Help</Button>
+          <Button colorScheme='none' bg={theme ? '#101214' : 'gray.100'}  color={theme ? 'white' : 'blackAlpha.800'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Share Tour</Button>
         </Flex>
 
         {/* Main content-start */}
         <Flex justifyContent={'space-between'}>
           {/* left box */}
+          
           <Box  w={{ base: "100%", md: "100%", lg: '67%' }}>
-            <Box  boxShadow={'md'} p={'20px'}   bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} borderRadius={'15px'}>
-              
-              <Text fontSize={{ base: "20px", md: '33px', lg: '33px' }} fontWeight={'600'}>{storedata?.title}</Text>
+            <Box  boxShadow={'md'} p={'20px'} bg={theme ? '#101214' : 'gray.100'} borderRadius={'15px'}>
+              <HStack>
+            <Image src="https://imgs.search.brave.com/QYPbkatU9sIb4zuNZAiNtBpUoyJx0cltIl2lqkwWHO4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGhlbm91bnBy/b2plY3QuY29tL3Bu/Zy8xNjYzNDgyLTIw/MC5wbmc" alt="" w="40px" h="40px" style={{ marginBottom: '20px'}} filter={theme ? 'invert(100%)' : 'none'}/>
+        <Text pb={'20px'} fontSize={'20px'} fontWeight={'600'}>&nbsp;{storedata?.title}</Text>
+        </HStack>
+              {/* <Text fontSize={{ base: "20px", md: '33px', lg: '33px' }} fontWeight={'600'}>Your Booking overview</Text> */}
               <Flex direction={{ base: "column", md: "row", lg: "row" }}>
                 
-                <Box border={'1px solid gray'} bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} w={{ base: "100%", md: "35%", lg: '35%' }} p={'20px'} borderRadius={{ base: '15px 15px 0 0', md: '15px 0 0 15px', lg: '15px 0 0 15px' }}>
+                <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}  w={{ base: "100%", md: "35%", lg: '35%' }} p={'20px'} borderRadius={{ base: '15px 15px 0 0', md: '15px 0 0 15px', lg: '15px 0 0 15px' }}>
                 <Image
                 src={mainImg}
                 alt="Description of the image"
@@ -183,15 +187,47 @@ function Payment() {
                   <Text fontSize={'15px'}>to Thursday, August 31st, 2023</Text>
                   <Text>Change date</Text>
                 </Box>
-                <Box border={'1px solid gray'} bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'}  w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
-                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.price)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
+                <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}   w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
+                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.price_per_day)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
                   <Flex py={'5px'}><FaUserFriends size={'25px'} /><Text px={'10px'}>6 spaces left and yours is reserved for the next 10 minutes</Text></Flex>
                   <Flex py={'5px'}><BsLightningChargeFill size={'22px'} /><Text px={'10px'}>Instant Book: Your spaces will be instantly secured.</Text></Flex>
                   <Flex py={'5px'}><AiFillTag size={'22px'} /><Text px={'10px'}>Special deal. See details</Text></Flex>
                 </Box>
               </Flex>
             </Box>
-            <Box my={'25px'} p={'20px'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} borderRadius={'15px'}  boxShadow={'md'}>
+
+            <Text> <br/> </Text>
+        {/* Hotels Div */}
+        <Box  boxShadow={'md'} p={'20px'} bg={theme ? '#101214' : 'gray.100'} borderRadius={'15px'}>
+              <HStack>
+            <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px" style={{ marginBottom: '20px'}} filter={theme ? 'invert(100%)' : 'none'}/>
+        <Text pb={'20px'} fontSize={'20px'} fontWeight={'600'}>&nbsp;{Hoteldata?.title}</Text>
+        </HStack>
+              {/* <Text fontSize={{ base: "20px", md: '33px', lg: '33px' }} fontWeight={'600'}>Your Booking overview</Text> */}
+              <Flex direction={{ base: "column", md: "row", lg: "row" }}>
+                
+                <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}  w={{ base: "100%", md: "35%", lg: '35%' }} p={'20px'} borderRadius={{ base: '15px 15px 0 0', md: '15px 0 0 15px', lg: '15px 0 0 15px' }}>
+                <Image
+                src={Hoteldata?.main_img}
+                alt="Description of the image"
+                fallbackSrc="/path/to/fallback/image.jpg"
+                />
+                  <Text fontSize={'18px'} fontWeight={'700'}>Sunday, August 20th, 2023</Text>
+                  <Text fontSize={'15px'}>to Thursday, August 31st, 2023</Text>
+                  <Text>Change date</Text>
+                </Box>
+                <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}   w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
+                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(Hoteldata?.price)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
+                  <Flex py={'5px'}><FaUserFriends size={'25px'} /><Text px={'10px'}>6 spaces left and yours is reserved for the next 10 minutes</Text></Flex>
+                  <Flex py={'5px'}><BsLightningChargeFill size={'22px'} /><Text px={'10px'}>Instant Book: Your spaces will be instantly secured.</Text></Flex>
+                  <Flex py={'5px'}><AiFillTag size={'22px'} /><Text px={'10px'}>Special deal. See details</Text></Flex>
+                </Box>
+              </Flex>
+            </Box>
+       
+       {/* Hotels Div End */}
+      
+            <Box my={'25px'} p={'20px'}  bg={theme ? '#101214' : 'gray.100'}  borderRadius={'15px'}  boxShadow={'md'}>
               <HStack >
                 {/* <BsFill1SquareFill size={'30px'} /> */}
                 <Image src="https://img.icons8.com/?size=512&id=uycYbKOpjcvE&format=png" alt="" w="50px"/>
@@ -201,14 +237,14 @@ function Payment() {
                 <Text fontWeight={'700'}>{traveller} x Traveller</Text>
                 <Spacer />
                 <HStack>
-                  <IconButton  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} isDisabled={traveller === 1} onClick={() => { settraveller(pre => pre - 1) }} icon={<GrFormSubtract size={'25px'} />} rounded={'full'} boxShadow={'lg'} />
+                  <IconButton  bg={theme ? '#101214' : 'gray.100'}  isDisabled={traveller === 1} onClick={() => { settraveller(pre => pre - 1) }} icon={<GrFormSubtract size={'25px'} />} rounded={'full'} boxShadow={'lg'} />
                   <Text px={'10px'}>{traveller}</Text>
-                  <IconButton  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} isDisabled={traveller === storedata?.group_size} onClick={() => { settraveller(pre => pre + 1) }} icon={<GrFormAdd size={'25px'} />} rounded={'full'} boxShadow={'lg'} />
+                  <IconButton  bg={theme ? '#101214' : 'gray.100'}  isDisabled={traveller === storedata?.group_size} onClick={() => { settraveller(pre => pre + 1) }} icon={<GrFormAdd size={'25px'} />} rounded={'full'} boxShadow={'lg'} />
                 </HStack>
               </HStack>
             </Box>
 
-            <Box p={'20px'} bg={theme ? '#191b1d' : 'white'} bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} boxShadow={'md'} borderRadius={'15px'}>
+            <Box p={'20px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'} borderRadius={'15px'}>
               <HStack>
                 {/* <BsFill2SquareFill size={'30px'} /> */}
                 <Image src="https://imgs.search.brave.com/npnvI8BvSTgBz_t_12K0xeCvn2ZGOl0etRWilh6dJvM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODE4Mi84MTgy/NjI5LnBuZw" alt="" w="40px" />
@@ -381,7 +417,7 @@ function Payment() {
               </Text>
             </Box> */}
             {/* vivek */}
-            <Box  my={'25px'} p={'20px'} boxShadow={'md'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} borderRadius={'15px'}>
+            <Box  my={'25px'} p={'20px'} boxShadow={'md'}  bg={theme ? '#101214' : 'gray.100'} borderRadius={'15px'}>
               <HStack>
                 {/* <BsFill4SquareFill size={'30px'} /> */}
                 <Image src="https://imgs.search.brave.com/5kV9NVHbCqXcZFz5EZFlxu7g2xUSQ7R12PYMTuaRp7M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hcHBz/LnNob3BpZnkuY29t/L2Nkbi9zaG9waWZ5/Y2xvdWQvc2hvcGlm/eV9hcHBfc3RvcmUv/YXNzZXRzL2FwcF9k/ZXRhaWxzX3BhZ2Uv/ZmVhdHVyZS1pY29u/LWZlMjdhZTRkNjY5/NTViMjgxYzczNTIx/NjRiNjM4N2E1YmE3/ZGQ0OGEwYjY0M2Iz/M2Y0NjU1ZWI3ODZj/ZmE0NmYuc3Zn.svg" alt="" w="40px"/>
@@ -592,7 +628,7 @@ function Payment() {
 
           {/* right box */}
           <Box  w={'31%'} display={{ base: "none", md: "none", lg: "block" }}>
-            <Box  display={{ base: "none", md: "none", lg: "block" }} p={'20px'} borderRadius={'15px'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} boxShadow={'md'} lineHeight={'25px'}>
+            <Box  display={{ base: "none", md: "none", lg: "block" }} p={'20px'} borderRadius={'15px'}  bg={theme ? '#101214' : 'gray.100'}  boxShadow={'md'} lineHeight={'25px'}>
             <HStack>
             <Image src="https://imgs.search.brave.com/4NRB7KBeY1IHDpbBqYJ-ZMsNbJlSliAiWr43zdWQ5fA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODI2LzgyNjA3/MC5wbmc" alt="" w="30px" h="30px"/>
               <Text pb={'15px'} fontSize={'20px'} fontWeight={'700'}>My Trip</Text>
@@ -626,7 +662,7 @@ function Payment() {
 }
 
 function Pricediv({ theme, storedata, traveller , basepr, discountVal, totalDue, dueNext }) {
-  return <Box p={'20px'} my={'25px'} borderRadius={'15px'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} boxShadow={'md'} position={'sticky'} top={'20px'}>
+  return <Box p={'20px'} my={'25px'} borderRadius={'15px'}  bg={theme ? '#101214' : 'gray.100'}  boxShadow={'md'} position={'sticky'} top={'20px'}>
      <HStack >
                 {/* <BsFill1SquareFill size={'30px'} /> */}
                 <Image src="https://img.icons8.com/?size=512&id=13008&format=png" alt="" w="30px" />
@@ -654,7 +690,7 @@ function Pricediv({ theme, storedata, traveller , basepr, discountVal, totalDue,
       <Flex>
         <Text fontWeight={'700'}>Due today</Text>
         <Spacer />
-        <Text fontWeight={'700'}>₹ {(traveller * storedata?.price)?.toLocaleString("en-US")}</Text>
+        <Text fontWeight={'700'}>₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}</Text>
       </Flex>
       <Flex>
         <Text>Due on 1 Jul, 2023</Text>
