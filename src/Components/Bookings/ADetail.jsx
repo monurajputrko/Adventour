@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
 import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai";
 import { RiFileCopy2Line } from "react-icons/ri";
 import { MdGroup, MdStar, MdVerified } from "react-icons/md";
@@ -13,10 +13,14 @@ import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
 import Loader from '../Utils/Loader';
+import { PhoneIcon, AddIcon, WarningIcon, ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons';
+
 export const ADetail = () => {
     const dispatch = useDispatch()
     const { idx } = useParams()
     console.log(idx)
+    const Id = parseInt(idx)
+
     const theme = useSelector(state => state.theme);
     const adventures = useSelector(state => state.adventures.adventures[idx - 1])
     console.log(adventures)
@@ -31,6 +35,22 @@ export const ADetail = () => {
         });
     }, [])
     if (isLoading) return <Loader />
+
+
+  const addToCart = (i) => {
+      
+    try {
+
+        
+    } catch (error) {
+        
+    }
+
+  }
+
+
+
+
     return (
         <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
             {/* <Toggle  /> */}
@@ -38,6 +58,27 @@ export const ADetail = () => {
 
 
             <Image src={adventures?.main_image} boxShadow={'md'} width={{ base: '100vw' }} h={{ base: '350px', lg: "500px" }} />
+
+           
+
+            <ButtonGroup gap='4'>
+
+
+                {/* <Link to={`/${Id+1}`} >
+                 <Button position="absolute" colorScheme='whiteAlpha'>WhiteAlpha</Button>
+                </Link> */}
+
+                <Link to={`/adventure/${Id+1}`} >
+                 <Button top="15vh" right="7vh" position="absolute" colorScheme='blackAlpha'> <ArrowRightIcon boxSize={6} /> </Button>
+                </Link>
+              
+               <Link to={`/adventure/${Id-1}`} >
+                 <Button top="15vh" position="absolute" colorScheme='blackAlpha'>  <ArrowLeftIcon boxSize={6} />  </Button>
+                </Link>
+
+            </ButtonGroup>
+
+
             <Box m={'auto'} pt={'20px'} w={{ base: '90vw', md: '76vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'}>
 
 
@@ -62,7 +103,7 @@ export const ADetail = () => {
                         <Box>
 
                             <SimpleGrid templateColumns='repeat(2, 1fr)' gap={1}>
-                                <Text><strong>Tour Operator:</strong><br />Dubai Emirates Co.</Text>
+                                <Text><strong>Tour Operator:</strong><br />{adventures?.tour_operator}</Text>
                                 <Text><strong>Max group size:</strong><br />{adventures?.group_size}</Text>
                                 <Text><strong>Age range:</strong><br />{adventures?.age_range} yrs</Text>
                                 <Text><strong>Operated in:</strong><br />English</Text>
@@ -100,7 +141,7 @@ export const ADetail = () => {
                         })}
                     </Flex>
                     <div>
-
+     
                         <Flex bg={theme === "dark" ? '#191b1d' : 'white'} direction={'column'} w={{ base: '100%', md: '100%', lg: '350px' }} boxShadow={'md'} border={'1px solid silver'} p={'20px'} mt={{ base: '40px', md: '10px' }} ml={{ base: '0px', md: '0px', lg: '40px' }} borderRadius={'10px'}>
                             <Flex w={{ base: '100%', md: '100%', lg: '300px' }}>
                                 <Text><s>From ₹{(adventures?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{adventures?.off}%</Tag>
@@ -108,7 +149,7 @@ export const ADetail = () => {
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                <Link><Button onClick={()=>{addToCart(idx)}} fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
