@@ -150,8 +150,8 @@ function Payment() {
       {/* Midbox-start */}
       <Box w={{ base: "92%", md: "95%", lg: '76%' }} m={'auto'}>
         {/* Heading flex */}
-        <Flex py={'30px'}>
-        <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px"/>
+        <Flex mb={-3} pb={1} py={'30px'}>
+        <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px" filter={theme ? 'invert(100%)' : 'none'}/>
         <Text pb={'20px'} fontSize={'20px'} fontWeight={'600'}>&nbsp;&nbsp;&nbsp;Your Booking overview</Text>
           <Spacer />
           <Button colorScheme='none' bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} color={theme ? 'white' : 'blackAlpha.800'} mr={'10px'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Help</Button>
@@ -205,7 +205,7 @@ function Payment() {
             <Box p={'20px'} bg={theme ? '#191b1d' : 'white'} bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} boxShadow={'md'} borderRadius={'15px'}>
               <HStack>
                 {/* <BsFill2SquareFill size={'30px'} /> */}
-                <Image src="https://imgs.search.brave.com/npnvI8BvSTgBz_t_12K0xeCvn2ZGOl0etRWilh6dJvM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODE4Mi84MTgy/NjI5LnBuZw" alt="" w="40px"/>
+                <Image src="https://imgs.search.brave.com/npnvI8BvSTgBz_t_12K0xeCvn2ZGOl0etRWilh6dJvM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODE4Mi84MTgy/NjI5LnBuZw" alt="" w="40px" />
                 <Text px={'10px'} fontWeight={'700'} fontSize={'20px'}>Add traveller details</Text>
               </HStack>
               <HStack ml={'8px'} borderRadius={'15px'} p={'20px'} bg={theme ? 'gray.800' : "gray.200"} my={'25px'}>
@@ -561,7 +561,11 @@ function Payment() {
               <Pricediv theme={theme} storedata={storedata} traveller={traveller} />
             </Box>
             <Box my={'25px'} p={'20px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'}>
-              <Text mt={'15px'} fontWeight={'700'} fontSize={'17px'}>Terms & Conditions</Text>
+            <HStack>
+                {/* <BsFill4SquareFill size={'30px'} /> */}
+                <Image src="https://imgs.search.brave.com/EiV9Szig0FglGnxUkj-NLwzuqgO6hu3QqQBZsYwzLzc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvb25saW5lLWNv/dXJzZS0yLzUxMi90/ZXJtcy1jb25kaXRp/b25zLWFncmVlbWVu/dC1hY2NlcHRhbmNl/LTUxMi5wbmc" alt="" w="30px" h="30px" filter={theme ? 'invert(100%)' : 'none'}/>
+               <Text mt={'15px'} fontWeight={'700'} fontSize={'17px'}>Terms & Conditions</Text>
+              </HStack>
               <Text mt={'25px'} lineHeight={'19px'} fontSize={'13px'}>Adventour is an authorised Agent of Expat Explore Travel. Please familiarise yourself with the Expat Explore Travel payment,
                 cancellation and refund policies and Adventour's Terms & Conditions. Adventour will charge you in the stated currency and we do
                 not charge any booking fees.
@@ -619,7 +623,7 @@ function Pricediv({ theme, storedata, traveller , basepr, discountVal, totalDue,
   return <Box p={'20px'} my={'25px'} borderRadius={'15px'}  bgGradient={theme ? 'gray.100' : 'linear(to-b, #44c1ff 10%, white 50%)'} boxShadow={'md'} position={'sticky'} top={'20px'}>
      <HStack >
                 {/* <BsFill1SquareFill size={'30px'} /> */}
-                <Image src="https://img.icons8.com/?size=512&id=13008&format=png" alt="" w="30px"/>
+                <Image src="https://img.icons8.com/?size=512&id=13008&format=png" alt="" w="30px" />
                 <Text pb={'5px'} fontWeight={'700'} fontSize={'20px'} px={'10px'}>Price Breakdown</Text>
               </HStack>
    
