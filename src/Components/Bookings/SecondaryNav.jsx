@@ -8,7 +8,7 @@ const SecondaryNav = () => {
     console.log(e.target.value)
   }
   return (<>
-    <C.Button colorScheme='cyan' size="sm" borderRadius={0} zIndex={4} position={'fixed'} bg="cyan.100" w="100vw" onClick={onOpen}>
+    <C.Button colorScheme='cyan' size="sm" borderRadius={0} zIndex={4} position={'fixed'} top='0' bg="cyan.100" w="100vw" onClick={onOpen}>
       <TriangleDownIcon color='white' />
     </C.Button>
     <C.Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>
@@ -29,8 +29,7 @@ const SecondaryNav = () => {
               <C.Input name="checkout" onChange={handleChange} type="date" color="black" bg="white.300" placeholder='City name, location, or Specific hotel' />
             </C.FormControl>
 
-            <C.FormControl flexGrow="2">
-              <C.FormLabel color="cyan.600">Change Filters</C.FormLabel>
+            <C.FormControl flexGrow="2" mt="25px">
               <C.Button size="md" color="white" _hover={{}} bg="cyan.200" border="2px solid white" fontWeight="bolder" fontSize="20px" p="15px 3em">Search</C.Button>
             </C.FormControl>
           </C.Flex>

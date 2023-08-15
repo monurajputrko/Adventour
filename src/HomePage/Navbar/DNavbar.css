@@ -1,0 +1,169 @@
+*{
+    font-family: "Times New Roman";
+}
+.navbar{
+    background-color: white;
+    margin-top:-60px ;
+    overflow-x:hidden ;
+    position:sticky;
+    
+}
+.NavBox{
+    width: 100%;
+  padding-top: 20px;
+}
+
+.NavbarItems{
+   
+    
+    display: flex; 
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #262828;
+    line-height: normal;
+    vertical-align: baseline;
+    font-weight: 800;
+   margin: 60px;
+   position: sticky;
+}
+.NavbarItems li{
+    list-style: none;
+}
+
+.NavbarItems ul{
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    gap: 40px;
+    margin-right: 7%;
+    margin-left: -20%;
+    font-size: 16px;
+    line-height: 24px;
+    color: #a9a9a9;
+}
+
+.NavbarItems ul :hover{
+    color: black;
+    font-weight: 800;
+    font-size:large ;
+    text-decoration: underline; 
+}
+
+.NavbarItems ul span{
+    margin-right:50px ;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.NavbarItems li :hover ::after{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+.logo{
+    margin-left: 6%;
+    margin-right: 50%;
+    color: white;
+}
+.NavbarItems button{
+    border-radius: 10px;
+    background-color: #3ec6f0;
+    color: #111315;
+    border: none;
+    font-size: 16px;
+    padding-bottom: 2px 2px 15px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.NavbarItems button :hover{
+    color: rgb(46, 43, 43);
+    background-color: #9ae4fa;
+    
+}
+.navItem{
+    color:#8e9092;
+}
+.NavbarItems ul li :hover {
+    background-color: blue;
+    }
+    .nav-Btn{
+        margin-top: -10px;
+    }
+
+
+  @media  (max-width:600px) and (min-width:300px){
+      
+    .navbar{
+        background-color: white;
+        margin-top:-80px ;
+        overflow-x:hidden;
+        
+    }
+    .NavBox{
+        width: 100%;
+      padding-top: 20px;
+    }
+    
+    .NavbarItems{        
+        display: flex; 
+        justify-content: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #262828;
+        line-height: normal;
+        vertical-align: baseline;
+       
+    }
+
+    .logo{
+        padding-left:30px;
+    }
+
+    .NavbarItems li{
+        list-style: none;
+    }
+    
+    .NavbarItems ul{
+        display: flex;
+        gap: 20px;
+        margin-right: 7%;
+        margin-left: -20%;
+        font-size: 16px;
+        color: #4d4e50;
+    }
+    
+   
+    
+    .NavbarItems ul span{
+        margin-top: 7px;
+        margin-right:50px ;
+        font-size: 20px;
+        cursor: pointer;
+        display: block;
+    }
+    
+    
+
+   
+    .NavbarItems button{
+        display: none;
+    }
+ 
+    .navItem{
+        color:#8e9092;
+        display: none;
+    }
+   
+    
+    .NavbarItems img{
+        width: 40px;
+        height: 20px;
+        margin-left: 50px;
+        margin-top:10px;
+        padding-right: 30px;
+    }
+    
+  }
+ 
