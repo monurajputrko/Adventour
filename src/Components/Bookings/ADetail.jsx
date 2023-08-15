@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useDisclosure, useToast } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
 import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai";
 import { RiFileCopy2Line } from "react-icons/ri";
 import { MdGroup, MdStar, MdVerified } from "react-icons/md";
@@ -12,17 +12,14 @@ import { getAdventure } from '../../redux/AdventureReducer/action';
 import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-import {
-    Animate,
-    initTE,
-  } from "tw-elements"
 import Loader from '../Utils/Loader';
-export const AdventureDetail = () => {
+export const ADetail = () => {
     const dispatch = useDispatch()
-    const { location } = useParams()
-    const { id } = useParams()
+    const { idx } = useParams()
+    console.log(idx)
     const theme = useSelector(state => state.theme);
-    let adventures = useSelector(state => state.adventures.adventures[0])
+    const adventures = useSelector(state => state.adventures.adventures[idx - 1])
+    console.log(adventures)
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
@@ -33,7 +30,7 @@ export const AdventureDetail = () => {
             top: 0,
         });
     }, [])
-    if(isLoading) return <Loader />
+    if (isLoading) return <Loader />
     return (
         <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
             {/* <Toggle  /> */}
@@ -50,8 +47,8 @@ export const AdventureDetail = () => {
                         <Text as="div" pb={'10px'}>
                             <strong> Duration : {adventures?.tour_length} • {adventures?.rating} stars</strong>
                             <Rating>
-                                {[...Array(Math.round(adventures?.rating) || 4)].map((i,idx) => {
-                                    return <Rating.Star key={"i"+idx}/>
+                                {[...Array(Math.round(adventures?.rating) || 4)].map((i, idx) => {
+                                    return <Rating.Star key={"i" + idx} />
                                 })}
                                 ({adventures?.reviews} reviews)
                             </Rating>
@@ -99,7 +96,7 @@ export const AdventureDetail = () => {
                     <Flex direction={'column'} textAlign={'left'} lineHeight={'30px'} color="grey.900" p="0 1%">
                         <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>Highlights</Text>
                         {adventures?.highlights?.map((text, idx) => {
-                            return <HStack key={id} pb={'10px'}><MdStar size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
+                            return <HStack key={idx} pb={'10px'}><MdStar size="25px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></HStack>
                         })}
                     </Flex>
                     <div>
@@ -111,7 +108,7 @@ export const AdventureDetail = () => {
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link to={`/payment/${location}/${id}`}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
@@ -139,31 +136,35 @@ export const AdventureDetail = () => {
                     </div>
                 </Flex>
 
-                <Flex direction={'column'} mt={'10px'} textAlign={'left'} bg="white" p="4%">
-                    <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book adventures, personalized</Text>
-                    <SimpleGrid minChildWidth={"200px"} w={{ base: "100%"}} lineHeight={'25px'} spacing={'20px'}>
-                        <Flex>
-                            <RiFileCopy2Line size={'25px'} />
-                            <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
+                <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '1em' }} mt={'10px'} textAlign={'left'} bg="white" p="4%">
+                    <Flex direction={{ base: 'column' }}>
+                        <Text mb={'35px'} fontSize={'25px'} fontWeight={'500'}>Ready-to-book adventures, personalized</Text>
+                        <Flex direction={{ base: "column" }} w={{ base: "100%", lg: '80%' }} lineHeight={'25px'} spacing={'20px'}>
+                            <Flex>
+                                <RiFileCopy2Line size={'25px'} />
+                                <Text pl={'18px'}><strong>Personal</strong><br />Make your adventure more you </Text>
+                            </Flex>
+                            <Flex>
+                                <MdGroup size={'25px'} />
+                                <Text pl={'18px'}><strong>Private</strong><br />Enjoy a tour focused solely on your travel group </Text>
+                            </Flex>
+                            <Flex>
+                                <MdOutlineTipsAndUpdates size={'25px'} />
+                                <Text pl={'18px'}><strong>Professional</strong><br />Access our Travel Experts’ insider knowledge</Text>
+                            </Flex>
                         </Flex>
-                        <Flex>
-                            <MdGroup size={'25px'} />
-                            <Text pl={'18px'}><strong>Private</strong><br />Enjoy a tour focused solely on your travel group </Text>
-                        </Flex>
-                        <Flex>
-                            <MdOutlineTipsAndUpdates size={'25px'} />
-                            <Text pl={'18px'}><strong>Professional</strong><br />Access our Travel Experts’ insider knowledge</Text>
-                        </Flex>
-                        <Flex>
-                            <BiShieldQuarter size={'25px'} />
-                            <Text pl={'18px'}><strong>Protected</strong><br />Travel within your own bubble </Text>
-                        </Flex>
-                    </SimpleGrid>
+                    </Flex>
+                    <Spacer />
+                    <Box w={{base:'100%',lg:'50%'}}>
+                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(adventures?.places_see_name + "," + adventures?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
+                            <a href="https://www.maps.ie/population/">Find Population on Map</a>
+                        </iframe>
+                    </Box>
                 </Flex>
                 <Divider borderColor="black" />
                 <Flex direction={'column'} pb={'30px'} lineHeight={'50px'} w="100%" bg="white" p="4%" pt="1%">
                     <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                    <SimpleGrid pl={'10px'} minChildWidth={"200px"}  columns={4}>
+                    <SimpleGrid pl={'10px'} minChildWidth={"200px"} columns={4}>
                         <HStack><MdVerified /><Text>Accommodation</Text></HStack>
                         <HStack><MdVerified /><Text>Guide</Text></HStack>
                         <HStack><MdVerified /><Text>Meals</Text></HStack>
@@ -176,15 +177,15 @@ export const AdventureDetail = () => {
                     </SimpleGrid>
                 </Flex>
                 <Divider borderColor="black" />
-                <Flex justifyContent="space-between" flexDirection={{base:"column",lg:"row"}}>
-                    <Flex w={{base:"100%",md:"50%"}} direction={'column'} p="2% 4%">
+                <Flex justifyContent="space-between" flexDirection={{ base: "column", lg: "row" }}>
+                    <Flex w={{ base: "100%", md: "50%" }} direction={'column'} p="2% 4%">
                         <Text textAlign={'left'} fontSize={'25px'} fontWeight={'600'} pb={'25px'}>Customer Reviews</Text>
                         <HStack shadow='md' bg={theme === "dark" ? 'gray.900' : 'blue.100'} mb={'2px'} px={'20px'} py={'10px'}>
                             <HStack textAlign={'left'}><BsStars /><Text>Overall Rating<br />Excellent</Text></HStack>
                             <Spacer />
                             <Rating>
-                                {[...Array(Math.round(Math.floor(adventures?.rating)) || 4)].map((i,idx) => {
-                                    return <Rating.Star key={"j"+idx}/>
+                                {[...Array(Math.round(Math.floor(adventures?.rating)) || 4)].map((i, idx) => {
+                                    return <Rating.Star key={"j" + idx} />
                                 })}
                                 ({adventures?.reviews} reviews)
                             </Rating>
@@ -200,11 +201,11 @@ export const AdventureDetail = () => {
                             }))}
                         </SimpleGrid>
                     </Flex>
-                    <Flex flexDirection="column" w={{base:"100%",md:"50%"}} p="1em">
+                    <Flex flexDirection="column" w={{ base: "100%", md: "50%" }} p="1em">
                         <div className="flex items-center mb-4 space-x-4">
                             <img className="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
                             <div className="space-y-1 font-medium dark:text-white">
-                                <p>Jese Leos <time  className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
+                                <p>Jese Leos <time className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
                             </div>
                         </div>
                         <div className="flex items-center mb-1">
@@ -243,4 +244,4 @@ export const AdventureDetail = () => {
     )
 }
 
-export default AdventureDetail
+export default ADetail

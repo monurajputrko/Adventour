@@ -4,10 +4,22 @@
       "id": 1,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d0/a5/47/deluxe-room.jpg?w=1100&h=-1&s=1",
       "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/5c/09/always-hotel-riverview.jpg?w=700&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/f7/14/23/riverview-hotel.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/5a/2b/fc/riverview-hotel.jpg?w=1100&h=-1&s=1"
+      ],
       "title": "Riverview Hotel",
       "reviews": 534,
       "address": "Nehru Bridge Corner Near Sakar Vii , Opp Patang Hotel, Ahmedabad 380009 India",
       "stars": 4.5,
+      "about":[
+        "Riverview Hotel is a good choice for travellers looking for a 3 star hotel in Ahmedabad. It is located in Near Nehru Bridge.",
+        "From all the 3 Star hotels in Ahmedabad, Riverview Hotel is very much popular among the tourists across the whole India.",
+        "A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for all.",
+        "82% of the guests have recommended Riverview Hotel on our platform. Good service quality, nice location, good rooms, good."
+      ],
       "description": "Located in Ahmedabad’s downtown commercial area of Nehru Bridge, Ashram Road, on the banks of River Sabarmati, Always Hotel Riverview is a modern & contemporary 3 Star Hotel in the country’s fastest growing city. Well appointed, spacious rooms with parquet flooring & all modern amenities, it is ideal for both business & leisure traveler.Plan your next luxury stay at the Riverview Hotel is one of the best hotel in Ahmedabad near sabarmati riverfront, which is the perfect destination for budget stay in Ahmedabad. Riverview hotel is located near Ashram Road Ahmedabad",
       "utils": [
         "Allergy-free room",
@@ -20,12 +32,37 @@
         "Walk-in shower"
       ],
       "phone": "079 66185000",
-      "price": 7840
+      "price": 7840,
+      "off":"24",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 2,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a6/fitness-center.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a4/momo-cafe.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/a3/momo-cafe-dining-area.jpg?w=1200&h=-1&s=1"
+      ],
       "title": "Courtyard By Marriott",
       "reviews": 2548,
       "address": "Ramdev Nagar Cross Road Satellite Road, Ahmedabad 380015 India",
@@ -46,8 +83,13 @@
     },
     {
       "id": 3,
-      "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
+      "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=1200",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6e/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6c/amp.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6b/amp.jpg?w=1200&h=-1&s=1"
+      ],
       "title": "Taj Skyline",
       "reviews": 1556,
       "address": "Sindhubhavan Road, Shilaj Sankalp Square III, Opp. Saket3, Nr. Nilkanth Green, Ahmedabad 380059 India",
@@ -68,9 +110,15 @@
     },
     {
       "id": 4,
+      "category":"HOTEL",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
-      "title": " Four Points by Sheraton",
+      "places_see_img" : [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1c/fc/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/fb/d4/0c/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/4c/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/d0/41/3d/hotel-entrance.jpg?w=700&h=-1&s=1"
+      ],
+      "title": "Four Points by Sheraton",
       "reviews": 2427,
       "address": "Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
       "stars": 4.1,
@@ -93,11 +141,10 @@
     {
       "id": 1,
       "category": "Explorer",
+      "main_image": "https://images.squarespace-cdn.com/content/v1/51bd4803e4b08f1c218b1208/1562793521324-BNIB21ALLVWXR32KQ5JG/SRWX2520-Edit-preview.jpg",
       "title": "Scuba Diving In Dubai",
       "reviews": 909,
-      "destinations": [
-        "Dubai"
-      ],
+      "destination": "Dubai",
       "age_range": "Above 10 years",
       "travel_style": [
         "Custom",
@@ -112,15 +159,10 @@
         "With training given by PADI certified divers before your scuba experience, this activity is safe for all level of divers"
       ],
       "tour_length": "2 days",
-      "price_per_day": 7099,
       "str_price": 21493.99,
       "act_price": 14099.99,
-      "save_price": 7785,
-      "addional_price": 3948,
       "off": 58,
-      "main_image": "https://images.squarespace-cdn.com/content/v1/51bd4803e4b08f1c218b1208/1562793521324-BNIB21ALLVWXR32KQ5JG/SRWX2520-Edit-preview.jpg",
       "rating": 4.7,
-      "tour_id": 136848,
       "group_size": 5,
       "places_see_img": [
         "https://media1.thrillophilia.com/filestore/a7odb4oqk8nfxuib6l7ntol9nij6_1555916896_shutterstock_219200257.jpg?w=auto&h=600",
