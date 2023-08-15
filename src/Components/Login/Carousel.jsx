@@ -46,7 +46,7 @@ const Carousel = () => {
                     <div key={i} style={{borderRadius:"20px"}} >
                         {Math.abs(activeStep - i) <= 2 ? (
                             <Image
-                                sx={{height: '66vh',maxWidth: 400,overflow: 'hidden',width: '100%',}}
+                                sx={{height: '70vh',maxWidth: 400,overflow: 'hidden',width: '100%',}}
                                 src= {images[i]}
                                 alt={ele.label}
                                 style={{borderRadius:"5px"}}
