@@ -3,15 +3,24 @@ import { Badge } from 'flowbite-react'
 import { MdGraphicEq } from 'react-icons/md'
 import React from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { useDispatch } from 'react-redux'
+import { filterHotel } from '../../redux/HotelReducer/action'
 
-const Filters = ({ showSpinner }) => {
+const Filters = () => {
     const [sliderValue, setSliderValue] = React.useState(6999)
     const [showTooltip, setShowTooltip] = React.useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
+    const dispatch = useDispatch()
+    const handleCheckbox = (e) =>{
+        // switch(e.target.value){
+        //     case ''
+        // }
+        dispatch(filterHotel('price=6000'))
+    }
     return <>
         <Show breakpoint='(max-width: 995px)'>
-            <IconButton ref={btnRef} w="20px" size={'sm'} bg="cyan.100" borderRadius={"0px"} colorScheme='cyan' color="white" position="fixed" zIndex={5} onClick={onOpen} icon={<HamburgerIcon />} />
+            <IconButton ref={btnRef} w="20px" size={'sm'} bg="cyan.100" borderRadius={"0px"} colorScheme='cyan' color="white" position="absolute" top='0' zIndex={5} onClick={onOpen} icon={<HamburgerIcon />} />
             <Drawer
                 isOpen={isOpen}
                 placement='left'
@@ -120,7 +129,7 @@ const Filters = ({ showSpinner }) => {
                                         <FormLabel htmlFor='email-alerts' mb='0' fontSize={"14px"} fontWeight={400} color="teal">
                                             Adventour Assured :
                                         </FormLabel>
-                                        <Switch id='assured' onChange={showSpinner} size="sm" colorScheme='teal' />
+                                        <Switch id='assured' size="sm" colorScheme='teal' />
                                     </FormControl>
                                 </AccordionPanel>
                             </AccordionItem>
@@ -152,10 +161,10 @@ const Filters = ({ showSpinner }) => {
                                     <AccordionPanel pb={4} bg="#f8fffe" borderRadius={"0 0 5px 5px"} color="black">
                                         <CheckboxGroup colorScheme='green' defaultValue={['naruto', 'kakashi']}>
                                             <Stack spacing={[1, 2]} direction={['row', 'column']}>
-                                                <Checkbox value='free' fontSize={"10px"}>Free Cancellation Available</Checkbox>
-                                                <Checkbox value='book1' >Book @1</Checkbox>
-                                                <Checkbox value='pay_at_hotel'>Pay at Hotel Available</Checkbox>
-                                                <Checkbox value='free_break'>Free Breakfast Included</Checkbox>
+                                                <Checkbox value='free' fontSize={"10px"} name="popular" onChange={handleCheckbox}>Free Cancellation Available</Checkbox>
+                                                <Checkbox value='book1' name="popular" onChange={handleCheckbox}>Book @1</Checkbox>
+                                                <Checkbox value='pay_at_hotel' name="popular" onChange={handleCheckbox}>Pay at Hotel Available</Checkbox>
+                                                <Checkbox value='free_break' name="popular">Free Breakfast Included</Checkbox>
                                             </Stack>
                                         </CheckboxGroup>
                                     </AccordionPanel>
@@ -182,13 +191,13 @@ const Filters = ({ showSpinner }) => {
                                             onMouseLeave={() => setShowTooltip(false)}
                                         >
                                             <SliderMark value={6999} my='2' ml='-2.5' fontSize='sm'>
-                                                ₹6999
+                                                ₹7k
                                             </SliderMark>
                                             <SliderMark value={19999} my='2' ml='-2.5' fontSize='sm'>
-                                                ₹20999
+                                                ₹21k
                                             </SliderMark>
                                             <SliderMark value={35000} my='2' ml='-2.5' fontSize='sm'>
-                                                ₹35000+
+                                                ₹35k+
                                             </SliderMark>
                                             <SliderTrack>
                                                 <SliderFilledTrack />
@@ -237,7 +246,7 @@ const Filters = ({ showSpinner }) => {
                                             <FormLabel htmlFor='email-alerts' mb='0' fontSize={"14px"} fontWeight={400} color="teal">
                                                 Adventour Assured :
                                             </FormLabel>
-                                            <Switch id='assured' onChange={showSpinner} size="sm" colorScheme='teal' />
+                                            <Switch id='assured' size="sm" colorScheme='teal' />
                                         </FormControl>
                                     </AccordionPanel>
                                 </AccordionItem>

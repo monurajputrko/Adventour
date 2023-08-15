@@ -8,7 +8,7 @@ const SecondaryNav = () => {
     console.log(e.target.value)
   }
   return (<>
-    <C.Button colorScheme='cyan' size="sm" borderRadius={0} zIndex={4} position={'fixed'} bg="cyan.100" w="100vw" onClick={onOpen}>
+    <C.Button colorScheme='cyan' size="sm" borderRadius={0} zIndex={4} position={'fixed'} top='0' bg="cyan.100" w="100vw" onClick={onOpen}>
       <TriangleDownIcon color='white' />
     </C.Button>
     <C.Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>

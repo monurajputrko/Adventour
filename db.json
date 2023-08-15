@@ -32,7 +32,27 @@
         "Walk-in shower"
       ],
       "phone": "079 66185000",
-      "price": 7840
+      "price": 7840,
+      "off":"24",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 2,

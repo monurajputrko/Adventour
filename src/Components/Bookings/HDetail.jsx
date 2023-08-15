@@ -13,6 +13,7 @@ import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
 import Loader from '../Utils/Loader';
 import { getHotel } from '../../redux/HotelReducer/action';
+import SecondaryNav from './SecondaryNav';
 
 export const HDetail = () => {
     const dispatch = useDispatch()
@@ -26,8 +27,8 @@ export const HDetail = () => {
     const isLoading = useSelector(store => store.hotels.isLoading)
 
     const splitString = (str = '', size) => {
-        
-     }
+
+    }
     useEffect(() => {
         dispatch(getHotel())
         window.scrollTo({
@@ -36,9 +37,10 @@ export const HDetail = () => {
     }, [])
     if (isLoading) return <Loader />
     return (
+        <>
+        <SecondaryNav />
         <Box bg={'white'} mb={{ base: "2em" }}>
-
-            <Box m={'auto'} mt="20px" w={{ base: '100vw',  lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
+            <Box m={'auto'} mt="20px" w={{ base: '100vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
                 <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '350px', lg: "500px" }} />
 
 
@@ -48,7 +50,7 @@ export const HDetail = () => {
                         <Text as="div" pb={'10px'}>
                             <strong> {hotels?.stars} stars</strong>
                             <Rating>
-                                {[...Array(Math.round(hotels?.stars) || 4)].map((i, idx) => {
+                                {[...Array(Math.round(hotels?.stars) || 3)].map((i, idx) => {
                                     return <Rating.Star key={"i" + idx} />
                                 })}
                                 ({hotels?.reviews} reviews)
@@ -61,7 +63,7 @@ export const HDetail = () => {
                         </Box>
                         <Box>
 
-                            <SimpleGrid templateColumns='repeat(2, 1fr)' w={{base:'100%',lg:'70%'}} gap={1} mb={{base:'10px',lg:'0'}}>
+                            <SimpleGrid templateColumns='repeat(2, 1fr)' w={{ base: '100%', lg: '70%' }} gap={1} mb={{ base: '10px', lg: '0' }}>
                                 <Text border={'1px solid black'} textAlign={'center'}><strong>Check In</strong><br />15/08/2023</Text>
                                 <Text border={'1px solid black'} textAlign={'center'}><strong>Check Out</strong><br />20/08/2023</Text>
                             </SimpleGrid >
@@ -86,16 +88,16 @@ export const HDetail = () => {
                     <Flex direction={'column'} textAlign={'left'} lineHeight={'30px'} color="grey.900" p="0 1%">
                         <Text pb={'20px'} fontSize='2xl' fontWeight={'600'}>About Hotel</Text>
                         {hotels?.about?.map((text, idx) => {
-                            return <Flex align={'center'} key={idx} pb={'10px'}><MdStar size="20px"/> <Text pl={'10px'} fontSize='lg'>{text}</Text></Flex>
+                            return <Flex align={'center'} key={idx} pb={'10px'}><MdStar size="20px" /> <Text pl={'10px'} fontSize='lg'>{text}</Text></Flex>
                         })}
                     </Flex>
                     <div>
 
                         <Flex bg={theme === "dark" ? '#191b1d' : 'white'} direction={'column'} w={{ base: '100%', md: '100%', lg: '350px' }} boxShadow={'md'} border={'1px solid silver'} p={'20px'} mt={{ base: '40px', md: '10px' }} ml={{ base: '0px', md: '0px', lg: '40px' }} borderRadius={'10px'}>
                             <Flex w={{ base: '100%', md: '100%', lg: '300px' }}>
-                                <Text><s>From ₹{(hotels?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{hotels?.off}%</Tag>
+                                <Text><s>From ₹{(hotels?.price + 5000)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{hotels?.off}%</Tag>
                             </Flex>
-                            <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(hotels?.act_price)?.toLocaleString("en-US")}</Text>
+                            <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(hotels?.price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
                                 <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
@@ -141,8 +143,8 @@ export const HDetail = () => {
                         </SimpleGrid>
                     </Flex>
                     <Spacer />
-                    <Box w={{ base: '100%', lg: '50%' }}>
-                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(hotels?.places_see_name + "," + hotels?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
+                    <Box w={{ base: '100%', lg: '40%' }}>
+                        <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(hotels?.address)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
                             <a href="https://www.maps.ie/population/">Find Population on Map</a>
                         </iframe>
                     </Box>
@@ -150,70 +152,37 @@ export const HDetail = () => {
                 <Divider borderColor="black" />
 
                 <Divider borderColor="black" />
-                <Flex justifyContent="space-between" flexDirection={{ base: "column", lg: "row" }}>
-                    <Flex w={{ base: "100%", md: "50%" }} direction={'column'} p="2% 4%">
-                        <Text textAlign={'left'} fontSize={'25px'} fontWeight={'600'} pb={'25px'}>Customer Reviews</Text>
-                        <HStack shadow='md' bg={theme === "dark" ? 'gray.900' : 'blue.100'} mb={'2px'} px={'20px'} py={'10px'}>
-                            <HStack textAlign={'left'}><BsStars /><Text>Overall Rating<br />Excellent</Text></HStack>
-                            <Spacer />
-                            <Rating>
-                                {[...Array(Math.round(Math.floor(hotels?.rating)) || 4)].map((i, idx) => {
-                                    return <Rating.Star key={"j" + idx} />
+                <Flex justifyContent="space-between" p="30px" flexDirection={{ base: "column", lg: "row" }}>
+                    {hotels?.feedback?.map(f => {
+                        return <Flex flexDirection="column" w={{ base: "100%", md: "45%" }} p="10px">
+                            <div className="flex items-center mb-4 space-x-4">
+                                <img className="w-10 h-10 rounded-full" src={f?.img} alt="" />
+                                <div className="space-y-1 font-medium dark:text-white">
+                                    <p>{f.name} <time className="block text-sm text-gray-500 dark:text-gray-400">Joined on {f.date_joined}</time></p>
+                                </div>
+                            </div>
+                            <div className="flex items-center mb-1">
+                                {[...Array(Math.round(f?.stars) || 3)].map((i, idx) => {
+                                    return <img src="https://w7.pngwing.com/pngs/134/138/png-transparent-star-golden-stars-angle-3d-computer-graphics-symmetry-thumbnail.png" height="20px" width="20px" alt="star"/>
                                 })}
-                                ({hotels?.reviews} reviews)
-                            </Rating>
-                        </HStack>
-
-                        <SimpleGrid columns={{ base: '1', md: '1', lg: '2' }} gap={'2px'}>
-                            {hotels?.user_ratings?.map(((ele, idx) => {
-                                return <HStack key={idx} bg={theme === "dark" ? '#191b1d' : 'white'} shadow='md' px={'20px'} py={'5px'} w={'100%'}>
-                                    <HStack textAlign={'left'}><FaClipboardList /><Text>{ele.title}<br />{ele.ratings > 4.5 ? "Excellent" : "Good"}</Text></HStack>
-                                    <Spacer />
-                                    <Text>{ele.ratings} ⭐</Text>
-                                </HStack>
-                            }))}
-                        </SimpleGrid>
-                    </Flex>
-                    <Flex flexDirection="column" w={{ base: "100%", md: "50%" }} p="1em">
-                        <div className="flex items-center mb-4 space-x-4">
-                            <img className="w-10 h-10 rounded-full" src="https://mixingimages.in/wp-content/uploads/2023/03/WhatsApp-DP.jpg" alt="" />
-                            <div className="space-y-1 font-medium dark:text-white">
-                                <p>Jese Leos <time className="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time></p>
+                                <h3 className="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Must have Experience!</h3>
                             </div>
-                        </div>
-                        <div className="flex items-center mb-1">
-                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg className="w-4 h-4 text-gray-300 dark:text-gray-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <h3 className="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Must have Experience!</h3>
-                        </div>
-                        <footer className="mb-5 text-sm text-gray-500 dark:text-gray-400"><p>Reviewed in the United Kingdom on <time>March 3, 2017</time></p></footer>
-                        <p className="mb-2 text-gray-500 dark:text-gray-400">The marines have always been my fantasy and I could not miss the Dubai scuba diving experience for anything. Adventour helped me get the booking done with ease. Demonstrated, checked and we went down into the blue world!</p>
-                        <p className="mb-3 text-gray-500 dark:text-gray-400">Once the green signal issued, we dived deeper and saw amazing nautical sights that we can’t describe in words, also the feeling of weightlessness is great. You can dive up to 60 ft. </p>
-                        <a href="#" className="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
-                        <aside>
-                            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
-                            <div className="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
-                                <a href="#" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-2 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Helpful</a>
-                                <a href="#" className="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Report abuse</a>
-                            </div>
-                        </aside>
-                    </Flex>
+                            <footer className="mb-5 text-sm text-gray-500 dark:text-gray-400"><p>Reviewed in {f?.place} on <time>{f.date_joined}</time></p></footer>
+                            <p className="mb-2 text-gray-500 dark:text-gray-400">{f?.desc1}</p>
+                            <a href="#" className="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
+                            <aside>
+                                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{Math.floor(Math.random()*1000)} people found this helpful</p>
+                                <div className="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
+                                    <a href="#" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-2 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Helpful</a>
+                                    <a href="#" className="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Report abuse</a>
+                                </div>
+                            </aside>
+                        </Flex>
+                    })}
                 </Flex>
             </Box>
         </Box>
+    </>
     )
 }
 
