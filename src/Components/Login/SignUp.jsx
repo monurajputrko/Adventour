@@ -1,15 +1,18 @@
-import { Box, Divider, Flex, Link, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Divider, Flex, Link, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react'
-import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth';
 import { auth } from './FireBase';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
 import { BsGoogle } from 'react-icons/bs';
 import { BsMeta } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
+import { setLOGIN } from '../../redux/LoginReducer/action';
 
 const SignUp = () => {
+  const dispatch = useDispatch()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [value, setValue] = useState({
     name: "",
@@ -22,6 +25,7 @@ const SignUp = () => {
   const [Err, setErr] = useState('');
   const [disBtn, setdisBtn] = useState(true);
 
+  const toast = useToast()
   const handlesubmission = () => {
     setErr("")
     setdisBtn(true);
@@ -31,14 +35,24 @@ const SignUp = () => {
     }
 
     setErr("");
+
+    
     createUserWithEmailAndPassword(auth, value.email, value.pass)
       .then((res) => {
         setdisBtn(false);
         setUser(res.user);
-        // await updateProfile(user,{
-        //   displayName : value.name,
-        // })
+        updateProfile(user,{
+          displayName : value.name,
+        })
         console.log(res)
+        dispatch(setLOGIN(res))
+        toast({
+          title: 'Account Created successfull.',
+          // description: "We've created your account for you.",
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        })
       })
       .catch((err) => {
         setdisBtn(false);
@@ -69,7 +83,7 @@ const SignUp = () => {
       >
         <Box>
           {/* <ModalOverlay /> */}
-          <ModalContent position='absolute' top='15%'
+          <ModalContent position='absolute' top='13%'
             bgGradient='linear(to-r, white, gray.100)'
             size={100}>
             <Flex>
