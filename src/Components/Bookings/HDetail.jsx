@@ -1,36 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Divider, Flex, HStack, Heading, IconButton, Image, SimpleGrid, Spacer, Tag, Text, useToast } from '@chakra-ui/react'
 import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai";
-import { RiFileCopy2Line } from "react-icons/ri";
-import { MdGroup, MdStar, MdVerified } from "react-icons/md";
-import { BiShieldQuarter } from "react-icons/bi";
-import { MdOutlineTipsAndUpdates, MdOutlineVerified } from "react-icons/md";
+import { MdStar, MdVerified } from "react-icons/md";
+import { MdOutlineVerified } from "react-icons/md";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { Rating } from 'flowbite-react';
-import { FaClipboardList } from "react-icons/fa";
-import { BsStars } from "react-icons/bs";
 import Loader from '../Utils/Loader';
 import { getHotel } from '../../redux/HotelReducer/action';
 import SecondaryNav from './SecondaryNav';
 
 export const HDetail = () => {
     const dispatch = useDispatch()
-    const { idx } = useParams()
+    const { city,idx } = useParams()
     const theme = useSelector(state => state.theme);
     const hotels = useSelector(state => state.hotels.hotels[idx - 1])
-    console.log(hotels)
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
     const isLoading = useSelector(store => store.hotels.isLoading)
 
-    const splitString = (str = '', size) => {
-
-    }
     useEffect(() => {
-        dispatch(getHotel())
+        dispatch(getHotel(city))
         window.scrollTo({
             top: 0,
         });

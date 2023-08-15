@@ -5,6 +5,7 @@ import React from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useDispatch } from 'react-redux'
 import { filterHotel } from '../../redux/HotelReducer/action'
+import { useParams } from 'react-router-dom'
 
 const Filters = () => {
     const [sliderValue, setSliderValue] = React.useState(6999)
@@ -12,11 +13,25 @@ const Filters = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     const dispatch = useDispatch()
+    const { city } = useParams()
+    let q = '';
     const handleCheckbox = (e) =>{
-        // switch(e.target.value){
-        //     case ''
-        // }
-        dispatch(filterHotel('price=6000'))
+        let temp;
+        switch(e.target.value){
+            case 'free' : temp = 'q=flexible&'
+            break;
+            case 'book1' : temp = 'id_ne=2&id_ne=5&'
+            break;
+            case 'pay_at_hotel' : temp = 'id_ne=1&id_ne=3&'
+            break;
+            case 'free_break' : temp = 'q=breakfast&'
+            break;
+            default : temp=''
+        }
+        q+=temp
+        q = q.substring(0,q.length-1)
+        console.log(q)
+        dispatch(filterHotel(city,q))
     }
     return <>
         <Show breakpoint='(max-width: 995px)'>
