@@ -1,6 +1,7 @@
 
 import { Box, Button, Checkbox, Flex, FormControl, HStack, IconButton, Image, Input, Modal, ModalBody, ModalContent, ModalOverlay, PinInput, PinInputField, Radio, RadioGroup, Select, Spacer, Text, VStack, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
+// import {  } from 'react-router-dom';
 import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
 import { FaMoon, FaSun } from "react-icons/fa";
 import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill,BsPhoneFill } from 'react-icons/bs';
@@ -10,7 +11,7 @@ import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import Logo from './LogoPic.png'
 import './pay.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate , useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
 function Payment() {
@@ -87,13 +88,14 @@ function Payment() {
 
   const mainImg = storedata?.main_image;
 
-  console.log(typeof(storedata?.price_per_day));
+  function redirectToHomePage() {
+    window.location.href = './Thankyou.jsx';
+  }
 
   const handlePayment = () => {
 
     const Pr = traveller * storedata?.price_per_day;
     const checkout = Pr * 100;
-    console.log(checkout);
 
     const options = {
       key: "rzp_test_dnv3nQiWbqzTGt",
@@ -103,7 +105,8 @@ function Payment() {
       description: "Payment",
       image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL6nri4shJQY02h95CkKAzHit6ZjuPGvrapODPp-XDCjnnRN2etJ2hG0jVXCTfw_Pa1VSHh41N-0EA9SIfm3Bvag4MtMOLU-6vqbs4JUUNfihajY3DNFPay7GrkgaLmANNdJE22IsXvsjSq_VDjpTIZe-3CJq8vRqXtn_K_ms9xToGYX88d0cKq6_a5nw/s16000/Screenshot%20(27).png",
       handler: function (response) {
-        console.log(response); // Update the state to indicate payment completion
+        redirectToHomePage();
+        console.log("Home"); // Update the state to indicate payment completion
       },
     };
 
@@ -264,7 +267,6 @@ function Payment() {
                 <Text px={'10px'} fontWeight={'700'}>Lead Traveller</Text>
                 <Text px={'10px'}>This traveller will serve as the contact person for the booking.</Text>
               </Box>
-              {console.log(formdata)}
               <RadioGroup py={'35px'} >
                 <HStack >
                   <Text fontWeight={'700'} fontSize={'14px'} px={'10px'}>Title*</Text>
@@ -581,7 +583,6 @@ function Payment() {
                       onClose();
                       if (pin.first == 5 && pin.sec == 6 && pin.third == 3 && pin.fourth == 7) {
                         navigate('/payment-successful')
-                        console.log("Pay Ok")
                       } else {
                         toast({
                           description: "Payment failed",
