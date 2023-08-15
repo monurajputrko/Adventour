@@ -16,7 +16,7 @@ const HotelGrid = () => {
     const hotels = useSelector(store => store.hotels.hotels) || []
     const isLoading = useSelector(store => store.hotels.isLoading)
     const [isCompleted, setIsCompleted] = useState(false)
-    const [index, setIndex] = useState(3)
+    const [index, setIndex] = useState(4)
     const initialHotels = slice(hotels, 0, index)
     const loadMore = () => {
         setIndex(index + 3)

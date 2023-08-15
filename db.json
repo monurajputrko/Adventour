@@ -35,6 +35,8 @@
       "price": 7840,
       "off":"24",
       "city":"Ahemdabad",
+      "assured": true,
+      "extra": "book1",
       "feedback":[
         {
           "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
@@ -201,10 +203,178 @@
     ]
     },
     {
-      "id":5,
+      "id": 5,
+      "city":"Ahemdabad",
       "category":"HOTEL",
-      "main_img":"https://cdn1.goibibo.com/voy_ing/t_fs/e8382b36c7f311ed80910a58a9feac02.png"
-      
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/3591864ad68011ecbcc30a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/6d2b8462955c11ecbb890a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/241741ded68011ec90340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/33e9f286dce911ecad6f0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/93a066be90a511ecb2fe0a58a9feac02.jpg"
+      ],
+      "title": "Hotel Ashish Ahemdabad",
+      "reviews": 2427,
+      "address": "Hotel Ashish Ahemdabad Lalbhai Dalpatbhai Museum 1.5 km Navkar Public SchoolBRTS Bus Stop Navkar Public SchoolGulbai Tekra Rd, opp. Vasundhara Society, Ambawadi",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 1850
+    },
+    {
+      "id": 6,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-855704ac253011eeabba0a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-200133d4253011eeb5d40a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-20bbf192253011eea5ca0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-20a841ba253011eeb54e0a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-f4a22d20253d11ee992e0a58a9feac02.jpg"
+      ],
+      "title": "Concorde Palace Hotel Bur Dubai",
+      "reviews": 2427,
+      "address": "Concorde Palace Hotel Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 3099
+    },
+    {
+      "id": 7,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/33f428c2290611e9bba50242ac110002.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/1f8928ba290611e9b40a0242ac110002.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/a0ec07604c6011e9aad90242ac110002.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/8eee7aca4c6011e99b440242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_mmt_ext/t_g/htl-imgs/4190725563792785-1997c2c9_z.jpg"
+      ],
+      "title": "Majestic City Retreat Hotel",
+      "reviews": 2427,
+      "address": "Majestic City Retreat Hotel",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5599
+    },
+    {
+      "id": 8,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/eaf36a569bc611e8a5dd0a9df65c8753.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/de2d2c8a946011e7b4dd025f77df004f.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/e8b18f489bc611e8b11d02ca8202b952.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/e0807aaa946011e7b5a30a4cef95d023.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4ce444c81e4411eaa4030242ac110006.jpg"
+      ],
+      "title": "Howard Johnson by Wyndham Bur Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5599
+    },
+    {
+      "id": 9,
+      "city": "Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/2db812a297a811ec9a340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-c6e0353a711711eb8dd10242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4c5f12e897a611ec9e880a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-4c3cf19c711711eb893f0242ac110003.jpg"
+      ],
+      "title": "Star Metro Deira Hotel Apartments Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5899
+    },
+    {
+      "id": 10,
+      "city":"Dubai",
+      "category":"HOTEL",
+      "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_ing/t_g/2db812a297a811ec9a340a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-c6e0353a711711eb8dd10242ac110003.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/4c5f12e897a611ec9e880a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201709191419415112-4c3cf19c711711eb893f0242ac110003.jpg"
+      ],
+      "title": "Star Metro Deira Hotel Apartments Dubai",
+      "reviews": 2427,
+      "address": "Howard Johnson by Wyndham Bur Dubai",
+      "stars": 4.1,
+      "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "084463 10595",
+      "price": 5899
     }
   ],
   "adventures": [
