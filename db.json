@@ -34,6 +34,9 @@
       "phone": "079 66185000",
       "price": 7840,
       "off":"24",
+      "city":"Ahemdabad",
+      "assured": true,
+      "extra": "book1",
       "feedback":[
         {
           "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
@@ -56,6 +59,7 @@
     },
     {
       "id": 2,
+      "city":"Ahemdabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
@@ -79,10 +83,31 @@
         "Walk-in shower"
       ],
       "phone": "079 52185000",
-      "price": 6504
+      "price": 6504,
+      "off":"30",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 3,
+      "city":"Ahemdabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=1200",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
@@ -106,10 +131,31 @@
         "Walk-in shower"
       ],
       "phone": "079 92185541",
-      "price": 5790
+      "price": 5790,
+      "off":"35",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 4,
+      "city":"Ahemdabad",
       "category":"HOTEL",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
@@ -121,7 +167,7 @@
       "title": "Four Points by Sheraton",
       "reviews": 2427,
       "address": "Opposite Gujarat College Ellis Bridge, Ahmedabad 380006 India",
-      "stars": 4.1,
+      "stars": 3.2,
       "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
       "utils": [
         "Allergy-free room",
@@ -134,10 +180,31 @@
         "Walk-in shower"
       ],
       "phone": "084463 10595",
-      "price": 4399
+      "price": 4399,
+      "off":"27",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     },
     {
       "id": 5,
+      "city":"Ahemdabad",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/3591864ad68011ecbcc30a58a9feac02.jpg",
       "places_see_img" : [
@@ -166,6 +233,7 @@
     },
     {
       "id": 6,
+      "city":"Dubai",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/202211171603104753-855704ac253011eeabba0a58a9feac02.jpg",
       "places_see_img" : [
@@ -194,6 +262,7 @@
     },
     {
       "id": 7,
+      "city":"Dubai",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/33f428c2290611e9bba50242ac110002.jpg",
       "places_see_img" : [
@@ -222,6 +291,7 @@
     },
     {
       "id": 8,
+      "city":"Dubai",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/eaf36a569bc611e8a5dd0a9df65c8753.jpg",
       "places_see_img" : [
@@ -250,6 +320,7 @@
     },
     {
       "id": 9,
+      "city": "Dubai",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
       "places_see_img" : [
@@ -278,6 +349,7 @@
     },
     {
       "id": 10,
+      "city":"Dubai",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/1c3c66c897a711ec8b240a58a9feac02.jpg",
       "places_see_img" : [
