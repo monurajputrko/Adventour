@@ -15,8 +15,9 @@ Shiva Verma : Login/Signup pages <br/>
 **Local Guides:** Get recommendations from local experts and fellow travelers about hidden gems, must-visit places, and authentic experiences.
 ![image](https://github.com/monurajputrko/Adventour/assets/68837552/33091aaa-6edf-4be1-a857-0792568f83ef)
 
-**Interactive Map:** Explore destinations using an interactive map, pinning points of interest and getting a glimpse of the attractions each location has to offer.
+**Interactive Bill & Payment:** Explore destinations using the razor-sharp razor-payment system with booking details your adventure has to offer with all the offers.
 
+![image](https://github.com/monurajputrko/Adventour/assets/68837552/2f2484b7-2a7e-423f-af7e-319fd5457086)
 
 
 **Photo Gallery:** Share your travel moments and explore photos shared by others who have visited the same destinations.
@@ -27,7 +28,7 @@ Shiva Verma : Login/Signup pages <br/>
 
 ![image](https://github.com/monurajputrko/Adventour/assets/68837552/7fce2d62-06e1-4181-bcf1-b027fecb4c88)
 
-Technologies Used React Redux for state management React Router for navigation Mapbox API for interactive maps OpenWeather API for weather forecasts Firebase for user authentication and data storage Styled Components for styling Contributing We welcome contributions from the community!
+Technologies Used React Redux for state management React Router for navigation Mapbox API for interactive maps OpenWeather API for weather forecasts Firebase for user authentication and data storage Chakra & Material Components for styling. We welcome contributions from the community!
 
 <p align="center">
   <a href="https://skillicons.dev">
