@@ -9,7 +9,6 @@ import img2 from "./photos/2.jpg"
 import img3 from "./photos/3.jpg"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 const images = [
     {
       label: 'San Francisco – Oakland Bay Bridge, United States',
