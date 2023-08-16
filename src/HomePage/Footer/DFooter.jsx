@@ -10,7 +10,7 @@ const Footer = () => {
           <h1>Get Started with Adventour!</h1>
         </div>
         <div>
-          <button>Get Started →</button>
+          <button style={{marginTop:"-50px"}} >Get Started →</button>
         </div>
       </div>
 

@@ -5,11 +5,11 @@ import DFooter from "../Footer/DFooter";
 
 const DNavbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" style={{paddingTop:"30px"}}>
       <div className="NavBox"></div>
       <nav className="NavbarItems">
         <img
-          style={{ paddingTop: "15px", marginRight: "-70px" }}
+          style={{ paddingBottom: "15px", marginRight: "-70px" }}
           src="https://adventour-app.vercel.app/static/media/logo.c4d46c4063175340fdd8.png"
           width={75}
           height={40}
@@ -22,7 +22,7 @@ const DNavbar = () => {
           <li className="navItem">Categories</li>
 
           <li className="navItem">About Us</li>
-          <button className="nav-Btn">Get Started</button>
+          <button style={{marginTop:-"5px",padding:"5px", height:"40px" ,fontSize:"13px"}} className="nav-Btn">Get Started</button>
           <span>☰</span>
         </ul>
       </nav>
