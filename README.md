@@ -16,6 +16,7 @@ Shiva Verma : Login/Signup pages <br/>
 ![image](https://github.com/monurajputrko/Adventour/assets/68837552/1e1448ea-b678-4cfa-85c8-473fa517d914)
 
 **Local Guides:** Get recommendations from local experts and fellow travelers about hidden gems, must-visit places, and authentic experiences.
+
 ![image](https://github.com/monurajputrko/Adventour/assets/68837552/33091aaa-6edf-4be1-a857-0792568f83ef)
 
 **Interactive Bill & Payment:** Explore destinations using the razor-sharp razor-payment system with booking details your adventure has to offer with all the offers.
