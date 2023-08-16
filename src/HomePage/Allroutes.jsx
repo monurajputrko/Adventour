@@ -9,6 +9,7 @@ import HDetail from '../Components/Bookings/HDetail'
 import ADetail from '../Components/Bookings/ADetail'
 import Payment from '../Components/Payment/Payment'
 import Main from './Main'
+import Error from '../Components/Utils/Error'
 
 const Allroutes = () => {
    
@@ -21,6 +22,7 @@ const Allroutes = () => {
             <Route path={"/booking/:city/:idx"} element={<HDetail />} />
             <Route path={"/adventure/:idx"} element={<ADetail />} />
             <Route path={"/payment"} element={<Payment />} />
+            <Route path={'*'} element={<Error />} />
         </Routes>
   )
 }

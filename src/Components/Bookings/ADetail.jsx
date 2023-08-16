@@ -29,6 +29,10 @@ export const ADetail = () => {
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
     const isLoading = useSelector(store => store.adventures.isLoading)
+    const handleAdd = () => {
+        console.log(addAdventure(adventures))
+        dispatch(addAdventure(adventures))
+    }
     useEffect(() => {
         dispatch(getAdventure())
         window.scrollTo({
@@ -36,14 +40,6 @@ export const ADetail = () => {
         });
     }, [])
     if (isLoading) return <Loader />
-
-  const handleAdd = () =>{
-    // dispatch(addAdventure(adventures))
-    // console.log('here')
-    navigate('/payment',{ replace: true })
-  }
-
-
 
     return (
         <Box bgColor={theme === "dark" ? '#101214' : '#fbfbfb'} mb={{ base: "2em" }}>
@@ -53,7 +49,7 @@ export const ADetail = () => {
 
             <Image src={adventures?.main_image} boxShadow={'md'} width={{ base: '100vw' }} h={{ base: '350px', lg: "500px" }} />
 
-           
+
 
             <ButtonGroup gap='4'>
 
@@ -62,12 +58,12 @@ export const ADetail = () => {
                  <Button position="absolute" colorScheme='whiteAlpha'>WhiteAlpha</Button>
                 </Link> */}
 
-                <Link to={`/adventure/${Id+1}`} >
-                 <Button top="15vh" right="7vh" position="absolute" colorScheme='blackAlpha'> <ArrowRightIcon boxSize={6} /> </Button>
+                <Link to={`/adventure/${Id + 1}`} >
+                    <Button top="16vh" h="20vh" right="0" position="absolute" colorScheme='blackAlpha'> <ArrowRightIcon boxSize={6} color={'grey'} /> </Button>
                 </Link>
-              
-               <Link to={`/adventure/${Id-1}`} >
-                 <Button top="15vh" position="absolute" colorScheme='blackAlpha'>  <ArrowLeftIcon boxSize={6} />  </Button>
+
+                <Link to={`/adventure/${Id - 1}`} >
+                    <Button top="16vh" h='20vh' left={0} position="absolute" colorScheme='blackAlpha'>  <ArrowLeftIcon boxSize={6} color={'grey'} />  </Button>
                 </Link>
 
             </ButtonGroup>
@@ -135,7 +131,7 @@ export const ADetail = () => {
                         })}
                     </Flex>
                     <div>
-     
+
                         <Flex bg={theme === "dark" ? '#191b1d' : 'white'} direction={'column'} w={{ base: '100%', md: '100%', lg: '350px' }} boxShadow={'md'} border={'1px solid silver'} p={'20px'} mt={{ base: '40px', md: '10px' }} ml={{ base: '0px', md: '0px', lg: '40px' }} borderRadius={'10px'}>
                             <Flex w={{ base: '100%', md: '100%', lg: '300px' }}>
                                 <Text><s>From ₹{(adventures?.str_price)?.toLocaleString("en-US")}</s> </Text><Spacer /> <Tag className="pulse" colorScheme='cyan.200' bg="pink.800" color={'white'}>-{adventures?.off}%</Tag>
@@ -143,7 +139,7 @@ export const ADetail = () => {
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} onClick={handleAdd} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                <Link to={`/booking/${adventures?.destination}`}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} onClick={handleAdd} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
@@ -190,7 +186,7 @@ export const ADetail = () => {
                         </Flex>
                     </Flex>
                     <Spacer />
-                    <Box w={{base:'100%',lg:'50%'}}>
+                    <Box w={{ base: '100%', lg: '50%' }}>
                         <iframe title="map" width={'100%'} height="250" style={{ backgroundColor: "white" }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(adventures?.places_see_name + "," + adventures?.destination)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}>
                             <a href="https://www.maps.ie/population/">Find Population on Map</a>
                         </iframe>

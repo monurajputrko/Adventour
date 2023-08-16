@@ -43,13 +43,13 @@ const HotelGrid = () => {
             }
         </Flex>
         {initialHotels.length > 0 &&
-            <Flex textAlign={'center'} justifyContent={'center'} ml='10vw'>
+            <Flex textAlign={'center'} justifyContent={'center'} ml={{base:'1vw',lg:'10vw'}} mb={{base:'2vh'}}>
                 {isCompleted ? (
-                    <Button onClick={loadMore} className="animate-border text-white px-6 py-2 inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
+                    <Button onClick={loadMore} class="animate-border text-white px-6 py-2 inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
                         That's It
                     </Button>
                 ) : (
-                    <Button onClick={loadMore} className="animate-border px-6 py-2 text-white inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
+                    <Button onClick={loadMore} class="animate-border px-6 py-2 text-white inline-block rounded-md bg-white bg-gradient-to-r from-cyan-200 via-cyan-500 to-cyan-200 bg-[length:400%_400%] p-0.5">
                         Load More
                     </Button>
                 )}

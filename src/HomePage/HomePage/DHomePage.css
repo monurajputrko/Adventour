@@ -6,15 +6,15 @@
     padding-bottom: 50px;
     text-align: center;
 }
-h1{
+.homepage h1{
     font-size: 30px;
     font-weight: 600;
 }
-h2{
+.homepage h2{
     font-size: 20px;
 
 }
-p{
+.homepage p{
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: 400;
