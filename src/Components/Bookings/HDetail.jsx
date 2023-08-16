@@ -4,7 +4,7 @@ import { AiOutlineHeart, AiOutlineFieldTime, AiFillHeart } from "react-icons/ai"
 import { MdStar, MdVerified } from "react-icons/md";
 import { MdOutlineVerified } from "react-icons/md";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
-import { Link, useParams } from 'react-router-dom'
+import { Link, redirect, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { Rating } from 'flowbite-react';
 import Loader from '../Utils/Loader';
@@ -15,12 +15,14 @@ export const HDetail = () => {
     const dispatch = useDispatch()
     const { city, idx } = useParams()
     const theme = useSelector(state => state.theme);
-    const hotels = useSelector(state => state.hotels.hotels[idx - 1])
+    const hotels = useSelector(state => state.hotels.hotels[(idx%5 - 1)])
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
     const isLoading = useSelector(store => store.hotels.isLoading)
-
+    const addToBooking = () =>{
+        dispatch(addHotel(hotels))
+    }
     useEffect(() => {
         dispatch(getHotel(city))
         window.scrollTo({
@@ -31,9 +33,10 @@ export const HDetail = () => {
     return (
         <>
             <SecondaryNav />
+            <Button onClick={addToBooking} >Click</Button>
             <Box mb={{ base: "2em" }} mt='2em'>
                 <Box m={'auto'} mt="20px" w={{ base: '100vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
-                    <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '350px', lg: "500px" }} />
+                    <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '300px', lg: "500px" }} />
 
 
                     <Flex flexDirection={{ base: 'column', md: 'column', lg: 'row' }} bg="white" p="2% 10px" >
@@ -48,7 +51,7 @@ export const HDetail = () => {
                                     ({hotels?.reviews} reviews)
                                 </Rating>
                             </Text>
-                            <Box w={'80%'} mb={'15px'}>
+                            <Box w={{base:'100%',lg:'80%'}} mb={'15px'}>
                                 {hotels?.utils?.map((style, idx) => {
                                     return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={"white"} bg='black'>{style}</Tag>
                                 })}
@@ -56,8 +59,8 @@ export const HDetail = () => {
                             <Box>
 
                                 <SimpleGrid templateColumns='repeat(2, 1fr)' w={{ base: '100%', lg: '70%' }} gap={1} mb={{ base: '10px', lg: '0' }}>
-                                    <Text border={'1px solid black'} textAlign={'center'}><strong>Check In</strong><br />15/08/2023</Text>
-                                    <Text border={'1px solid black'} textAlign={'center'}><strong>Check Out</strong><br />20/08/2023</Text>
+                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check In</strong><br />15/08/2023</Text>
+                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check Out</strong><br />20/08/2023</Text>
                                 </SimpleGrid >
                             </Box>
                         </Box>
@@ -92,7 +95,7 @@ export const HDetail = () => {
                                 <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(hotels?.price)?.toLocaleString("en-US")}</Text>
                                 <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                                 <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                    <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} onClick={()=>addHotel(hotels)} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                    <Link to={'/payment'}><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} onClick={addToBooking} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                     <Spacer />
                                     <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                         if (!wish) {
@@ -121,9 +124,9 @@ export const HDetail = () => {
                     </Flex>
 
                     <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '1em' }} mt={'10px'} textAlign={'left'} bg="white" p="4%">
-                        <Flex direction={{ base: 'column' }} w='45%'>
+                        <Flex direction={{ base: 'column' }} w={{base:'100%',lg:'45%'}}>
                             <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                            <SimpleGrid pl={'10px'} minChildWidth={"200px"} columns={2}>
+                            <SimpleGrid pl={'10px'} minChildWidth={{base:"120px",lg:'200px'}} columns={2}>
                                 <HStack><MdVerified /><Text>Accommodation</Text></HStack>
                                 <HStack><MdVerified /><Text>Guide</Text></HStack>
                                 <HStack><MdVerified /><Text>Meals</Text></HStack>

@@ -23,8 +23,7 @@ const HotelsComp = ({ price, id, main_img, title, description, address, city, st
   }
   const navigate = useNavigate()
   const goToDetails = () => {
-    console.log("here")
-    window.open(`/booking/${city}/1`, '_blank', 'noreferrer');
+    navigate(`/booking/${city}/${id}`);
   }
   const goToMap = () => {
 
@@ -57,7 +56,7 @@ const HotelsComp = ({ price, id, main_img, title, description, address, city, st
     <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
   </Box>
   return (
-    <Grid onClick={goToDetails} cursor="pointer">
+    <Grid onClick={goToDetails} cursor="pointer" mb={{base:'20px',lg:'0'}}>
       <Card
         _hover={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset" }}
         direction={{ base: 'column', md: 'row' }}
@@ -86,7 +85,7 @@ const HotelsComp = ({ price, id, main_img, title, description, address, city, st
                 return <Image transition="0.5s" onClick={handleImageChange} borderRadius={"5px"} key={idx} w={{ base: '120px', md: '80px' }} height='45px' src={el} fallback={"../../images/150.png"} />
               })}
             </div>
-            <IconButton w="15%" h="100%" position="absolute" right={{ base: '25%', md: '0%' }} zIndex={'2'} onClick={(e) => { e.stopPropagation(); setval(val > -55 ? val - 35 : val) }} colorScheme='none' bg={'blackAlpha.300'} isDisabled={val < -80}
+            <IconButton w="15%" h="100%" position="absolute" right={{ base: '10%', md: '0%' }} zIndex={'2'} onClick={(e) => { e.stopPropagation(); setval(val > -55 ? val - 35 : val) }} colorScheme='none' bg={'blackAlpha.300'} isDisabled={val < -80}
               icon={<AiOutlineCaretRight size={'25px'} />} />
           </Box>
         </Flex>
@@ -121,8 +120,8 @@ const HotelsComp = ({ price, id, main_img, title, description, address, city, st
             </Button>
           </CardBody>
 
-          <CardFooter display="flex" py="0" alignItems={"center"}>
-            <Flex direction={'column'}>
+          <CardFooter display="flex" py="0" alignItems={"center"} flexDirection={{base:'column',lg:'row'}} gap={{base:'10px',lg:'0'}} >
+            <Flex direction={{base:'row',lg:'column'}} w={{base:'100%',lg:'40%'}} justifyContent={{base:'space-between',lg:'center'}}>
               <Flex alignItems="center" gap="5px" bg="green.100" w='fit-content' px='10px' borderRadius={10}>
                 <AiFillCheckCircle color="green" />
                 Certified
