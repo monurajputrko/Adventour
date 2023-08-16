@@ -3,7 +3,7 @@ import { ADD_ADVENTURE_REQUEST, GET_ADVENTURE_ERROR, GET_ADVENTURE_REQUEST, GET_
 export const getAdventure = () => async(dispatch) => {
     dispatch({type:GET_ADVENTURE_REQUEST})
     try{
-        let response = await axios.get(`http://localhost:8080/adventures`)
+        let response = await axios.get(`https://${process.env.REACT_APP_BASE_SERVER_URL}/adventures`)
         setTimeout(()=>{
             dispatch({type:GET_ADVENTURE_SUCESS,payload:response.data})
         },[500])
