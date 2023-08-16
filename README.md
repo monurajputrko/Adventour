@@ -4,7 +4,8 @@
 <b>Live At :</b> https://adventour-e3im-git-booking-monurajputrko.vercel.app/
 
 # Team & Tasks
-Mohd Shamaiel Wani & MD Dilnawaj Alam: Home Page <br/>
+MD Dilnawaj Alam: Home Page <br/>
+Mohd Shamaiel Wani: Explore Page <br/>
 Karan Kotai(Team Leader) : Booking & Listing pages <br/>
 Monu Singh : Checkout page <br/>
 Shiva Verma : Login/Signup pages <br/>
