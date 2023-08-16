@@ -84,7 +84,7 @@ export const ADetail = () => {
                                 ({adventures?.reviews} reviews)
                             </Rating>
                         </Text>
-                        <Text pb={'15px'}>From <strong>Persian Gulf</strong> to <strong>Jumeirah Beach</strong></Text>
+                        <Text pb={'15px'}>From <strong>{adventures?.destination}</strong> to Location<strong>Jumeirah Beach</strong></Text>
                         <Box w={'80%'} mb={'15px'}>
                             {adventures?.travel_style?.map((style, idx) => {
                                 return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={theme === "dark" ? 'blackAlpha.800' : 'whiteAlpha.900'} bg='cyan.300'>{style}</Tag>

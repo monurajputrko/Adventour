@@ -10,6 +10,7 @@ import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import './pay.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
+import Loader from '../Utils/Loader';
 
 function Payment() {
   const [CardPay, setCardPay] = useState(true);
@@ -49,23 +50,6 @@ function Payment() {
     exp_day: '',
     cvv: ''
   })
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-
-    // storedata?.destination?.filter((el, i) => {
-    //   if (i === 0) {
-    //     setstart(el)
-    //   }
-    //   if (i === len - 1) {
-    //     setend(el)
-    //   }
-    //   return el;
-    // })
-  }, [])
-
 
   const basepr = storedata?.str_price;
 
@@ -107,9 +91,17 @@ function Payment() {
     setCardPay(true);
     setRazorPay(false);
   };
+  const [isLoading,setIsLoading] = useState(true);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+    setTimeout(()=>{
+      setIsLoading(false)
+    },1000)
+  }, [])
 
-
-
+  if (isLoading) return <Loader />
   return (
 
 
