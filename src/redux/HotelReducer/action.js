@@ -6,7 +6,7 @@ export const getHotel = (city='ahemdabad') => async(dispatch) => {
         let response = await axios.get(`${process.env.REACT_APP_BASE_SERVER_URL}hotels?city_like=${city}`)
         setTimeout(()=>{
             dispatch({type:GET_HOTEL_SUCESS,payload:response.data})
-        },[1000])
+        },[500])
     }catch(e){
         dispatch({type:GET_HOTEL_ERROR})
     }

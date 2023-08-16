@@ -33,7 +33,6 @@ export const HDetail = () => {
     return (
         <>
             <SecondaryNav />
-            <Button onClick={addToBooking} >Click</Button>
             <Box mb={{ base: "2em" }} mt='2em'>
                 <Box m={'auto'} mt="20px" w={{ base: '100vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
                     <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '300px', lg: "500px" }} />

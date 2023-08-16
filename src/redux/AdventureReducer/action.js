@@ -6,7 +6,7 @@ export const getAdventure = () => async(dispatch) => {
         let response = await axios.get(`http://localhost:8080/adventures`)
         setTimeout(()=>{
             dispatch({type:GET_ADVENTURE_SUCESS,payload:response.data})
-        },[1000])
+        },[500])
     }catch(e){
         dispatch({type:GET_ADVENTURE_ERROR})
     }
