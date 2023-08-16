@@ -1,10 +1,11 @@
-import { FILTER_HOTEL_ERROR, FILTER_HOTEL_REQUEST, FILTER_HOTEL_SUCESS, GET_HOTEL_ERROR, GET_HOTEL_REQUEST, GET_HOTEL_SUCESS } from "./actionType";
+import { Add_HOTEL_REQUEST, FILTER_HOTEL_ERROR, FILTER_HOTEL_REQUEST, FILTER_HOTEL_SUCESS, GET_HOTEL_ERROR, GET_HOTEL_REQUEST, GET_HOTEL_SUCESS } from "./actionType";
 
 const iniState = {
     hotels: [],
     isLoading: false,
     isError: false,
-    isSkeleton: false
+    isSkeleton: false,
+    cartHotel: {}
 }
 
 
@@ -16,6 +17,7 @@ export const HotelReducer = (state=iniState,{type,payload}) =>{
         case FILTER_HOTEL_REQUEST : return {...state,isSkeleton:true}
         case FILTER_HOTEL_SUCESS: return {...state,isSkeleton:false,hotels:payload}
         case FILTER_HOTEL_ERROR: return {...state,isSkeleton:false,isError:true}
+        case Add_HOTEL_REQUEST : return {...state,cartHotel:payload}
         default: return state;
     }
 }

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { FILTER_HOTEL_ERROR, FILTER_HOTEL_REQUEST, FILTER_HOTEL_SUCESS, GET_HOTEL_ERROR, GET_HOTEL_REQUEST, GET_HOTEL_SUCESS } from "./actionType"
+import { Add_HOTEL_REQUEST, FILTER_HOTEL_ERROR, FILTER_HOTEL_REQUEST, FILTER_HOTEL_SUCESS, GET_HOTEL_ERROR, GET_HOTEL_REQUEST, GET_HOTEL_SUCESS } from "./actionType"
 export const getHotel = (city='ahemdabad') => async(dispatch) => {
     dispatch({type:GET_HOTEL_REQUEST})
     try{
@@ -21,6 +21,9 @@ export const filterHotel = (city='ahemdabad',q='') => async(dispatch) => {
     }catch(e){
         dispatch({type:FILTER_HOTEL_ERROR})
     }
+}
+export const addHotel = (obj) =>{
+    return {type:Add_HOTEL_REQUEST,payload:obj}
 }
 
 

@@ -1,16 +1,14 @@
 
 import { Box, Button, Checkbox, Flex, FormControl, HStack, IconButton, Image, Input, Modal, ModalBody, ModalContent, ModalOverlay, PinInput, PinInputField, Radio, RadioGroup, Select, Spacer, Text, VStack, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-// import {  } from 'react-router-dom';
 import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
 import { FaMoon, FaSun } from "react-icons/fa";
-import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill,BsPhoneFill } from 'react-icons/bs';
+import { BsFillInfoCircleFill, BsLightningChargeFill,BsPhoneFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
-import { BsStar,BsStarFill,Bs1CircleFill,Bs2CircleFill,BsHouseFill,BsCashCoin,Bs3CircleFill } from "react-icons/bs";
+import { BsStarFill,BsHouseFill,BsCashCoin } from "react-icons/bs";
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
-import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import './pay.css'
-import { useNavigate , useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
 function Payment() {
@@ -18,7 +16,8 @@ function Payment() {
   const [RazorPay, setRazorPay] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [theme, settheme] = useState(false);
-  const storedata = useSelector(state => state.adventure)
+  const storedata = useSelector(state => state)
+  console.log(storedata)
   const Hoteldata = useSelector(state => state.hotels)
   const [start, setstart] = useState('');
   const [end, setend] = useState('');
@@ -60,11 +59,12 @@ function Payment() {
   // }
 
   useEffect(() => {
-
+    
+    console.log(storedata)
     window.scrollTo({
       top: 0, 
     });
-
+    
     storedata?.destinations?.filter((el, i) => {
       if (i === 0) {
         setstart(el)
@@ -87,9 +87,6 @@ function Payment() {
 
   const mainImg = storedata?.main_image;
 
-  function redirectToHomePage() {
-    window.location.href = './Thankyou.jsx';
-  }
 
   const handlePayment = () => {
 
@@ -104,7 +101,7 @@ function Payment() {
       description: "Payment",
       image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL6nri4shJQY02h95CkKAzHit6ZjuPGvrapODPp-XDCjnnRN2etJ2hG0jVXCTfw_Pa1VSHh41N-0EA9SIfm3Bvag4MtMOLU-6vqbs4JUUNfihajY3DNFPay7GrkgaLmANNdJE22IsXvsjSq_VDjpTIZe-3CJq8vRqXtn_K_ms9xToGYX88d0cKq6_a5nw/s16000/Screenshot%20(27).png",
       handler: function (response) {
-        redirectToHomePage();
+        // redirectToHomePage();
         console.log("Home"); // Update the state to indicate payment completion
       },
     };
@@ -224,9 +221,9 @@ function Payment() {
                 <Box border={'1px solid gray'} bg={theme ? '#101214' : 'gray.100'}   w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
                   <Flex py={'5px'}><BsCashCoin size={'25px'} /><Text pt={'0px'} px={'10px'}>Only ₹{(Hoteldata?.price)?.toLocaleString("en-US")} upfront per person</Text></Flex>
                   <Flex py={'5px'}><BsHouseFill size={'35px'} /><Text px={'10px'}>{Hoteldata?.address}</Text></Flex>
-                  <Flex py={'5px'}><Bs1CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[0]}</Text></Flex>
+                  {/* <Flex py={'5px'}><Bs1CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[0]}</Text></Flex>
                   <Flex py={'5px'}><Bs2CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[3]}</Text></Flex>
-                  <Flex py={'5px'}><Bs3CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[4]}</Text></Flex>
+                  <Flex py={'5px'}><Bs3CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[4]}</Text></Flex> */}
                  
                   <Flex py={'5px'}><BsPhoneFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.phone}</Text></Flex>
                 </Box>
@@ -580,7 +577,7 @@ function Payment() {
                     </ModalBody>
                     <Button colorScheme='blue' m={5} onClick={() => {
                       onClose();
-                      if (pin.first == 5 && pin.sec == 6 && pin.third == 3 && pin.fourth == 7) {
+                      if (pin.first===5 && pin.sec===6 && pin.third===3 && pin.fourth===7) {
                         navigate('/payment-successful')
                       } else {
                         toast({

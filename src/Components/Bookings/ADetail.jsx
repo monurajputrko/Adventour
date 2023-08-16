@@ -6,9 +6,9 @@ import { MdGroup, MdStar, MdVerified } from "react-icons/md";
 import { BiShieldQuarter } from "react-icons/bi";
 import { MdOutlineTipsAndUpdates, MdOutlineVerified } from "react-icons/md";
 import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { getAdventure } from '../../redux/AdventureReducer/action';
+import { addAdventure, getAdventure } from '../../redux/AdventureReducer/action';
 import { Rating } from 'flowbite-react';
 import { FaClipboardList } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
@@ -20,8 +20,9 @@ export const ADetail = () => {
     const { idx } = useParams()
     console.log(idx)
     const Id = parseInt(idx)
-
-    const theme = useSelector(state => state.theme);
+    const navigate = useNavigate()
+    const theme = useSelector(state => state);
+    console.log(theme)
     const adventures = useSelector(state => state.adventures.adventures[idx - 1])
     console.log(adventures)
     const toast = useToast()
@@ -36,18 +37,11 @@ export const ADetail = () => {
     }, [])
     if (isLoading) return <Loader />
 
-
-  const addToCart = (i) => {
-      
-    try {
-
-        
-    } catch (error) {
-        
-    }
-
+  const handleAdd = () =>{
+    // dispatch(addAdventure(adventures))
+    // console.log('here')
+    navigate('/payment',{ replace: true })
   }
-
 
 
 
@@ -149,7 +143,7 @@ export const ADetail = () => {
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='4xl' fontWeight={'700'}>₹{(adventures?.act_price)?.toLocaleString("en-US")}</Text>
                             <Text w={{ base: '100%', md: '100%', lg: '300px' }} textAlign={'left'} fontSize='sm' fontWeight={'500'}>per person</Text>
                             <Flex mb={'20px'} w={{ base: '100%', md: '100%', lg: '300px' }} alignItems={'center'} pt={'10px'} pb={'10px'}>
-                                <Link><Button onClick={()=>{addToCart(idx)}} fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
+                                <Link><Button fontSize={'16px'} h={'45px'} w={'230px'} colorScheme='none' fontWeight={'700'} bg={theme === "dark" ? "#3DC6EF" : "cyan.200"} onClick={handleAdd} color={'white'} borderRadius={'5px'}>Add to Bookings</Button></Link>
                                 <Spacer />
                                 <IconButton display={{ base: "none", sm: "inline-flex" }} onClick={() => {
                                     if (!wish) {
