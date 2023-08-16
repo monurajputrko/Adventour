@@ -13,6 +13,7 @@ Shiva Verma : Login/Signup pages <br/>
 # Features 
 
 **Adventure Planning:** Plan your adventure trips by creating personalized itineraries. Add activities, set dates, and organize your daily schedule.
+
 ![image](https://github.com/monurajputrko/Adventour/assets/68837552/1e1448ea-b678-4cfa-85c8-473fa517d914)
 
 **Local Guides:** Get recommendations from local experts and fellow travelers about hidden gems, must-visit places, and authentic experiences.
