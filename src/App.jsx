@@ -9,8 +9,18 @@ export const App = () => {
   return <div className="app">
     <ThemeProvider theme={muiTheme}>
       {/* <Navbar/> */}
+      {/* <DNavbar/>
+      <DHomePage />
+      <DHoliday />
+      <DExperience />
+      <DRating />
+     <DFooter/> */}
+
+
+
     </ThemeProvider>
     <Allroutes/>
     <ScrollToTop smooth top="20" component={<img src={backtoTop} style={{mixBlendMode:'multiply'}} alt='btt'></img>}/>
   </div>
 }
+
