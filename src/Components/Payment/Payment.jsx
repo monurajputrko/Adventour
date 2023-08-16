@@ -18,9 +18,10 @@ function Payment() {
   const [theme, settheme] = useState(false);
   const storedata = useSelector(state => state.adventures.cartAdventure)
   const Hoteldata = useSelector(state => state.hotels.cartHotel)
+  
   const [start, setstart] = useState('');
   const [end, setend] = useState('');
-  const len = storedata?.destinations?.length
+  const len = storedata?.destination?.length
   const [traveller, settraveller] = useState(1);
   const toast = useToast()
   const navigate = useNavigate()
@@ -50,40 +51,37 @@ function Payment() {
   })
 
   useEffect(() => {
-
-    console.log(storedata)
     window.scrollTo({
       top: 0,
     });
 
-    storedata?.destinations?.filter((el, i) => {
-      if (i === 0) {
-        setstart(el)
-      }
-      if (i === len - 1) {
-        setend(el)
-      }
-      return el;
-    })
+    // storedata?.destination?.filter((el, i) => {
+    //   if (i === 0) {
+    //     setstart(el)
+    //   }
+    //   if (i === len - 1) {
+    //     setend(el)
+    //   }
+    //   return el;
+    // })
   }, [])
 
 
-  const basepr = storedata?.price * 10;
+  const basepr = storedata?.str_price;
 
   const discountVal = basepr * 0.3;
 
-  const totalDue = basepr - discountVal;
+  const totalDue = parseInt(basepr) - parseInt(discountVal);
 
-  const dueNext = totalDue - storedata?.price;
+  const dueNext = totalDue - storedata?.str_price;
 
   const mainImg = storedata?.main_image;
 
-
   const handlePayment = () => {
 
-    const Pr = traveller * storedata?.price;
-    const checkout = Pr * 100;
-
+    const Pr = traveller * totalDue;
+    const checkout = Number(Pr * 10);
+    console.log(checkout)
     const options = {
       key: "rzp_test_dnv3nQiWbqzTGt",
       amount: checkout,
@@ -92,8 +90,8 @@ function Payment() {
       description: "Payment",
       image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL6nri4shJQY02h95CkKAzHit6ZjuPGvrapODPp-XDCjnnRN2etJ2hG0jVXCTfw_Pa1VSHh41N-0EA9SIfm3Bvag4MtMOLU-6vqbs4JUUNfihajY3DNFPay7GrkgaLmANNdJE22IsXvsjSq_VDjpTIZe-3CJq8vRqXtn_K_ms9xToGYX88d0cKq6_a5nw/s16000/Screenshot%20(27).png",
       handler: function (response) {
-        // redirectToHomePage();
-        console.log("Home"); // Update the state to indicate payment completion
+        navigate('/')
+        // Update the state to indicate payment completion
       },
     };
 
@@ -163,7 +161,7 @@ function Payment() {
                   <Text>Change date</Text>
                 </Box>
                 <Box border={'1px solid gray'} bg={theme ? '#101214' : 'white'} w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
-                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.price)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
+                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.str_price - 10000)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
                   <Flex py={'5px'}><FaUserFriends size={'25px'} /><Text px={'10px'}>6 spaces left and yours is reserved for the next 10 minutes</Text></Flex>
                   <Flex py={'5px'}><BsLightningChargeFill size={'22px'} /><Text px={'10px'}>Instant Book: Your spaces will be instantly secured.</Text></Flex>
                   <Flex py={'5px'}><AiFillTag size={'22px'} /><Text px={'10px'}>Special deal. See details</Text></Flex>
@@ -578,7 +576,7 @@ function Payment() {
               </Box>
             </Box>
             <Box display={{ base: "block", md: "block", lg: "none" }}>
-              <Pricediv theme={theme} storedata={storedata} traveller={traveller} />
+              <Pricediv theme={theme} storedata={storedata} traveller={traveller} basepr={basepr} discountVal={discountVal} totalDue={totalDue} dueNext={dueNext}/>
             </Box>
             <Box my={'25px'} p={'20px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'}>
               <HStack>
@@ -666,7 +664,7 @@ function Pricediv({ theme, storedata, traveller, basepr, discountVal, totalDue, 
       <Flex>
         <Text fontWeight={'700'}>Due today</Text>
         <Spacer />
-        <Text fontWeight={'700'}>₹ {(traveller * storedata?.price)?.toLocaleString("en-US")}</Text>
+        <Text fontWeight={'700'}>₹ {(traveller * totalDue)?.toLocaleString("en-US")}</Text>
       </Flex>
       <Flex>
         <Text>Due on 20 August, 2023</Text>
