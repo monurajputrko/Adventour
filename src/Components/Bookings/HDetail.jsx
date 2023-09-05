@@ -15,12 +15,15 @@ export const HDetail = () => {
     const dispatch = useDispatch()
     const { city, idx } = useParams()
     const theme = useSelector(state => state.theme);
-    const hotels = useSelector(state => state.hotels.hotels[(idx%5 - 1)])
+    const hotels = useSelector(state => state.hotels.hotels[(idx - 1)])
+    const [locate, setLocate] = useState('Ahemdabad')
+    const [checkInDate, setCheckI] = useState('2023-08-16')
+    const [checkOutDate, setCheckO] = useState('2023-08-17')
     const toast = useToast()
     const [val, setval] = useState(-10);
     const [wish, setwish] = useState(false)
     const isLoading = useSelector(store => store.hotels.isLoading)
-    const addToBooking = () =>{
+    const addToBooking = () => {
         dispatch(addHotel(hotels))
     }
     useEffect(() => {
@@ -32,12 +35,10 @@ export const HDetail = () => {
     if (isLoading) return <Loader />
     return (
         <>
-            <SecondaryNav />
-            <Button onClick={addToBooking} >Click</Button>
+            <SecondaryNav setLocate={setLocate} locate={locate} checkInDate={checkInDate} checkOutDate={checkOutDate} setCheckI={setCheckI} setCheckO={setCheckO}/>
             <Box mb={{ base: "2em" }} mt='2em'>
                 <Box m={'auto'} mt="20px" w={{ base: '100vw', lg: '76vw' }} bg="white" color={theme === "dark" ? 'white' : 'blackAlpha.800'} boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'>
                     <Image src={hotels?.main_img} boxShadow={'md'} width={{ base: '100%' }} h={{ base: '300px', lg: "500px" }} />
-
 
                     <Flex flexDirection={{ base: 'column', md: 'column', lg: 'row' }} bg="white" p="2% 10px" >
                         <Box textAlign={'left'} pl={'40px'} w={{ base: '90%', md: '70%', lg: '38%' }}>
@@ -51,7 +52,7 @@ export const HDetail = () => {
                                     ({hotels?.reviews} reviews)
                                 </Rating>
                             </Text>
-                            <Box w={{base:'100%',lg:'80%'}} mb={'15px'}>
+                            <Box w={{ base: '100%', lg: '80%' }} mb={'15px'}>
                                 {hotels?.utils?.map((style, idx) => {
                                     return <Tag key={idx} mr={'10px'} mb="15px" pb="5px" color={"white"} bg='black'>{style}</Tag>
                                 })}
@@ -59,8 +60,8 @@ export const HDetail = () => {
                             <Box>
 
                                 <SimpleGrid templateColumns='repeat(2, 1fr)' w={{ base: '100%', lg: '70%' }} gap={1} mb={{ base: '10px', lg: '0' }}>
-                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check In</strong><br />15/08/2023</Text>
-                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check Out</strong><br />20/08/2023</Text>
+                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check In</strong><br />{checkInDate}</Text>
+                                    <Text border={'1px solid black'} textAlign={'center'} p='5px' borderRadius={5}><strong>Check Out</strong><br />{checkOutDate}</Text>
                                 </SimpleGrid >
                             </Box>
                         </Box>
@@ -124,9 +125,9 @@ export const HDetail = () => {
                     </Flex>
 
                     <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '1em' }} mt={'10px'} textAlign={'left'} bg="white" p="4%">
-                        <Flex direction={{ base: 'column' }} w={{base:'100%',lg:'45%'}}>
+                        <Flex direction={{ base: 'column' }} w={{ base: '100%', lg: '45%' }}>
                             <HStack pb={'20px'}><Text fontSize={'25px'} fontWeight={'600'}>What's Included</Text></HStack>
-                            <SimpleGrid pl={'10px'} minChildWidth={{base:"120px",lg:'200px'}} columns={2}>
+                            <SimpleGrid pl={'10px'} minChildWidth={{ base: "120px", lg: '200px' }} columns={2}>
                                 <HStack><MdVerified /><Text>Accommodation</Text></HStack>
                                 <HStack><MdVerified /><Text>Guide</Text></HStack>
                                 <HStack><MdVerified /><Text>Meals</Text></HStack>

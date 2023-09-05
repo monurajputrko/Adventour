@@ -46,11 +46,11 @@
     
 }
 .copyright{
-    
-    margin-left: 2%;
-    margin-right: 2%;
+    padding: 0 2%;
     display: flex;
     justify-content: space-between;
+    background: rgb(72, 72, 72);
+    color:white;
  
 }
 .copyright ul{
@@ -58,8 +58,14 @@
     list-style: none;
     gap: 30px;
     margin-bottom: 100px;
+    
 }
 
+.footer_Div{
+    padding: 1em;
+    color: white;
+    background: rgb(72, 72, 72);
+}
 
 
 
@@ -67,7 +73,7 @@
     .footer{
         text-align: center;
         border-top: 2px sold wheat;
-    
+        width: 100%;
     }
    .footer button{
     font-size: small;
@@ -76,8 +82,7 @@
     }
     footer{
         gap:10px;
-        margin-left: 50px;
-        margin-right: 40px;
+        flex-direction: column;
     }
     .footer_Div p{
         margin-top: -10px;
@@ -87,6 +92,7 @@
     font-size: small;
     gap: 10px;
     margin-bottom: 5px;
+    width: 100%;
     
 }
 }

@@ -11,7 +11,7 @@ import { BsInstagram } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { setLOGIN } from '../../redux/LoginReducer/action';
 
-const SignUp = () => {
+const SignUp = ({setShowSignup,setShowLogin}) => {
   const dispatch = useDispatch()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [value, setValue] = useState({
@@ -66,7 +66,8 @@ const SignUp = () => {
 
   const nevigate = useNavigate();
   const handleLogin = () => {
-    nevigate('/login');
+    setShowSignup(false)
+    setShowLogin(true)
   }
   //========================= Google Authentication ================
 
@@ -82,7 +83,7 @@ const SignUp = () => {
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}
       >
         <Box>
-          {/* <ModalOverlay /> */}
+          <ModalOverlay />
           <ModalContent position='absolute' top='5%'
             bgGradient='linear(to-r, white, gray.100)'
             size={100}>

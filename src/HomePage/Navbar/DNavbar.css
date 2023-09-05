@@ -60,8 +60,12 @@
     left: 0;
     right: 0;
     height: 2px;
+    display: flex;
+    align-items: center;
 }
 .logo{
+    font-family: 'algerian',-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 22px;
     margin-left: 6%;
     margin-right: 50%;
     color: white;
@@ -72,9 +76,7 @@
     color: #111315;
     border: none;
     font-size: 16px;
-    padding-bottom: 2px 2px 15px 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 2px 25px;
 }
 .NavbarItems button :hover{
     color: rgb(46, 43, 43);
@@ -85,9 +87,13 @@
     color:#8e9092;
 }
 .NavbarItems ul li :hover {
-    background-color: blue;
+    background-color: rgb(221, 221, 221);
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
     }
     .nav-Btn{
+        text-decoration: none;
         margin-top: -10px;
     }
 

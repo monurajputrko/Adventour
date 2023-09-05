@@ -2,7 +2,7 @@ import React from "react";
 import "./DFooter.css";
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id='footer'>
       <div className="contact-short"></div>
       <div className="gridColumn">
         <div className="connected">
@@ -10,7 +10,7 @@ const Footer = () => {
           <h1>Get Started with Adventour!</h1>
         </div>
         <div>
-          <button style={{marginTop:"-50px"}} >Get Started →</button>
+          <button style={{marginTop:"-50px",color:'white'}} >Get Started →</button>
         </div>
       </div>
 

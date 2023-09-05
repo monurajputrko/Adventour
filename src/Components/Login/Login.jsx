@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux'
 import { setLOGIN } from '../../redux/LoginReducer/action'
 
 
-const Login = () => {
+const Login = ({setShowLogin,setShowSignup}) => {
   const dispatch = useDispatch()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [value, setValue] = useState({
@@ -50,7 +50,8 @@ const Login = () => {
 
   const nevigate = useNavigate();
   const handleSignup = () => {
-    nevigate('/signup');
+    setShowLogin(false)
+    setShowSignup(true)
   }
 
 
@@ -79,7 +80,7 @@ const Login = () => {
     <>
       <Modal size={'3xl'} blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <Box>
-          {/* <ModalOverlay /> */}
+          <ModalOverlay />
           <ModalContent position='absolute' top='5%'
             bgGradient='linear(to-r, white, gray.100)'
             size={'100'}>

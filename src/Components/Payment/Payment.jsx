@@ -3,13 +3,14 @@ import { Box, Button, Checkbox, Flex, FormControl, HStack, IconButton, Image, In
 import React, { useEffect, useState } from 'react'
 import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
 import { FaMoon, FaSun } from "react-icons/fa";
-import { BsFillInfoCircleFill, BsLightningChargeFill, BsPhoneFill } from 'react-icons/bs';
+import { BsFillInfoCircleFill, BsLightningChargeFill, BsPhone, BsPhoneFill, BsPhoneFlip } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
 import { BsStarFill, BsHouseFill, BsCashCoin } from "react-icons/bs";
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
 import './pay.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
+import Loader from '../Utils/Loader';
 
 function Payment() {
   const [CardPay, setCardPay] = useState(true);
@@ -49,23 +50,6 @@ function Payment() {
     exp_day: '',
     cvv: ''
   })
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-
-    // storedata?.destination?.filter((el, i) => {
-    //   if (i === 0) {
-    //     setstart(el)
-    //   }
-    //   if (i === len - 1) {
-    //     setend(el)
-    //   }
-    //   return el;
-    // })
-  }, [])
-
 
   const basepr = storedata?.str_price;
 
@@ -107,9 +91,17 @@ function Payment() {
     setCardPay(true);
     setRazorPay(false);
   };
+  const [isLoading,setIsLoading] = useState(true);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+    setTimeout(()=>{
+      setIsLoading(false)
+    },1000)
+  }, [])
 
-
-
+  if (isLoading) return <Loader />
   return (
 
 
@@ -131,7 +123,7 @@ function Payment() {
         {/* Heading flex */}
         <Flex mb={-3} pb={1} py={'30px'}>
           {/* <Image src="https://imgs.search.brave.com/O1K0BjlIPGnMx_utdR9PmaFis4lPYgm59Y9c29kprGM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjAxLzIwMTQy/Ni5wbmc" alt="" w="30px" h="30px" filter={theme ? 'invert(100%)' : 'none'}/> */}
-          <Text pb={'20px'} fontSize={'30px'} fontWeight={'600'}>&nbsp;&nbsp;&nbsp;Your Booking overview</Text>
+          <Text pb={'20px'} fontSize={'30px'} fontWeight={'600'} color={'#ebebeb'} fontFamily={'algerian'}>&nbsp;&nbsp;&nbsp;Your Booking overview</Text>
           <Spacer />
           <Button colorScheme='none' bg={theme ? '#101214' : 'white'} color={theme ? 'white' : 'blackAlpha.800'} mr={'10px'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Help</Button>
           <Button colorScheme='none' bg={theme ? '#101214' : 'white'} color={theme ? 'white' : 'blackAlpha.800'} borderRadius={'20px'} display={{ base: 'none', md: 'block', lg: 'block' }}>Share Tour</Button>
@@ -193,12 +185,12 @@ function Payment() {
                 </Box>
                 <Box border={'1px solid gray'} bg={theme ? '#101214' : 'white'} w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
                   <Flex py={'5px'}><BsCashCoin size={'25px'} /><Text pt={'0px'} px={'10px'}>Only ₹{(Hoteldata?.price)?.toLocaleString("en-US")} upfront per person</Text></Flex>
-                  <Flex py={'5px'}><BsHouseFill size={'35px'} /><Text px={'10px'}>{Hoteldata?.address}</Text></Flex>
+                  <Flex py={'5px'}><BsHouseFill size={'25px'} /><Text px={'10px'}>{Hoteldata?.address}</Text></Flex>
                   {/* <Flex py={'5px'}><Bs1CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[0]}</Text></Flex>
                   <Flex py={'5px'}><Bs2CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[3]}</Text></Flex>
                   <Flex py={'5px'}><Bs3CircleFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.utils[4]}</Text></Flex> */}
 
-                  <Flex py={'5px'}><BsPhoneFill size={'22px'} /><Text px={'10px'}>{Hoteldata?.phone}</Text></Flex>
+                  <Flex py={'5px'}><BsPhoneFlip size={'25px'} /><Text px={'10px'}>{Hoteldata?.phone}</Text></Flex>
                 </Box>
               </Flex>
             </Box>

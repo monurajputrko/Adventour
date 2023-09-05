@@ -191,6 +191,7 @@ font-size: medium;
     }
     .placeDetails_Text{
         font-size: medium;
+        width: 40%;
         margin-right:350px;
     }
     .sliderText{

@@ -16,6 +16,9 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.rating-element-div{
+    padding: 1em;
+}
 .rating-element-div img{
     width: 50px;
     height: 50px;
@@ -38,7 +41,7 @@
 }
 .userdetails p{
     margin-bottom:10px;
-    margin-top: -15px;
+    margin-text_ctop: -15px;
     font-size: medium;
     margin-left:20px;
 }
@@ -59,6 +62,11 @@
 }
 .text_color{
     color: white;
+}
+.rating-element h2.text_color{
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 15px;
 }
 .saying{
     display: flex;
@@ -94,6 +102,7 @@
     }
 .userdetails{
     display: flex;
+    align-items: center;
 }
 .rating-element-div h4{
     margin-top: -1px;
