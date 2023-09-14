@@ -1,14 +1,10 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 import { Image } from '@chakra-ui/react';
 import img1 from "./photos/1.jpg"
 import img2 from "./photos/2.jpg"
 import img3 from "./photos/3.jpg"
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
     {
@@ -36,7 +32,7 @@ const Carousel = () => {
   return (
     <Box
     sx={{ maxWidth: 400, flexGrow: 1 }}>
-     <AutoPlaySwipeableViews
+     {/* <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
@@ -54,7 +50,7 @@ const Carousel = () => {
                         ) : null}
                     </div>
                 ))}
-            </AutoPlaySwipeableViews>
+            </AutoPlaySwipeableViews> */}
   </Box>
   )
 }

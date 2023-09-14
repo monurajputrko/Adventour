@@ -1,18 +1,15 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { ThemeProvider } from "@mui/material"
-import { muiTheme } from '../App'
-import Booking from '../Components/Bookings/Booking'
-import SignUp from '../Components/Login/SignUp'
-import Login from '../Components/Login/Login'
-import HDetail from '../Components/Bookings/HDetail'
-import ADetail from '../Components/Bookings/ADetail'
-import Payment from '../Components/Payment/Payment'
+import Booking from '../Bookings/Booking'
+import SignUp from '../Login/SignUp'
+import Login from '../Login/Login'
+import HDetail from '../Bookings/HDetail'
+import ADetail from '../Bookings/ADetail'
+import Payment from '../Payment/Payment'
 import Main from './Main'
-import Error from '../Components/Utils/Error'
+import Error from '../Utils/Error'
 
 const Allroutes = () => {
-   
     return (
         <Routes>
             <Route path={"/"} element={<Main/>} ></Route>

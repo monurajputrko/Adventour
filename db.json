@@ -3,7 +3,6 @@
     {
       "id": 1,
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d0/a5/47/deluxe-room.jpg?w=1100&h=-1&s=1",
-      "secImg": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/4b/76/always-hotel-riverview.jpg?w=1200&h=-1&s=1",
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/35/5c/09/always-hotel-riverview.jpg?w=700&h=-1&s=1",
@@ -34,7 +33,7 @@
       "phone": "079 66185000",
       "price": 7840,
       "off":"24",
-      "city":"Ahemdabad",
+      "city":"Ahmedabad",
       "assured": true,
       "extra": "book1",
       "feedback":[
@@ -59,7 +58,7 @@
     },
     {
       "id": 2,
-      "city":"Ahemdabad",
+      "city":"Ahmedabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/34/5f/8d/lobby.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/5d/90/47/courtyard-by-marriott.jpg?w=1200&h=-1&s=1",
@@ -107,7 +106,7 @@
     },
     {
       "id": 3,
-      "city":"Ahemdabad",
+      "city":"Ahmedabad",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b8/22/0c/hotel-facade.jpg?w=1200&h=1200",
       "places_see_img" : [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/20/6d/amp.jpg?w=1200&h=-1&s=1",
@@ -155,7 +154,7 @@
     },
     {
       "id": 4,
-      "city":"Ahemdabad",
+      "city":"Ahmedabad",
       "category":"HOTEL",
       "main_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4b/1e/70/four-points-by-sheraton.jpg?w=1200&h=-1&s=1",
       "places_see_img" : [
@@ -204,7 +203,7 @@
     },
     {
       "id": 5,
-      "city":"Ahemdabad",
+      "city":"Ahmedabad",
       "category":"HOTEL",
       "main_img": "https://cdn1.goibibo.com/voy_ing/t_g/3591864ad68011ecbcc30a58a9feac02.jpg",
       "places_see_img" : [
@@ -213,9 +212,9 @@
         "https://cdn1.goibibo.com/voy_ing/t_g/33e9f286dce911ecad6f0a58a9feac02.jpg",
         "https://cdn1.goibibo.com/voy_ing/t_g/93a066be90a511ecb2fe0a58a9feac02.jpg"
       ],
-      "title": "Hotel Ashish Ahemdabad",
+      "title": "Hotel Ashish Ahmedabad",
       "reviews": 2427,
-      "address": "Hotel Ashish Ahemdabad Lalbhai Dalpatbhai Museum 1.5 km Navkar Public SchoolBRTS Bus Stop Navkar Public SchoolGulbai Tekra Rd, opp. Vasundhara Society, Ambawadi",
+      "address": "Hotel Ashish Ahmedabad Lalbhai Dalpatbhai Museum 1.5 km Navkar Public SchoolBRTS Bus Stop Navkar Public SchoolGulbai Tekra Rd, opp. Vasundhara Society, Ambawadi",
       "stars": 4.1,
       "description": "Get what you’re looking for with the style and service you want, all at a great price. We have what matters most to you, like a comfortable bed, a delicious breakfast and fresh coffee. You will also find high speed internet access, and delicious, simple food. Four Points by Sheraton Ahmedabad has a great location in the heart of the city. We are just 10km from Ahmedabad airport, 3km from the railway station and 1.5km from Paldi bus station. Shopping is just minutes away from our door. Our well-equipped meeting rooms and pre-function area totals 288 square meters. Let our team of dedicated professionals work with you to host your special event. Whether you are in town for business or leisure, convenience, comfort and value are everywhere at Four Points by Sheraton Ahmedabad.",
       "utils": [
@@ -375,6 +374,62 @@
       ],
       "phone": "084463 10595",
       "price": 5899
+    },
+    {
+      "id": 11,
+      "main_img": "https://cdn1.goibibo.com/voy_mmt/t_fs/htl-imgs/202206091532074208-f952e408e7d711ec84870a58a9feac02.jpg",
+      "places_see_img" : [
+        "https://cdn1.goibibo.com/voy_mmt/t_fs/htl-imgs/202206091532074208-adfcc11c1e1a11eda5780a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_mmt/t_fs/htl-imgs/202206091532074208-be614eec1e1a11ed95390a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/7862c45ce7d811ec83320a58a9feac02.jpg",
+        "https://cdn1.goibibo.com/voy_ing/t_g/82e29a8c1e1b11ed9da70a58a9feac02.jpg"
+      ],
+      "title": "ITC Narmada - A Luxury Collection Hotel",
+      "reviews": 2600,
+      "address": "ITC Narmada - A Luxury Collection Hotel No # 104 A, Judges Bunglow Rd, Vastrapur",
+      "stars": 4.5,
+      "about":[
+        "ITC Narmada - A Luxury Collection Hotel is a great choice for travellers looking for a 5 star hotel in Ahmedabad. ",
+        "This Hotel stands out as one of the highly recommended hotel in Ahmedabad and is recommended by 96% of our guests.",
+        "A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for all.",
+        "82% of the guests have recommended ITC Narmada Hotel on our platform. Good service quality, nice location, good rooms, good."
+      ],
+      "description": "ITC Narmada - A Luxury Collection Hotel is a great choice for travellers looking for a 5 star hotel in Ahmedabad. It is located in Vastrapur.This Hotel stands out as one of the highly recommended hotel in Ahmedabad and is recommended by 96% of our guests. Hotel is rated 4.6 out of 5, which is considered as excellent. From all the 5 Star hotels in Ahmedabad, ITC Narmada - A Luxury Collection Hotel is very much popular among the tourists. A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for this property.",
+      "utils": [
+        "Allergy-free room",
+        "Blackout curtains",
+        "Desk",
+        "Housekeeping",
+        "Coffee / tea maker",
+        "Cable / satellite TV",
+        "Sofa bed",
+        "Walk-in shower"
+      ],
+      "phone": "079 66185000",
+      "price": 7840,
+      "off":"24",
+      "city":"Ahmedabad",
+      "assured": true,
+      "extra": "book1",
+      "feedback":[
+        {
+          "img":"https://i.pinimg.com/564x/b7/06/e9/b706e9a5e66eccc80836c50267d67192.jpg",
+          "name":"Alex Adams",
+          "date_joined":"July 2023",
+          "stars":"4",
+          "place":"U.S.",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. ",
+          "desc2":"The food over here is splendid, We had great experience with the staff , manager Manoj and executive manager pawan and anima . Overall it was a great experience."
+      },
+        {
+          "img":"https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name":"Jignesh Patel",
+          "date_joined":"August 2022",
+          "stars":"5",
+          "place":"India",
+          "desc1":"I visited the hotel with my family and loved it. The hotel is clean and the staff is courteous.  I especially liked their in house restaurant eatery and had an amazing experience there. "
+      }
+    ]
     }
   ],
   
@@ -443,9 +498,261 @@
         }
       ]
     },
-
     {
       "id": 2,
+      "category": "Zipline Singapore at Mega Adventure Park",
+      "main_image": "https://media1.thrillophilia.com/filestore/7ihs066l5r3sz30zqtskjr73m6hw_1539855324_megajump_(5).jpg?w=auto&h=600",
+      "title": "Zipline Singapore at Mega Adventure Park",
+      "reviews": 500,
+      "destination": "Rome",
+      "age_range": "Above 18 years",
+      "tour_operator": "Rome tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Soar above the vibrant cityscape of Singapore, zipping through the air with breathtaking views that will leave you speechless",
+        "Experience the thrill of defying gravity as you conquer heart-pounding drops and twists on an adrenaline-pumping zip line adve",
+        "Immerse yourself in the beauty of nature while seamlessly gliding through a carefully designed course that blends with",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
+      ],
+      "tour_length": "6 days",
+      "str_price": 367983.99,
+      "act_price": 70998.99,
+      "off": 58,
+      "rating": 4.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/qjkiudohhj3rs0mhh6iwknvbw5sd_1539855328_megajump_(3).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/81jkmdpdcmuxvi1c0xfwt627zbac_1539855330_megajump(8).jpg?w=auto&h=600",
+        "https://media.gettyimages.com/id/1157735556/photo/happy-woman-having-fun-during-canopy-tour-in-the-forest.jpg?s=612x612&w=0&k=20&c=6VGOcI9dqRku6Dc7yIMY8Q98Gd5JwBTeBR6qHWjdl9c="
+      ],
+      "places_see_name": [
+        "Bermuda Diving Center"
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "",
+      "main_image": "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+      "title": "Viking Cave",
+      "reviews": 900,
+      "destination": "Thailand",
+      "age_range": "Above 13 years",
+      "tour_operator": "Thailand tour & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Explore this naturally formed cave located at the bottom of a tall limestone cliff on the northeastern side of Ko Phi Phi island.",
+        "Check out the paintings on the eastern and southern walls of the cave that are believed to be done by pirates who took shelter at the caves.",
+        "Spot the swiftlet birds' nests in the Viking Caves which are actually edible and harvested by locals to be used in exotic Chinese delicacies.",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
+      ],
+      "tour_length": "2 days",
+      "str_price": 556351.99,
+      "act_price": 99099.99,
+      "off": 58,
+      "rating": 5.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
+        "https://media.gettyimages.com/id/167650448/photo/koh-phi-phi-krabi-thailand-a-bird-nest-collector-climbs-bamboo-scaffolding-in-viking-cave-the.jpg?s=612x612&w=0&k=20&c=uyTkiPdDkf12JiV8RVwWhzwnYmKBRB_YmbqTo7hTdrA="
+
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "4.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Place",
+      "main_image": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b7706b453c0a1b1ae61659f5b9482d49112cfcc4d888c22ac5ee83658290d2fc._RI_TTW_.jpg",
+      "title": "Wildlife Tour Of Little Rann Of Kutch",
+      "reviews": 800,
+      "destination": "Ahmedabad",
+      "age_range": "Above 10 years",
+      "tour_operator": "Ahmdabad govt tourism",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "The wildlife tour to Little Rann of Kutch is led by Vipul Ramanuj, who is  with wildlife photography",
+        "This tour is especially for those who are interested in raptors as a lot of them migrate here",
+        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
+      ],
+      "tour_length": "6 days",
+      "str_price": 83133.99,
+      "act_price": 2978.99,
+      "off": 58,
+      "rating": 7.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://www.gujarattourism.com/content/dam/gujrattourism/images/weekend-get-aways/great-rann-of-kutch/gallery/Great%20Rann%20Of%20Kutch%20(14).jpg",
+        "https://utsav.gov.in/public/uploads/event_picture_image/event_15/16491338141670466003.jpg",
+        "https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2023/01/09112841/kite_festival_1200.jpg",
+        "https://media.gettyimages.com/id/1258707936/photo/villagers-cover-himself-with-plastic-to-protect-from-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=U67p5S8KTvZjAn2_KK2-zOrms9Lr1C-Ddoxn0OrqVdE="
+      ],
+      "places_see_name": [
+        "Rann of Kutch, Gujrat"
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "5.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Air",
+      "main_image": "https://media1.thrillophilia.com/filestore/o69bmvtyzcb27k22hhdqbvpuijxc_1588082622_1.png?w=auto&h=600",
+      "title": "Napa Valley Hot Air Balloon Tour, San Francisco",
+      "reviews": 800,
+      "destination": "San Francisco",
+      "age_range": "Above 12 years",
+      "tour_operator": "USA, tours & CO.",
+      "travel_style": [
+        "Custom",
+        "Private",
+        "Group", 
+        "Explorer"
+      ],
+      "highlights": [
+        "Embark on enthralling 1-hour hot-air balloon ride with your folks as you witnes owned Napa Valley",
+        "Admire the outstanding beauty of the majestic mountains and lush greenery while  the corridors of grapes",
+        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
+        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
+      ],
+      "tour_length": "3 days",
+      "str_price": 93133.99,
+      "act_price": 9978.99,
+      "off": 58,
+      "rating": 7.9,
+      "group_size": 5,
+      "places_see_img": [
+        "https://media1.thrillophilia.com/filestore/38ah3y0sptxpi7vehg9tpom4rz42_napa1.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/xkkpai3edv5s83uxrakscszrxti9_napa3.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/c00dzle4z4r4v0ey3zr518byhf8j_napa2.jpg?w=auto&h=600",
+        "https://media1.thrillophilia.com/filestore/yzxreibiffh193ur54gr0h3f4jci_napa%204.jpg?w=auto&h=600"
+      ],
+      "places_see_name": [
+        ""
+      ],
+      "user_ratings": [
+        {
+          "title": "Itineray",
+          "ratings": "5.4"
+        },
+        {
+          "title": "Guide",
+          "ratings": "5"
+        },
+        {
+          "title": "Transport",
+          "ratings": "4.7"
+        },
+        {
+          "title": "Tour Operator",
+          "ratings": "4.0"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "ratings": "4.5"
+        },
+        {
+          "title": "Experience",
+          "ratings": "4.9"
+        }
+      ]
+    },
+    {
+      "id": 6,
       "category": "Monuments",
       "main_image": "https://media1.thrillophilia.com/filestore/77n2ip2ixp9cluz2mceu3961ej15_shutterstock_533608354.jpg?w=auto&h=600",
       "title": "Vatican Museums Tickets | Skip The Line",
@@ -509,7 +816,7 @@
     },
 
     {
-      "id": 3,
+      "id": 7,
       "category": "Monuments",
       "main_image": "https://media1.thrillophilia.com/filestore/0abs05pmgdrkig0y5b7qb16ad536_shutterstock_1028245255.jpg?w=auto&h=600",
       "title": "Colosseum Tickets, Rome",
@@ -548,263 +855,6 @@
         {
           "title": "Itineray",
           "ratings": "4.4"
-        },
-        {
-          "title": "Guide",
-          "ratings": "5"
-        },
-        {
-          "title": "Transport",
-          "ratings": "4.7"
-        },
-        {
-          "title": "Tour Operator",
-          "ratings": "4.0"
-        },
-        {
-          "title": "Customer Satisfaction",
-          "ratings": "4.5"
-        },
-        {
-          "title": "Experience",
-          "ratings": "4.9"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "category": "Zipline Singapore at Mega Adventure Park",
-      "main_image": "https://media1.thrillophilia.com/filestore/7ihs066l5r3sz30zqtskjr73m6hw_1539855324_megajump_(5).jpg?w=auto&h=600",
-      "title": "Zipline Singapore at Mega Adventure Park",
-      "reviews": 500,
-      "destination": "Rome",
-      "age_range": "Above 18 years",
-      "tour_operator": "Rome tour & CO.",
-      "travel_style": [
-        "Custom",
-        "Private",
-        "Group", 
-        "Explorer"
-      ],
-      "highlights": [
-        "Soar above the vibrant cityscape of Singapore, zipping through the air with breathtaking views that will leave you speechless",
-        "Experience the thrill of defying gravity as you conquer heart-pounding drops and twists on an adrenaline-pumping zip line adve",
-        "Immerse yourself in the beauty of nature while seamlessly gliding through a carefully designed course that blends with",
-        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
-      ],
-      "tour_length": "6 days",
-      "str_price": 367983.99,
-      "act_price": 70998.99,
-      "off": 58,
-      "rating": 4.9,
-      "group_size": 5,
-      "places_see_img": [
-        "https://media1.thrillophilia.com/filestore/qjkiudohhj3rs0mhh6iwknvbw5sd_1539855328_megajump_(3).jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/81jkmdpdcmuxvi1c0xfwt627zbac_1539855330_megajump(8).jpg?w=auto&h=600",
-        "https://media.gettyimages.com/id/1157735556/photo/happy-woman-having-fun-during-canopy-tour-in-the-forest.jpg?s=612x612&w=0&k=20&c=6VGOcI9dqRku6Dc7yIMY8Q98Gd5JwBTeBR6qHWjdl9c="
-      ],
-      "places_see_name": [
-        "Bermuda Diving Center"
-      ],
-      "user_ratings": [
-        {
-          "title": "Itineray",
-          "ratings": "4.4"
-        },
-        {
-          "title": "Guide",
-          "ratings": "5"
-        },
-        {
-          "title": "Transport",
-          "ratings": "4.7"
-        },
-        {
-          "title": "Tour Operator",
-          "ratings": "4.0"
-        },
-        {
-          "title": "Customer Satisfaction",
-          "ratings": "4.5"
-        },
-        {
-          "title": "Experience",
-          "ratings": "4.9"
-        }
-      ]
-    },
-
-
-    {
-      "id": 5,
-      "category": "",
-      "main_image": "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
-      "title": "Viking Cave",
-      "reviews": 900,
-      "destination": "Thailand",
-      "age_range": "Above 13 years",
-      "tour_operator": "Thailand tour & CO.",
-      "travel_style": [
-        "Custom",
-        "Private",
-        "Group", 
-        "Explorer"
-      ],
-      "highlights": [
-        "Explore this naturally formed cave located at the bottom of a tall limestone cliff on the northeastern side of Ko Phi Phi island.",
-        "Check out the paintings on the eastern and southern walls of the cave that are believed to be done by pirates who took shelter at the caves.",
-        "Spot the swiftlet birds' nests in the Viking Caves which are actually edible and harvested by locals to be used in exotic Chinese delicacies.",
-        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history, culture & traditions"
-      ],
-      "tour_length": "2 days",
-      "str_price": 556351.99,
-      "act_price": 99099.99,
-      "off": 58,
-      "rating": 5.9,
-      "group_size": 5,
-      "places_see_img": [
-        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/2i9tlmn36he0mahxbh3bmcrlqcn1_1539855327_megajump_(2).jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/x77tbagm4zntn1lfv3unija4kt0w_1627127002_shutterstock_217322836.jpg?w=auto&h=600",
-        "https://media.gettyimages.com/id/167650448/photo/koh-phi-phi-krabi-thailand-a-bird-nest-collector-climbs-bamboo-scaffolding-in-viking-cave-the.jpg?s=612x612&w=0&k=20&c=uyTkiPdDkf12JiV8RVwWhzwnYmKBRB_YmbqTo7hTdrA="
-
-      ],
-      "places_see_name": [
-        ""
-      ],
-      "user_ratings": [
-        {
-          "title": "Itineray",
-          "ratings": "4.4"
-        },
-        {
-          "title": "Guide",
-          "ratings": "5"
-        },
-        {
-          "title": "Transport",
-          "ratings": "4.7"
-        },
-        {
-          "title": "Tour Operator",
-          "ratings": "4.0"
-        },
-        {
-          "title": "Customer Satisfaction",
-          "ratings": "4.5"
-        },
-        {
-          "title": "Experience",
-          "ratings": "4.9"
-        }
-      ]
-    },
-
-    {
-      "id": 6,
-      "category": "Air",
-      "main_image": "https://media1.thrillophilia.com/filestore/o69bmvtyzcb27k22hhdqbvpuijxc_1588082622_1.png?w=auto&h=600",
-      "title": "Napa Valley Hot Air Balloon Tour, San Francisco",
-      "reviews": 800,
-      "destination": "San Francisco",
-      "age_range": "Above 12 years",
-      "tour_operator": "USA, tours & CO.",
-      "travel_style": [
-        "Custom",
-        "Private",
-        "Group", 
-        "Explorer"
-      ],
-      "highlights": [
-        "Embark on enthralling 1-hour hot-air balloon ride with your folks as you witnes owned Napa Valley",
-        "Admire the outstanding beauty of the majestic mountains and lush greenery while  the corridors of grapes",
-        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
-        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
-      ],
-      "tour_length": "3 days",
-      "str_price": 93133.99,
-      "act_price": 9978.99,
-      "off": 58,
-      "rating": 7.9,
-      "group_size": 5,
-      "places_see_img": [
-        "https://media1.thrillophilia.com/filestore/38ah3y0sptxpi7vehg9tpom4rz42_napa1.jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/xkkpai3edv5s83uxrakscszrxti9_napa3.jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/c00dzle4z4r4v0ey3zr518byhf8j_napa2.jpg?w=auto&h=600",
-        "https://media1.thrillophilia.com/filestore/yzxreibiffh193ur54gr0h3f4jci_napa%204.jpg?w=auto&h=600"
-      ],
-      "places_see_name": [
-        ""
-      ],
-      "user_ratings": [
-        {
-          "title": "Itineray",
-          "ratings": "5.4"
-        },
-        {
-          "title": "Guide",
-          "ratings": "5"
-        },
-        {
-          "title": "Transport",
-          "ratings": "4.7"
-        },
-        {
-          "title": "Tour Operator",
-          "ratings": "4.0"
-        },
-        {
-          "title": "Customer Satisfaction",
-          "ratings": "4.5"
-        },
-        {
-          "title": "Experience",
-          "ratings": "4.9"
-        }
-      ]
-    },
-
-    {
-      "id": 7,
-      "category": "Place",
-      "main_image": "https://media2.thrillophilia.com/images/photos/000/050/729/original/intro-2_673655992741448265454.jpg?width=975&height=600",
-      "title": "Wildlife Tour Of Little Rann Of Kutch",
-      "reviews": 800,
-      "destination": "Kutch Ahmedabad",
-      "age_range": "Above 10 years",
-      "tour_operator": "Ahmdabad govt tour .",
-      "travel_style": [
-        "Custom",
-        "Private",
-        "Group", 
-        "Explorer"
-      ],
-      "highlights": [
-        "The wildlife tour to Little Rann of Kutch is led by Vipul Ramanuj, who is  with wildlife photography",
-        "This tour is especially for those who are interested in raptors as a lot of them migrate here",
-        "Get an unforgettable experience as you take part in pre-flight & post-flight activities withctors",
-        "Walk through the ancient sites of the Roman Forum and Palatine Hill to understand their history"
-      ],
-      "tour_length": "6 days",
-      "str_price": 83133.99,
-      "act_price": 2978.99,
-      "off": 58,
-      "rating": 7.9,
-      "group_size": 5,
-      "places_see_img": [
-        "https://media.gettyimages.com/id/167844213/photo/indian-salt-pan-worker-bhartiben-rameshbhai-salvages-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=a82YY78vYjKncBXvl5Fs2G39bzycxK8LlpomlOeSQJE=",
-        "https://media.gettyimages.com/id/1258708021/photo/sea-water-closes-in-on-the-village-road-after-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=nXSAPMPpJTD4X2pbbY6J0mVzZoDDBcJ--RJ73nSdn6o=",
-        "https://media.gettyimages.com/id/167844204/photo/indian-salt-pan-worker-bhartiben-rameshbhai-displays-the-mineral-ruined-by-rains-from-a.jpg?s=612x612&w=0&k=20&c=2GAXKUCocayLFkKbMhLrp4wsAbMjK8NgFcYmOVwJjZo=",
-        "https://media.gettyimages.com/id/1258707936/photo/villagers-cover-himself-with-plastic-to-protect-from-heavy-rain-ahead-of-landfall-of-biparjoy.jpg?s=612x612&w=0&k=20&c=U67p5S8KTvZjAn2_KK2-zOrms9Lr1C-Ddoxn0OrqVdE="
-      ],
-      "places_see_name": [
-        ""
-      ],
-      "user_ratings": [
-        {
-          "title": "Itineray",
-          "ratings": "5.4"
         },
         {
           "title": "Guide",
@@ -892,15 +942,10 @@
         }
       ]
     }
-
-
-
   ],
-
 
   
 
 
   "cart": []
 }
-
